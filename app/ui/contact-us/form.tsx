@@ -14,6 +14,8 @@ interface FormValues {
 
 
 
+
+
 const InnerForm = (props: FormikProps<FormValues>) => {
   const { touched, errors, isSubmitting, values } = props;
 
@@ -115,6 +117,7 @@ interface MyFormProps {
   initialPicked?: string;
   initialMessage?: string;
   initialChecked?: boolean;
+  sendEmail: (to:string, subject:string, message: string) => void;
 }
 
 export const ContactForm = withFormik<MyFormProps, FormValues>({
@@ -145,15 +148,22 @@ export const ContactForm = withFormik<MyFormProps, FormValues>({
     return errors;
   },
 
-  handleSubmit: (values, { setSubmitting }) => {
+  handleSubmit: (values, { setSubmitting, props }) => {
+
     setTimeout(() => {
+
+      props.sendEmail(values.email, `#${values.picked} ${values.subject}`, values.message);
+
       if (values.picked == 'delete') {
-        toast.success('Your account and data will be deleted.', { duration: 6000 })
+        toast.success('Your account and data will be deleted.', { duration: 6000 });
       } else {
         toast.success('Message has been sent');
       }
+
       setSubmitting(false);
+
     }, 1000)
 
   },
+
 })(InnerForm);

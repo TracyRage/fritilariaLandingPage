@@ -2,12 +2,30 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { sourceSerif } from "../ui/fonts";
 import Link from 'next/link';
 import { ContactForm } from "../ui/contact-us/form";
+import { Resend } from "resend";
+import EmailTemplate from "@/components/email-template";
 
 
-export default function ContactUs() {
+export default async function ContactUs() {
 
   const LinkIcon = ArrowLeftIcon;
 
+  async function sendEmail(to: string, subject: string, message: string) {
+
+    'use server';
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    const { data } = await resend.emails.send({
+        from: 'noreply@fritilaria.com',
+        to: to,
+        subject: subject,
+        react: EmailTemplate({message: message}) as React.ReactElement
+      });
+
+      console.log(data);
+  
+};
 
   return (
 
@@ -25,7 +43,7 @@ export default function ContactUs() {
             </h1>
           </div>
         </div>
-        <ContactForm />
+        <ContactForm sendEmail={sendEmail} />
       </div>
     </div> 
   );
