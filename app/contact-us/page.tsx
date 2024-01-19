@@ -20,7 +20,7 @@ export default async function ContactUs() {
         from: 'noreply@fritilaria.com',
         to: to,
         subject: subject,
-        react: EmailTemplate({message: message}) as React.ReactElement
+        react: EmailTemplate({email: to, message: message}) as React.ReactElement
       });
 
       console.log(data);

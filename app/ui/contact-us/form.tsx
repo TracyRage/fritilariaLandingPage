@@ -14,8 +14,6 @@ interface FormValues {
 
 
 
-
-
 const InnerForm = (props: FormikProps<FormValues>) => {
   const { touched, errors, isSubmitting, values } = props;
 
@@ -27,7 +25,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           <h1 className="text-lg py-4">Your email</h1>
         </div>
         <Field type="email" name="email"
-          className="flex w-[270px] h-[38px] border-onBackground border-4 bg-onBackground text-background rounded-md font-medium tracking-wider px-2" />
+          className="flex w-[270px] h-[38px] border-onBackground border-2 bg-onBackground text-background rounded-md font-medium tracking-wider px-2" />
         {touched.email && errors.email && <div className="py-2 font text-onPrimaryContainer">{errors.email}</div>}
       </div>
 
@@ -83,6 +81,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
         {values.picked === 'delete' && <div className="flex flex-row pt-8 space-x-4 items-center">
           <Field type="checkbox" name="checked" className="rounded-full shadow w-8 h-8 text-primaryContainer" />
           <p>I agree to delete my Fritilaria account and associated data.</p>
+          {errors.checked  &&  <div className="py-2 text-onPrimaryContainer">{errors.checked}</div>}
 
         </div>}
       </div>
@@ -144,6 +143,12 @@ export const ContactForm = withFormik<MyFormProps, FormValues>({
     if (!values.subject) {
       errors.subject = 'Required';
     }
+
+    if (values.picked == 'delete' && !values.checked) {
+      errors.checked = 'Required'
+
+    }
+
 
     return errors;
   },
