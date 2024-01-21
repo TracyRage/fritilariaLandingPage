@@ -3,29 +3,68 @@ import { sourceSerif } from "../ui/fonts";
 import Link from 'next/link';
 import { ContactForm } from "../ui/contact-us/form";
 import { Resend } from "resend";
-import EmailTemplate from "@/components/email-template";
+import FritilariaUserFarewellEmail from "@/components/farewell-template";
+import FritilariaDeleteAccountEmail from "@/components/delete-account-template";
+import getTicketNumber from "../utils/generateTicket";
+import FritilariaFeedbackEmail from "@/components/feedback-template";
+import { emit } from "process";
 
 
 export default async function ContactUs() {
 
   const LinkIcon = ArrowLeftIcon;
 
-  async function sendEmail(to: string, subject: string, message: string) {
+  async function sendEmail(to: string, subject: string, message: string, type: string) {
 
     'use server';
 
     const resend = new Resend(process.env.RESEND_API_KEY);
+    const ticket = getTicketNumber(1, 1e7);
+    const currentDate: Date = new Date();
+    const currentTime: string = currentDate.toISOString();
 
-    const { data } = await resend.emails.send({
+
+    if (type == 'delete') {
+      await resend.emails.send({
+        from: 'noreply@fritilaria.com',
+        to: to,
+        subject: "Fritilaria Account Deletion",
+        react: FritilariaUserFarewellEmail({ email: to, date: currentTime }) as React.ReactElement
+      });
+
+      await resend.emails.send({
+        from: 'noreply@fritilaria.com',
+        to: to,
+        subject: `#deletion ${to} ${ticket}`,
+        react: FritilariaDeleteAccountEmail({
+          email: to,
+          ticket: ticket,
+          date: currentTime,
+          subject: subject,
+          message: message
+        }) as React.ReactElement
+      });
+
+
+    } else {
+
+      const { data } = await resend.emails.send({
         from: 'noreply@fritilaria.com',
         to: to,
         subject: subject,
-        react: EmailTemplate({email: to, message: message}) as React.ReactElement
+        react: FritilariaFeedbackEmail({
+          message: message,
+          subject: subject,
+          date: currentTime
+        }) as React.ReactElement
       });
 
       console.log(data);
-  
-};
+
+    }
+
+
+  };
 
   return (
 
@@ -45,6 +84,6 @@ export default async function ContactUs() {
         </div>
         <ContactForm sendEmail={sendEmail} />
       </div>
-    </div> 
+    </div>
   );
 }

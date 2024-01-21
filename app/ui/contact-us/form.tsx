@@ -2,6 +2,9 @@
 import { withFormik, FormikProps, FormikErrors, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import toast, { Toaster } from 'react-hot-toast';
+import getTicketNumber from '@/app/utils/generateTicket';
+import FritilariaUserFarewellEmail from '@/components/farewell-template';
+import { ReactNode } from 'react';
 
 
 interface FormValues {
@@ -9,7 +12,7 @@ interface FormValues {
   subject: string,
   message: string,
   picked: string,
-  checked: boolean
+  checked: boolean,
 };
 
 
@@ -81,7 +84,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
         {values.picked === 'delete' && <div className="flex flex-row pt-8 space-x-4 items-center">
           <Field type="checkbox" name="checked" className="rounded-full shadow w-8 h-8 text-primaryContainer" />
           <p>I agree to delete my Fritilaria account and associated data.</p>
-          {errors.checked  &&  <div className="py-2 text-onPrimaryContainer">{errors.checked}</div>}
+          {errors.checked && <div className="py-2 text-onPrimaryContainer">{errors.checked}</div>}
 
         </div>}
       </div>
@@ -116,7 +119,7 @@ interface MyFormProps {
   initialPicked?: string;
   initialMessage?: string;
   initialChecked?: boolean;
-  sendEmail: (to:string, subject:string, message: string) => void;
+  sendEmail: (to: string, subject: string, message: string, type: string) => void;
 }
 
 export const ContactForm = withFormik<MyFormProps, FormValues>({
@@ -157,11 +160,12 @@ export const ContactForm = withFormik<MyFormProps, FormValues>({
 
     setTimeout(() => {
 
-      props.sendEmail(values.email, `#${values.picked} ${values.subject}`, values.message);
 
       if (values.picked == 'delete') {
+        props.sendEmail(values.email, `#${values.picked} ${values.subject}`, values.message, "delete");
         toast.success('Your account and data will be deleted.', { duration: 6000 });
       } else {
+        props.sendEmail(values.email, `#${values.subject}`, values.message, "feedback");
         toast.success('Message has been sent');
       }
 
