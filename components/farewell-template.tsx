@@ -42,15 +42,16 @@ export const FritilariaUserFarewellEmail = ({ email, date
                     alt="fritilaria"
                     style={logo}
                 />
-                <Text style={paragraph}>Hello, <Link style={{color: '#ffb2bc'}}>{email}</Link> </Text>
+                <Text style={paragraph}>Hello, <Link style={{ color: '#ffb2bc' }}>{email}</Link> </Text>
                 <Text style={paragraph2}>
-                    Your account and all the associated data will be deleted. <br/>
+                    Your account and all the associated data will be deleted. <br />
                     For more details, visit our <Link href='' style={{ color: '#ffb2bc' }}>Privacy policy</Link>.
                 </Text>
                 <Text style={paragraph3}>
                     Best,
                     <br />
-                    Fritilaria team
+                    Fritilaria team <br />
+                    <span style={{ color: '#ffb2bc' }}>{date}</span>
                 </Text>
                 <Hr style={hr} />
                 <Section style={footerLogos}>
@@ -89,7 +90,7 @@ export const FritilariaUserFarewellEmail = ({ email, date
                             </Link>
                         </Column>
                     </Row>
-                    <Row style={{textAlign: 'center'}}>
+                    <Row style={{ textAlign: 'center' }}>
                         <Text style={footer}>
                             © 2024 Aremti Statistica. All Rights Reserved. <br />
                             Bușteni 4, Cluj-Napoca, CJ, 470000 - Romania

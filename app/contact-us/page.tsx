@@ -7,7 +7,7 @@ import FritilariaUserFarewellEmail from "@/components/farewell-template";
 import FritilariaDeleteAccountEmail from "@/components/delete-account-template";
 import getTicketNumber from "../utils/generateTicket";
 import FritilariaFeedbackEmail from "@/components/feedback-template";
-import { emit } from "process";
+import generateTimastamp from "../utils/generateTimestamp";
 
 
 export default async function ContactUs() {
@@ -20,8 +20,8 @@ export default async function ContactUs() {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
     const ticket = getTicketNumber(1, 1e7);
-    const currentDate: Date = new Date();
-    const currentTime: string = currentDate.toISOString();
+    const timestamp = generateTimastamp();
+ 
 
 
     if (type == 'delete') {
@@ -29,24 +29,24 @@ export default async function ContactUs() {
         from: 'noreply@fritilaria.com',
         to: to,
         subject: "Fritilaria Account Deletion",
-        react: FritilariaUserFarewellEmail({ email: to, date: currentTime }) as React.ReactElement
+        react: FritilariaUserFarewellEmail({ email: to, date: timestamp }) as React.ReactElement
       });
 
       await resend.emails.send({
         from: 'noreply@fritilaria.com',
         to: to,
-        subject: `#deletion ${to} ${ticket}`,
+        subject: `#deletion ${to} #${ticket}`,
         react: FritilariaDeleteAccountEmail({
           email: to,
           ticket: ticket,
-          date: currentTime,
+          date: timestamp,
           subject: subject,
           message: message
         }) as React.ReactElement
       });
 
 
-    } else {
+    } else if(type == "feedback") {
 
       const { data } = await resend.emails.send({
         from: 'noreply@fritilaria.com',
@@ -54,8 +54,7 @@ export default async function ContactUs() {
         subject: subject,
         react: FritilariaFeedbackEmail({
           message: message,
-          subject: subject,
-          date: currentTime
+          date: timestamp
         }) as React.ReactElement
       });
 

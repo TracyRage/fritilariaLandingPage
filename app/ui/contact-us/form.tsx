@@ -160,12 +160,11 @@ export const ContactForm = withFormik<MyFormProps, FormValues>({
 
     setTimeout(() => {
 
-
       if (values.picked == 'delete') {
         props.sendEmail(values.email, `#${values.picked} ${values.subject}`, values.message, "delete");
         toast.success('Your account and data will be deleted.', { duration: 6000 });
-      } else {
-        props.sendEmail(values.email, `#${values.subject}`, values.message, "feedback");
+      } else if (values.picked == 'technical' || values.picked == 'business') {
+        props.sendEmail(values.email, `#${values.picked} ${values.subject}`, values.message, "feedback");
         toast.success('Message has been sent');
       }
 

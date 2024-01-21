@@ -17,7 +17,6 @@ import * as React from 'react';
 
 interface FritilariaFeedbackEmailProps {
   date: string;
-  subject: string;
   message: string;
 }
 
@@ -26,12 +25,12 @@ const redditURL = 'https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/pu
 const xURL = 'https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/x_logo_white_fritilaria.png?t=2023-12-30T11%3A17%3A31.549Z'
 const threadsURL = 'https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/threads_logo_white_fritilaria.png?t=2023-12-30T11%3A17%3A51.074Z'
 
-export const FritilariaFeedbackEmail = ({ subject, message, date
+export const FritilariaFeedbackEmail = ({message, date
 }: FritilariaFeedbackEmailProps) => (
   <Html>
     <Head />
     <Preview>
-      {subject}
+      {message.slice(0,50)}
     </Preview>
     <Body style={main}>
       <Container style={container}>
@@ -46,8 +45,8 @@ export const FritilariaFeedbackEmail = ({ subject, message, date
         <Text style={paragraph2}>
             {message} 
         </Text>
-        <Text style={paragraph2}>
-            Date: <span style={{color: '#ffb2bc'}}>{date}</span>
+        <Text style={paragraph4}>
+            <span style={{color: '#ffb2bc'}}>{date}</span>
         </Text>
 
 
