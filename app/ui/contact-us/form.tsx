@@ -25,18 +25,18 @@ const InnerForm = (props: FormikProps<FormValues>) => {
     <Form>
       <div className="flex flex-col items-baseline pt-4 py-2">
         <div>
-          <h1 className="text-lg py-4">Your email</h1>
+          <h1 className="lg:text-lg py-4">Your email</h1>
         </div>
         <Field type="email" name="email"
           className="flex w-[270px] h-[38px] border-onBackground border-2 bg-onBackground text-background rounded-md font-medium tracking-wider px-2" />
         {touched.email && errors.email && <div className="py-2 font text-onPrimaryContainer">{errors.email}</div>}
       </div>
 
-      <div className="flex flex-row space-x-[54px]">
+      <div className="flex flex-col lg:flex-row lg:space-x-[54px]">
         <div className="flex flex-col items-baseline pb-2">
 
           <div>
-            <h1 className="text-lg py-4">Subject</h1>
+            <h1 className="lg:text-lg py-4">Subject</h1>
           </div>
           <Field id="subject" name="subject"
             className="flex w-[270px] h-[38px] border-primar bg-onBackground text-background rounded-md font-medium tracking-wider px-2" />
@@ -44,24 +44,26 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
         </div>
 
-        <div className="flex flex-row space-x-[54px]">
+        <div className="flex flex-col space-x-0 lg:space-x-[54px]">
           <div className="flex flex-col items-baseline pb-2">
             <div>
-              <h1 className="text-lg py-4">Category</h1>
+              <h1 className="lg:text-lg py-4">Category</h1>
             </div>
 
-            <div className="flex flex-row space-x-6 h-[38px]">
+
+
+            <div className="flex lg:flex-row flex-col space-y-4 lg:space-y-0 lg:space-x-6 lg:h-[38px]">
               <div className="flex flex-row space-x-2 items-center">
                 <Field className="h-[24px] w-[24px] text-primaryContainer" type="radio" name="picked" value={"technical"} />
-                <label className="flex text-md">Technical</label>
+                <label className="flex lg:text-md">Technical</label>
               </div>
               <div className="flex flex-row space-x-2 items-center">
                 <Field className="h-[24px] w-[24px] text-primaryContainer" type="radio" name="picked" value={"delete"} />
-                <label className="flex text-md">Delete account</label>
+                <label className="flex lg:text-md">Delete account</label>
               </div>
               <div className="flex flex-row space-x-2 items-center">
                 <Field className="h-[24px] w-[24px] text-primaryContainer" type="radio" name="picked" value={"business"} />
-                <label className="flex text-md">Business</label>
+                <label className="flex lg:text-md">Business</label>
               </div>
             </div>
 
@@ -75,21 +77,21 @@ const InnerForm = (props: FormikProps<FormValues>) => {
       <div className="flex flex-col items-baseline pb-10">
 
         <div>
-          <h1 className="text-lg py-4">Message</h1>
+          <h1 className="lg:text-lg py-4">Message</h1>
         </div>
         <div>
-          <Field as='textarea' id="message" name="message" rows={10} cols={50} className="flex border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
+          <Field as='textarea' id="message" name="message" rows={10} cols={50} className="hidden md:block border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
+          <Field as='textarea' id="message" name="message" rows={10} cols={24} className="block md:hidden border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
         </div>
-
-        {values.picked === 'delete' && <div className="flex flex-row pt-8 space-x-4 items-center">
+        {values.picked === 'delete' && <div className="flex flex-row pt-6 lg:pt-8 space-x-4 lg:space-x-4 items-center">
           <Field type="checkbox" name="checked" className="rounded-full shadow w-8 h-8 text-primaryContainer" />
-          <p>I agree to delete my Fritilaria account and associated data.</p>
-          {errors.checked && <div className="py-2 text-onPrimaryContainer">{errors.checked}</div>}
+          <p className='text-sm lg:text-xl'>I agree to delete my Fritilaria account and associated data.</p>
+          {errors.checked && <div className="lg:py-2 text-onPrimaryContainer text-sm lg:text-xl">{errors.checked}</div>}
 
         </div>}
       </div>
 
-      <div className="flex flex-col items-baseline pt-4">
+      <div className="flex flex-col justify-center">
 
         <button type="submit" disabled={isSubmitting} className="flex w-[220px] h-[38px] bg-onPrimaryContainer text-primaryContainer border-onPrimary active:bg-fritilariaGreen active:text-onPrimary hover:bg-primary hover:text-onPrimary border-3 rounded-xl items-center justify-center">
           Submit

@@ -4,8 +4,8 @@ import Manifesto from "./ui/Manifesto";
 export default function Home() {
 
   return (
-    <div className="flex flex-col h-fit border-2 rounded-[25px] w-[1000px] me-40 border-primary">
-      <div className="flex flex-col ps-6 pt-6">
+    <div className="flex flex-col h-fit border-2 rounded-[25px] lg:w-[1000px] lg:h-fit w-auto border-primary">
+      <div className="flex flex-col py-4 px-4">
       <Manifesto/>
       <Guide/>
       </div>

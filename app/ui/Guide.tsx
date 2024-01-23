@@ -24,9 +24,9 @@ export default function Guide() {
                     <li className="pt-14 pb-12 lg:text-lg">Get Value/Share graph.</li>
                 </ul>
                 <div className="flex md:justify-center">
-                    <div className="w-[577px] h-[537px]">
+                    {/* <div className="w-[577px] h-[537px]"> */}
                         {/* <RenderAnimation pathname="./conclusion" loop={false} /> */}
-                    </div>
+                    {/* </div> */}
                 </div>
             </div>
         </div>

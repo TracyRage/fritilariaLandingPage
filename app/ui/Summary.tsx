@@ -14,16 +14,16 @@ export function Summary({
     return (
 
 
-        <div className='flex flex-col h-fit border-2 rounded-[25px] ms-40 w-[550px] border-primary pb-6'>
+        <div className='flex flex-col h-fit border-2 rounded-[25px] lg:w-[380px] w-fit border-primary pb-6'>
 
 
-                <div className="flex flex-col ps-6 pt-6">
+                <div className="flex flex-col pt-6 ps-6">
 
-                    <div className="flex sm:flex-row space-x-4">
+                    <div className="flex space-x-4 sm:flex-row">
 
                         <div>
                             <Link href={"/"}>
-                            <h1 className={`${sourceSerif.className} text-xl text-onBackground md:text-3xl pb-6`}>
+                            <h1 className={`${sourceSerif.className} text-2xl text-onBackground md:text-3xl pb-6`}>
                                 {title}
                             </h1>
                             </Link>
@@ -51,13 +51,13 @@ export function Summary({
                 </div>
 
 
-                <div className="flex text-left px-6 pb-6 md:pt-4">
+                <div className="flex px-6 pb-6 text-left md:pt-4">
                     <h1 className={' text-onBackground text-balance md:tracking-wide tracking-tight'}>
                         <span className="text-fritilariaGreen">Skidetic statistical models </span> for value investing.
                     </h1>
                 </div>
 
-                <div className="flex px-6 pb-8 md:pb-4 text-left">
+                <div className="flex px-6 pb-8 text-left md:pb-4">
                     <h1 className={'text-onBackground md:tracking-wide tracking-tight text-balance'}>
                         Transform your subjective opinion into statistically accurate <span className="text-fritilariaGreen">fundamental analysis</span>.
 
@@ -78,7 +78,7 @@ export function Summary({
                         />
                     </div>
 
-                    <div className="flex items-center md:justify-center lg:justify-center justify-left md:px-8 md:py-8">
+                    <div className="flex items-center pb-8 md:justify-center lg:justify-center justify-left md:px-8 md:py-8">
                         <Image
                             src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
                             width={130}
@@ -91,6 +91,8 @@ export function Summary({
 
                 <NavLink/>
                 <NavLink2/>
+
+
 
                 </div>
 
