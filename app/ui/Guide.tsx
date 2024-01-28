@@ -1,5 +1,5 @@
 'use client';
-import { use, useState } from "react";
+import { use, useEffect, useState } from "react";
 import RenderAnimation from "./RenderDensityGraph"
 import { sourceSerif } from "./fonts";
 import clsx from "clsx";
@@ -20,12 +20,6 @@ export default function Guide() {
         { id: "down", label: 'Down', state: false }
     ])
 
-    const [growthSelected, isGrowthSelected] = useState(true)
-
-    const handleGrowthSelected = () => {
-        isGrowthSelected(true)
-    }
-
 
     const handleGrowthButton = (buttonId: string) => {
 
@@ -40,63 +34,68 @@ export default function Guide() {
     const handlePatternButton = (buttonId: string) => {
 
 
-        if (growthSelected) {
             setPatternButtons(prevButtons =>
                 prevButtons.map(button =>
                     button.id === buttonId ? { ...button, state: true } : { ...button, state: false }))
 
-        }
 
     }
 
-    const [pathName, setPathName] = useState('equalizer_arrow_up_low')
+     const [pathName, setPathName] = useState('equalizer_arrow_up_low')
 
-    const handlePathname = () => {
-        const activeButtonId = buttons.find(button => button.state === true)?.id;
-        const activeButtonId2 = patternButtons.find(button => button.state === true)?.id;
+     const handlePathname = () => {
 
-        switch (activeButtonId) {
+         const activeButtonId = buttons.find(button => button.state === true)?.id;
+         const activeButtonId2 = patternButtons.find(button => button.state === true)?.id;
 
-            case "low":
-                switch (activeButtonId2) {
-                    case "arrowUp":
-                        setPathName("equalizer_arrow_up_low");
-                        break;
-                    case "up":
-                        setPathName("equalizer_ascending_low");
-                        break;
-                    case "down":
-                        setPathName("equalizer_descending_low");
-                        break;
-                }
+         switch (activeButtonId) {
 
-            // case "moderate":
-            //     switch (activeButtonId2) {
-            //         case "arrowUp":
-            //             setPathName("equalizer_arrow_up_moderate");
-            //         case "up":
-            //             setPathName("equalzier_ascending_moderate");
-            //         case "down":
-            //             setPathName("equalizer_descending_moderate");
-            //     }
+             case "low":
+                 switch (activeButtonId2) {
+                     case "arrowUp":
+                         setPathName("equalizer_arrow_up_low");
+                         break;
+                     case "up":
+                         setPathName("equalizer_ascending_low");
+                         break;
+                     case "down":
+                         setPathName("equalizer_descending_low");
+                         break;
+                 }
 
-            // case "high":
-            //     switch (activeButtonId2) {
-            //         case "arrowUp":
-            //             setPathName("equalizer_arrow_up_high");
-            //         case "up":
-            //             setPathName("equalzier_ascending_high");
-            //         case "down":
-            //             setPathName("equalizer_descending_high");
-            //     }
+            //  case "moderate":
+            //      switch (activeButtonId2) {
+            //          case "arrowUp":
+            //              setPathName("equalizer_arrow_up_moderate");
+            //          case "up":
+            //              setPathName("equalzier_ascending_moderate");
+            //          case "down":
+            //              setPathName("equalizer_descending_moderate");
+            //      }
 
-            default:
-                return "";
+            //  case "high":
+            //      switch (activeButtonId2) {
+            //          case "arrowUp":
+            //              setPathName("equalizer_arrow_up_high");
+            //          case "up":
+            //              setPathName("equalzier_ascending_high");
+            //          case "down":
+            //              setPathName("equalizer_descending_high");
+            //      }
+
+            //  default:
+            //      return "";
         
-    }
+     }
 
 
     }
+
+       useEffect(() => {
+        handlePathname();
+    }
+
+     );
 
 
 
@@ -113,7 +112,7 @@ export default function Guide() {
                     <li className="pb-4 lg:text-lg">Choose growth magnitude (%) and pattern for the next 5 years.</li>
                     <div className="flex justify-center lg:pt-6 md:pe-6">
                         <div className="w-[423px] h-[256px] hidden md:block">
-                            <RenderAnimation pathname={`./animation/equalizer/${pathName}.json`} loop={true} />
+                            <RenderAnimation pathname={`./animation/equalizer/equalizer_arrow_up_low.json`} loop={true} />
                         </div>
                         <div className="flex flex-col space-y-10 py-4">
                             <div className="flex flex-row space-x-4">
@@ -121,7 +120,6 @@ export default function Guide() {
                                 {buttons.map((button) => (
                                     <button type="submit" onClick={() => {
                                         handleGrowthButton(button.id)
-                                        handleGrowthSelected()
 
                                     }} key={button.id} className={clsx('flex w-[90px] h-[36px] rounded-xl items-center justify-center',
                                         {
@@ -140,8 +138,7 @@ export default function Guide() {
 
                                 {patternButtons.map((button) => (
                                     <button type="submit" onClick={() => {
-                                        handlePatternButton(button.id)
-                                        handlePathname()
+                                        handlePatternButton(button.id);
                                     }} key={button.id} className={clsx('flex w-[90px] h-[36px] rounded-xl items-center justify-center',
                                         {
                                             'bg-background text-onBackground border-2 border-onBackground': button.state === false,
@@ -162,7 +159,6 @@ export default function Guide() {
                         <RenderAnimation pathname="./conclusion" loop={false} />
                     </div> */}
                     <div>
-                        {pathName}
                     </div>
                 </div>
             </div>
