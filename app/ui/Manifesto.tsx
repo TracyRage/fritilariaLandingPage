@@ -30,7 +30,7 @@ export default function Manifesto() {
                             <li className="pb-4"><span className="text-primary">Fritilaria</span> app represents the first implementation of <span className="text-fritilariaGreen">skidetics</span> in realm of <span className="text-fritilariaGreen">value investing</span>. </li>
                             <li className="pb-4"><span className="text-primary">Fritilaria</span> performs a <span className="text-fritilariaGreen">skidetik fundamental analysis</span> of publicly traded stock by employing user&apos;s subjective opinion and delivers accurate statistical conclusions.</li>
                             <li>
-                                Do you want to try it? <span className="text-fritilariaGreen"> It's easy, do it below. </span>
+                                Do you want to try it? <span className="text-fritilariaGreen"> It&apos;s easy, do it below. </span>
                 
                             </li>
 
