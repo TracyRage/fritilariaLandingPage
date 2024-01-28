@@ -41,7 +41,7 @@ export default function Guide() {
 
     }
 
-     const [pathName, setPathName] = useState('equalizer_arrow_up_low')
+     const [pathName, setPathName] = useState('arrow_up_low')
 
      const handlePathname = () => {
 
@@ -53,13 +53,13 @@ export default function Guide() {
              case "low":
                  switch (activeButtonId2) {
                      case "arrowUp":
-                         setPathName("equalizer_arrow_up_low");
+                         setPathName("arrow_up_low");
                          break;
                      case "up":
-                         setPathName("equalizer_ascending_low");
+                         setPathName("ascending_low");
                          break;
                      case "down":
-                         setPathName("equalizer_descending_low");
+                         setPathName("descending_low");
                          break;
                  }
 
@@ -132,7 +132,7 @@ export default function Guide() {
 
                             </div>
                             <div className="w-[273px] min-h-[106px] block md:hidden">
-                                <RenderAnimation pathname={`./animation/equalizer/${pathName}.json`} loop={true} />
+                                <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
                             </div>
                             <div className="flex flex-row space-x-4">
 
@@ -155,9 +155,9 @@ export default function Guide() {
                     <li className="pb-12 pt-14 lg:text-lg">Get Value/Share graph.</li>
                 </ul>
                 <div className="flex md:justify-center">
-                    {/* <div className="w-[577px] h-[537px]"> 
-                        <RenderAnimation pathname="./conclusion" loop={false} />
-                    </div> */}
+                    <div className="w-[577px] h-[537px]"> 
+                        <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={false} />
+                    </div>
                     <div>
                     </div>
                 </div>
