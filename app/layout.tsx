@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={'${roboto.className} antialiased'}>
-        <div className='min-h-screen min-w-screen text-white lg:p-12 md:p-10 p-4 Parent bg-background'>
+        <div className='min-h-screen p-4 text-white min-w-screen lg:py-12 lg:px-4 md:p-10 Parent bg-background'>
 
-          <div className='flex lg:flex-row flex-col lg:mx-[80px] space-y-[24px] lg:space-x-[54px] lg:space-y-[0px] justify-center'>
+          <div className='flex md:flex-row flex-col lg:m-[4px] space-y-[25px] lg:space-x-[30px] md:space-y-[0px] justify-center'>
             <Summary title='Fritilaria' />
             <div>{children}</div>
           </div>

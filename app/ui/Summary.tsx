@@ -14,12 +14,12 @@ export function Summary({
     return (
 
 
-        <div className='flex flex-col h-fit border-2 rounded-[25px] lg:w-[380px] w-fit border-primary pb-6'>
+        <div className='flex flex-col h-fit border-2 rounded-[25px] lg:w-5/6 xl:w-2/12 w-fit border-primary pb-6'>
 
 
-                <div className="flex flex-col pt-6 ps-6">
+                <div className="flex flex-col pt-6 px-6">
 
-                    <div className="flex space-x-4 sm:flex-row">
+                    <div className="flex space-x-4 flex-row">
 
                         <div>
                             <Link href={"/"}>
@@ -51,7 +51,7 @@ export function Summary({
                 </div>
 
 
-                <div className="flex px-6 pb-6 text-left md:pt-4">
+                <div className="flex px-6 pb-4 text-left md:pt-4">
                     <h1 className={' text-onBackground text-balance md:tracking-wide tracking-tight'}>
                         <span className="text-fritilariaGreen">Skidetic statistical models </span> for value investing.
                     </h1>
@@ -71,8 +71,8 @@ export function Summary({
                     <div className="flex justify-center">
                         <Image
                             src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
-                            width={110}
-                            height={70}
+                            width={130}
+                            height={90}
                             alt="Fritilaria"
                             className="block md:hidden"
                         />
@@ -81,8 +81,8 @@ export function Summary({
                     <div className="flex items-center pb-8 md:justify-center lg:justify-center justify-left md:px-8 md:py-8">
                         <Image
                             src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
-                            width={130}
-                            height={90}
+                            width={190}
+                            height={150}
                             alt="Fritilaria"
                             className="hidden md:block"
                         />

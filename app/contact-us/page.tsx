@@ -67,7 +67,7 @@ export default async function ContactUs() {
 
   return (
 
-    <div className="flex flex-col h-fit border-2 rounded-[25px] lg:w-[1000px] pb-[36px] border-primary text-onBackground">
+    <div className="flex flex-col h-fit border-2 rounded-[25px] lg:w-6/6 xl:w-12/12 pb-[36px] border-primary text-onBackground">
       <div className="flex flex-col p-6">
         <div className="flex flex-row items-baseline lg:space-x-6">
           <div className="flex">

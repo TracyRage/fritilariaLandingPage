@@ -28,23 +28,23 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           <h1 className="lg:text-lg py-4">Your email</h1>
         </div>
         <Field type="email" name="email"
-          className="flex w-[270px] h-[38px] border-onBackground border-2 bg-onBackground text-background rounded-md font-medium tracking-wider px-2" />
+          className="flex lg:w-[270px] h-[38px] border-onBackground border-2 bg-onBackground text-background rounded-md font-medium tracking-wider px-2" />
         {touched.email && errors.email && <div className="py-2 font text-onPrimaryContainer">{errors.email}</div>}
       </div>
 
-      <div className="flex flex-col lg:flex-row lg:space-x-[54px]">
+      <div className="flex flex-col xl:flex-row xl:space-x-[52px]">
         <div className="flex flex-col items-baseline pb-2">
 
           <div>
             <h1 className="lg:text-lg py-4">Subject</h1>
           </div>
           <Field id="subject" name="subject"
-            className="flex w-[270px] h-[38px] border-primar bg-onBackground text-background rounded-md font-medium tracking-wider px-2" />
+            className="flex lg:w-[270px] h-[38px] border-primar bg-onBackground text-background rounded-md font-medium tracking-wider px-2" />
           {touched.subject && errors.subject && <div className="py-2 text-onPrimaryContainer">{errors.subject}</div>}
 
         </div>
 
-        <div className="flex flex-col space-x-0 lg:space-x-[54px]">
+        <div className="flex flex-col">
           <div className="flex flex-col items-baseline pb-2">
             <div>
               <h1 className="lg:text-lg py-4">Category</h1>
@@ -52,7 +52,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
 
 
-            <div className="flex lg:flex-row flex-col space-y-4 lg:space-y-0 lg:space-x-6 lg:h-[38px]">
+            <div className="flex xl:flex-row xl:space-x-4 flex-col xl:space-y-0 space-y-4 h-[38px]">
               <div className="flex flex-row space-x-2 items-center">
                 <Field className="h-[24px] w-[24px] text-primaryContainer" type="radio" name="picked" value={"technical"} />
                 <label className="flex lg:text-md">Technical</label>
@@ -74,13 +74,13 @@ const InnerForm = (props: FormikProps<FormValues>) => {
       </div>
 
 
-      <div className="flex flex-col items-baseline pb-10">
+      <div className="flex flex-col items-baseline xl:pt-4 xl:pb-12 py-16">
 
         <div>
           <h1 className="lg:text-lg py-4">Message</h1>
         </div>
         <div>
-          <Field as='textarea' id="message" name="message" rows={10} cols={50} className="hidden md:block border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
+          <Field as='textarea' id="message" name="message" rows={10} cols={34} className="hidden md:block border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
           <Field as='textarea' id="message" name="message" rows={10} cols={24} className="block md:hidden border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
         </div>
         {values.picked === 'delete' && <div className="flex flex-row pt-6 lg:pt-8 space-x-4 lg:space-x-4 items-center">
