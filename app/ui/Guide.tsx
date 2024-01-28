@@ -155,8 +155,8 @@ export default function Guide() {
                     <li className="pb-12 pt-14 lg:text-lg">Get Value/Share graph.</li>
                 </ul>
                 <div className="flex md:justify-center">
-                    <div className="w-[577px] h-[537px]"> 
-                        <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={false} />
+                    <div> 
+                        <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
                     </div>
                     <div>
                     </div>
