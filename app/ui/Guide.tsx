@@ -268,7 +268,7 @@ export default function Guide() {
                                     {
                                         'bg-background text-onBackground border-2 border-fritilariaGreen': button.state === false && button.id == 'fair',
                                         'bg-fritilariaGreen text-background': button.state === true && button.id === 'fair',
-                                        'bg-primary text-onPrimary': button.state === true,
+                                        'bg-primary text-onPrimary': button.state === true && button.id !=='fair',
                                         'bg-background text-onBackground border-2 border-onBackground border-dashed': button.state === false && button.id !== 'fair'
                                     })}>
                                     <div className="flex flex-row justify-center">
