@@ -112,15 +112,15 @@ export default function Guide() {
 
             <div className="px-6 pt-4 text-sm tracking-wide pb-14 lg:leading-relaxed">
                 <ul className="list-decimal">
-                    <div className="flex flex-col space-y-4 pb-6">
-                    <li className="lg:text-lg">Select a company. Let's choose something historical - a watermill.</li>
-                    <div className="flex justify-center">
-                        <h1 className="text-primary tracking-wide">Société des Moulins du Bazacle</h1>
+                    <div className="flex flex-col pb-6 space-y-4">
+                    <li className="lg:text-lg">Select a company. Let&apos;s choose something historical - a watermill.</li>
+                    <div className="flex justify-center py-2">
+                        <h1 className="text-lg tracking-wide underline text-primary underline-offset-8 decoration-1 decoration-onBackground">Société des Moulins du Bazacle</h1>
                     </div>
                     </div>
                     <li className="pb-6 lg:text-lg">Choose growth magnitude (%) and pattern for the next 5 years. This is the moment when you transform your subjective opinion into a model.</li>
                     <div className="flex justify-center lg:pt-6 md:pe-6">
-                        <div className="flex flex-col space-y-10 pb-4">
+                        <div className="flex flex-col pb-4 space-y-10">
                             <div className="flex flex-row space-x-4">
 
                                 {buttons.map((button) => (
@@ -166,15 +166,15 @@ export default function Guide() {
 
                         </div>
                     </div>
-                    <li className="pb-8 pt-12 lg:text-lg">Check if expected year five revenue is reasonable and fits your beliefes. This is the moment when you validate your opinion.</li>
+                    <li className="pt-12 pb-8 lg:text-lg">Check if expected year five revenue ($) is reasonable and fits your beliefes. This is the moment when you validate your opinion.</li>
                     <div className="flex justify-center">
                         <div>
-                        <h1 className="text-3xl text-primary tracking-wide underline-offset-8 underline decoration-1 decoration-onBackground">100M</h1>
+                        <h1 className="text-3xl tracking-wide underline text-primary underline-offset-8 decoration-1 decoration-onBackground">100M</h1>
                         </div>
                         <div>
                         </div>
                     </div>
-                    <li className="pb-8 pt-12 lg:text-lg">Finally, estimate the fundamental value of the selected company. If median value is lower than current market price, then company is undervalued.</li>
+                    <li className="pt-12 pb-8 lg:text-lg">Finally, estimate the fundamental value of the selected company. If median value is lower than current market price, then company is undervalued.</li>
                     <div className="flex justify-center">
                         <div className="flex flex-col space-y-4">
                             <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
