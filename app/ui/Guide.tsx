@@ -291,7 +291,7 @@ export default function Guide() {
 
                         </div>
                         <div className="flex flex-col pt-4 pb-2 space-y-6 text-lg justify-center items-center">
-                            <h1>It's easy, isn't it? Try <span className="text-primary">Fritilaria</span>. Now.</h1>
+                            <h1>It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>. Now.</h1>
                               <Image
                             src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
                             width={130}
