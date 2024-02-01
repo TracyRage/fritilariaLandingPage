@@ -51,7 +51,7 @@ export function Summary({
                 </div>
 
 
-                <div className="flex px-6 pb-4 text-left md:pt-4">
+                <div className="flex px-6 pb-2 text-left md:pt-4">
                     <h1 className={' text-onBackground text-balance md:tracking-wide tracking-tight'}>
                         <span className="text-fritilariaGreen">Skidetic statistical models </span> for value investing.
                     </h1>

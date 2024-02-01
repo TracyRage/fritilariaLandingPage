@@ -240,7 +240,7 @@ export default function Guide() {
 
                         </div>
                     </div>
-                    <li className="pt-12 pb-8 lg:text-lg">Check if expected year five revenue (€) is reasonable and fits your beliefes. This is the moment when you validate your opinion.</li>
+                    <li className="pt-6 pb-8 lg:text-lg">Check if expected year five revenue (€) is reasonable and fits your beliefes. This is the moment when you validate your opinion.</li>
                     <div className="flex justify-center">
                         <div>
                             <h1 className="text-3xl tracking-wide underline text-primary underline-offset-8 decoration-1 decoration-onBackground">{revenue}M</h1>
@@ -248,7 +248,7 @@ export default function Guide() {
                         <div>
                         </div>
                     </div>
-                    <li className="pt-12 pb-8 lg:text-lg">Finally, estimate the fundamental value of the selected company. If median value is lower than current market price, then company is undervalued.</li>
+                    <li className="pt-8 pb-8 lg:text-lg">Finally, estimate the fundamental value of the selected company. If median value is lower than current market price, then company is undervalued.</li>
                     <div className="flex justify-center">
                         <div className="flex flex-col space-y-4">
                             <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
@@ -280,15 +280,25 @@ export default function Guide() {
                             ))}
 
                         </div>
-                        <div className="container w-4/4 bg-onPrimaryContainer text-primaryContainer px-4 py-3 rounded-xl">
-                        <div className="flex text-center justify-center text-md font-semibold tracking-wide">
+                        <div className="container w-4/4 bg-onBackground text-background px-4 py-3 rounded-xl">
+                        <div className="flex text-center justify-center font-semibold tracking-wide">
 
                             {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
-                            {probabilityType === 'ci5' && (<p>There&apos;s 5% that fair value is less than {probabilityValue}.</p>)}
-                            {probabilityType === 'ci95' && (<p>There&apos;s 5% that fair value is more than {probabilityValue}.</p>)}
+                            {probabilityType === 'ci5' && (<p>There&apos;s 5% that fair value is less than {probabilityValue} (€).</p>)}
+                            {probabilityType === 'ci95' && (<p>There&apos;s 5% that fair value is more than {probabilityValue} (€).</p>)}
 
                         </div>
 
+                        </div>
+                        <div className="flex flex-col pt-4 pb-2 space-y-6 text-lg justify-center items-center">
+                            <h1>It's easy, isn't it? Try <span className="text-primary">Fritilaria</span>. Now.</h1>
+                              <Image
+                            src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
+                            width={130}
+                            height={90}
+                            alt="Fritilaria"
+                            className="block md:hidden"
+                        />
                         </div>
                     </div>
 
