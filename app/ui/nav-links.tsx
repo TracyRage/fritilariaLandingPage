@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const links = [
     { name: 'Terms & Conditions', href: '/terms' },
     { name: 'Privacy policy', href: '/privacy' },
+    { name: 'FAQ', href: '/faq' },
     { name: 'Company', href: '/about-company' },
     { name: 'Contact us', href: '/contact-us' },
 ];
@@ -43,7 +44,7 @@ export function NavLink2() {
     <div className="flex justify-center space-x-4">
 
         {
-            links.slice(2,4).map((link) => {
+            links.slice(2,5).map((link) => {
                 return (
                     <Link
                         key={link.name}

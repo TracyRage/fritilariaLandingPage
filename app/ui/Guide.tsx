@@ -6,6 +6,7 @@ import RenderAnimation from "./RenderDensityGraph"
 import { sourceSerif } from "./fonts";
 import clsx from "clsx";
 import Image from 'next/image';
+import Link from "next/link";
 
 
 export default function Guide() {
@@ -268,7 +269,7 @@ export default function Guide() {
                                     {
                                         'bg-background text-onBackground border-2 border-fritilariaGreen': button.state === false && button.id == 'fair',
                                         'bg-fritilariaGreen text-background': button.state === true && button.id === 'fair',
-                                        'bg-primary text-onPrimary': button.state === true && button.id !=='fair',
+                                        'bg-primary text-onPrimary': button.state === true && button.id !== 'fair',
                                         'bg-background text-onBackground border-2 border-onBackground border-dashed': button.state === false && button.id !== 'fair'
                                     })}>
                                     <div className="flex flex-row justify-center">
@@ -281,25 +282,42 @@ export default function Guide() {
 
                         </div>
                         <div className="container w-4/4 bg-onBackground text-background px-4 py-3 rounded-xl">
-                        <div className="flex text-center justify-center font-semibold tracking-wide">
+                            <div className="flex text-center justify-center font-semibold tracking-wide">
 
-                            {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
-                            {probabilityType === 'ci5' && (<p>There&apos;s 5% that fair value is less than {probabilityValue} (€).</p>)}
-                            {probabilityType === 'ci95' && (<p>There&apos;s 5% that fair value is more than {probabilityValue} (€).</p>)}
+                                {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
+                                {probabilityType === 'ci5' && (<p>There&apos;s 5% that fair value is less than {probabilityValue} (€).</p>)}
+                                {probabilityType === 'ci95' && (<p>There&apos;s 5% that fair value is more than {probabilityValue} (€).</p>)}
+
+                            </div>
 
                         </div>
+                        <div className="flex flex-col pt-4 space-y-6 text-lg justify-center items-center">
+                            <h1 className="tracking-tighter">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</h1>
+                            <Image
+                                src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
+                                width={130}
+                                height={90}
+                                alt="Fritilaria"
+                                className="block md:hidden"
+                            />
+                            <div className="flex flex-col justify-center leading-7 text-center text-sm">
+                            <p>Do you have any other questions?</p>
+                            <p>Check the  <Link className="text-primary font-bold" href={"/faq"}><span> FAQ</span>
+                            </Link>.</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div className="flex flex-col pt-12 space-y-6 text-onBackground">
+                        <hr className="opacity-50" />
+                        <div className="flex flex-row space-x-6 justify-center">
+
+                            <Image src="reddit.svg" width={25} height={10} alt="x" />
+                            <Image src="x.svg" width={20} height={10} alt="x" />
+                            <Image src="threads.svg" width={20} height={10} alt="x" />
                         </div>
-                        <div className="flex flex-col pt-4 pb-2 space-y-6 text-lg justify-center items-center">
-                            <h1>It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>. Now.</h1>
-                              <Image
-                            src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
-                            width={130}
-                            height={90}
-                            alt="Fritilaria"
-                            className="block md:hidden"
-                        />
-                        </div>
+                        <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All right Reserved.</p>
+
                     </div>
 
                 </ul>
