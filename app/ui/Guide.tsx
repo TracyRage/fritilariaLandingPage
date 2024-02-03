@@ -188,12 +188,12 @@ export default function Guide() {
             <div className="px-6 pt-4 text-sm tracking-wide lg:leading-relaxed">
                 <ul className="list-decimal">
                     <div className="flex flex-col pb-8 space-y-4">
-                        <li className="lg:text-lg">Select a company. Let&apos;s choose something historical.</li>
+                        <li className="lg:text-base">Select a company. Let&apos;s choose something historical.</li>
                         <div className="flex justify-center py-2">
                             <h1 className="text-base tracking-wide underline underline-offset-8 decoration-1 decoration-onBackground lg:text-2xl">Société des Moulins du Bazacle</h1>
                         </div>
                     </div>
-                    <li className="pb-6 lg:text-lg">Select the growth magnitude (%) and pattern for the next 5 years. This is the moment when you translate your subjective opinion into a model</li>
+                    <li className="pb-6 lg:text-base">Select the growth magnitude (%) and pattern for the next 5 years. This is the moment when you translate your subjective opinion into a model</li>
                     <div className="flex justify-center lg:pt-6 md:pe-6">
                         <div className="flex flex-col pb-6 space-y-10">
                             <div className="flex flex-row space-x-4">
@@ -244,7 +244,7 @@ export default function Guide() {
 
                         </div>
                     </div>
-                    <li className="pt-6 pb-8 lg:text-lg">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs. This is the moment when you validate your opinion.</li>
+                    <li className="pt-6 pb-8 lg:text-base">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs. This is the moment when you validate your opinion.</li>
                     <div className="flex pb-4 justify-center">
                         <div>
                             <h1 className="text-3xl lg:text-4xl tracking-wide underline text-primary underline-offset-8 decoration-1 decoration-onBackground">{revenue}M</h1>
@@ -252,7 +252,7 @@ export default function Guide() {
                         <div>
                         </div>
                     </div>
-                    <li className="pt-8 pb-12 lg:text-lg">Finally, estimate the fundamental value of the selected company. If median value is lower than the current market price, then the company is undervalued.</li>
+                    <li className="pt-8 pb-12 lg:text-base">Finally, estimate the fundamental value of the selected company. If median value is lower than the current market price, then the company is undervalued.</li>
                     <div className="flex justify-center">
                         <div className="block md:hidden space-y-4">
                             <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />

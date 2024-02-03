@@ -9,7 +9,7 @@ export default function Manifesto() {
                     Skidetic /σχέδιο/ manifesto
                 </h1>
             </div>
-            <div className="px-6 pt-2 lg:text-lg lg:leading-relaxed">
+            <div className="px-6 pt-2 lg:text-base lg:leading-relaxed">
                 <ul className="list-disc">
                     <li className="pb-4">
                         Have you ever tried to perform a fundamental analysis but got lost in math? Or struggled to transform your personal opions in a statistically robust hypotheses? You have tried. You have struggled. The majority of retail investors have found challenging to perform statistically sound fundamental analyses and usually delegate important financial decisions to blind chance.

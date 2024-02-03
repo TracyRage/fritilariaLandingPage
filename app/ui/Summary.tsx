@@ -29,12 +29,13 @@ export function Summary({
                             </Link>
                         </div>
 
-                        <div className="w-[28px] h-[38px] block md:hidden">
+                        <div className="w-[30px] block md:hidden">
                             <Link href={"/"}>
                             <RenderDensityGraph pathname='./animation/logo/fritilaria_logo_dark.json' loop={true} />
                             </Link>
                             {/* <RenderDensityGraph pathname='./animation/logo/fritilaria_logo_dark.json' loop={true} /> */}
                         </div>
+
                     </div>
 
                     <div className="flex md:justify-center lg:pt-6 lg:pb-6 md:pe-6">
