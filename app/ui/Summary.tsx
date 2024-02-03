@@ -14,16 +14,16 @@ export function Summary({
     return (
 
 
-        <div className='flex flex-col h-fit border-2 rounded-[25px] lg:w-5/6 xl:w-2/12 w-fit border-primary pb-6'>
+        <div className='flex flex-col h-fit border-2 rounded-[25px] w-fit lg:w-[380px] border-primary py-6'>
 
 
-                <div className="flex flex-col pt-6 px-6">
+                <div className="flex flex-col px-6">
 
                     <div className="flex space-x-4 flex-row">
 
                         <div>
                             <Link href={"/"}>
-                            <h1 className={`${sourceSerif.className} text-2xl text-onBackground md:text-3xl pb-6`}>
+                            <h1 className={`${sourceSerif.className} text-2xl text-onBackground lg:text-3xl pb-6`}>
                                 {title}
                             </h1>
                             </Link>
@@ -52,13 +52,13 @@ export function Summary({
 
 
                 <div className="flex px-6 pb-2 text-left md:pt-4">
-                    <h1 className={' text-onBackground text-balance md:tracking-wide tracking-tight'}>
+                    <h1 className={' text-onBackground text-pretty md:tracking-wide tracking-tight'}>
                         <span className="text-fritilariaGreen">Skidetic statistical models </span> for value investing.
                     </h1>
                 </div>
 
                 <div className="flex px-6 pb-8 text-left md:pb-4">
-                    <h1 className={'text-onBackground md:tracking-wide tracking-tight text-balance'}>
+                    <h1 className={'text-onBackground md:tracking-wide tracking-tight text-pretty'}>
                         Transform your subjective opinion into statistically accurate <span className="text-fritilariaGreen">fundamental analysis</span>.
 
                     </h1>
@@ -81,23 +81,22 @@ export function Summary({
                     <div className="flex items-center pb-8 md:justify-center lg:justify-center justify-left md:px-8 md:py-8">
                         <Image
                             src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
-                            width={190}
-                            height={150}
+                            width={160}
+                            height={120}
                             alt="Fritilaria"
                             className="hidden md:block"
                         />
                     </div>
                 </div>
 
+                <div className="space-y-1">
                 <NavLink/>
                 <NavLink2/>
-
-
-
                 </div>
 
 
 
+                </div>
 
 
     );

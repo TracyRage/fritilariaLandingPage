@@ -25,9 +25,9 @@ export default function Guide() {
     ])
 
     const [probabilityButtons, setProbabilityButtons] = useState([
-        { id: "unlikely_low", label: "Low", state: false, icon: <ArrowTrendingDownIcon className="w-1/4" /> },
+        { id: "unlikely_low", label: "Low", state: false, icon: <ArrowTrendingDownIcon className="w-1/4 lg:w-[32px]" /> },
         { id: "fair", label: "Fair value", state: true },
-        { id: "unlikely_high", label: 'High', state: false, icon: <ArrowTrendingUpIcon className="w-1/4" /> },
+        { id: "unlikely_high", label: 'High', state: false, icon: <ArrowTrendingUpIcon className="w-1/4 lg:w-[32px]" /> },
     ])
 
     const [pathName, setPathName] = useState(financialParams[0].iconPath);
@@ -185,17 +185,17 @@ export default function Guide() {
                 <span className="text-fritilariaGreen">Skidetics</span> + <span className="text-primary">Fritilaria</span> = statistically sound fundamental analysis
             </div>
 
-            <div className="px-6 pt-4 text-sm tracking-wide pb-14 lg:leading-relaxed">
+            <div className="px-6 pt-4 text-sm tracking-wide lg:leading-relaxed">
                 <ul className="list-decimal">
-                    <div className="flex flex-col pb-6 space-y-4">
-                        <li className="lg:text-lg">Select a company. Let&apos;s choose something historical - a watermill.</li>
+                    <div className="flex flex-col pb-8 space-y-4">
+                        <li className="lg:text-lg">Select a company. Let&apos;s choose something historical.</li>
                         <div className="flex justify-center py-2">
-                            <h1 className="text-lg tracking-wide underline text-primary underline-offset-8 decoration-1 decoration-onBackground">Société des Moulins du Bazacle</h1>
+                            <h1 className="text-base tracking-wide underline underline-offset-8 decoration-1 decoration-onBackground lg:text-2xl">Société des Moulins du Bazacle</h1>
                         </div>
                     </div>
-                    <li className="pb-6 lg:text-lg">Choose growth magnitude (%) and pattern for the next 5 years. This is the moment when you transform your subjective opinion into a model.</li>
+                    <li className="pb-6 lg:text-lg">Select the growth magnitude (%) and pattern for the next 5 years. This is the moment when you translate your subjective opinion into a model</li>
                     <div className="flex justify-center lg:pt-6 md:pe-6">
-                        <div className="flex flex-col pb-4 space-y-10">
+                        <div className="flex flex-col pb-6 space-y-10">
                             <div className="flex flex-row space-x-4">
 
                                 {buttons.map((button) => (
@@ -213,6 +213,9 @@ export default function Guide() {
 
                             </div>
                             <div className="w-[273px] min-h-[106px] block md:hidden">
+                                <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
+                            </div>
+                            <div className="w-[340px] min-h-[106px] hidden md:block">
                                 <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
                             </div>
                             <div className="flex flex-row space-x-4">
@@ -241,23 +244,28 @@ export default function Guide() {
 
                         </div>
                     </div>
-                    <li className="pt-6 pb-8 lg:text-lg">Check if expected year five revenue (€) is reasonable and fits your beliefes. This is the moment when you validate your opinion.</li>
-                    <div className="flex justify-center">
+                    <li className="pt-6 pb-8 lg:text-lg">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs. This is the moment when you validate your opinion.</li>
+                    <div className="flex pb-4 justify-center">
                         <div>
-                            <h1 className="text-3xl tracking-wide underline text-primary underline-offset-8 decoration-1 decoration-onBackground">{revenue}M</h1>
+                            <h1 className="text-3xl lg:text-4xl tracking-wide underline text-primary underline-offset-8 decoration-1 decoration-onBackground">{revenue}M</h1>
                         </div>
                         <div>
                         </div>
                     </div>
-                    <li className="pt-8 pb-8 lg:text-lg">Finally, estimate the fundamental value of the selected company. If median value is lower than current market price, then company is undervalued.</li>
+                    <li className="pt-8 pb-12 lg:text-lg">Finally, estimate the fundamental value of the selected company. If median value is lower than the current market price, then the company is undervalued.</li>
                     <div className="flex justify-center">
-                        <div className="flex flex-col space-y-4">
+                        <div className="block md:hidden space-y-4">
+                            <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
+                            <label className="flex justify-center">Value / Share (€)</label>
+                        </div>
+                        <div className="space-y-4 hidden lg:block w-[340px]">
                             <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>
                         <div>
                         </div>
                     </div>
+                    <div className="flex justify-center">
                     <div className="flex flex-col pt-8 space-y-8">
                         <div className="flex flex-row space-x-4">
 
@@ -265,7 +273,7 @@ export default function Guide() {
                                 <button type="submit" onClick={() => {
                                     handleProbabilityButton(button.id);
 
-                                }} key={button.id} className={clsx('flex w-2/6 h-[36px] rounded-xl items-center text-sm justify-center',
+                                }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] h-[36px] rounded-xl items-center text-sm justify-center',
                                     {
                                         'bg-background text-onBackground border-2 border-fritilariaGreen': button.state === false && button.id == 'fair',
                                         'bg-fritilariaGreen text-background': button.state === true && button.id === 'fair',
@@ -281,7 +289,7 @@ export default function Guide() {
                             ))}
 
                         </div>
-                        <div className="container w-4/4 bg-onBackground text-background px-4 py-3 rounded-xl">
+                        <div className="container w-4/4 bg-onBackground text-background text-md px-4 py-3 rounded-xl">
                             <div className="flex text-center justify-center font-semibold tracking-wide">
 
                                 {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
@@ -292,7 +300,15 @@ export default function Guide() {
 
                         </div>
                         <div className="flex flex-col pt-4 space-y-6 text-lg justify-center items-center">
-                            <h1 className="tracking-tighter">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</h1>
+                            <h1 className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</h1>
+                            <Image
+                                src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
+                                width={160}
+                                height={120}
+                                alt="Fritilaria"
+                                className="hidden md:block"
+                            />
+
                             <Image
                                 src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
                                 width={130}
@@ -306,6 +322,7 @@ export default function Guide() {
                             </Link>.</p>
                             </div>
                         </div>
+                    </div>
                     </div>
 
                     <div className="flex flex-col pt-12 space-y-6 text-onBackground">

@@ -8,6 +8,7 @@ import FritilariaDeleteAccountEmail from "@/components/delete-account-template";
 import getTicketNumber from "../utils/generateTicket";
 import FritilariaFeedbackEmail from "@/components/feedback-template";
 import generateTimastamp from "../utils/generateTimestamp";
+import Image from "next/image";
 
 
 export default async function ContactUs() {
@@ -67,9 +68,9 @@ export default async function ContactUs() {
 
   return (
 
-    <div className="flex flex-col h-fit border-2 rounded-[25px] lg:w-6/6 xl:w-12/12 pb-[36px] border-primary text-onBackground">
-      <div className="flex flex-col p-6">
-        <div className="flex flex-row items-baseline lg:space-x-6">
+    <div className="flex flex-col h-fit border-2 rounded-[25px] min-w-screen lg:w-[1000px] border-primary text-onBackground py-6 px-5 lg:py-5 lg:px-6">
+      <div className="flex flex-col">
+        <div className="flex flex-row lg:space-x-4 items-baseline">
           <div className="flex">
             <Link key={"Home"} href={"/"}>
               <LinkIcon className="w-[20px] font-extrabold md:block hidden" />
@@ -81,7 +82,20 @@ export default async function ContactUs() {
             </h1>
           </div>
         </div>
+        <div className="pb-4">
         <ContactForm sendEmail={sendEmail} />
+        </div>
+        <div className="flex flex-col space-y-6 lg:pt-12 pt-12 text-onBackground align-bottom">
+          <hr className="opacity-50" />
+          <div className="flex flex-row space-x-6 justify-center">
+
+            <Image src="reddit.svg" width={25} height={10} alt="x" />
+            <Image src="x.svg" width={20} height={10} alt="x" />
+            <Image src="threads.svg" width={20} height={10} alt="x" />
+
+          </div>
+          <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All right Reserved.</p>
+        </div>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
   return (
 
     <Form>
-      <div className="flex flex-col items-baseline pt-4 py-2">
+      <div className="flex flex-col items-baseline pt-4">
         <div>
           <h1 className="lg:text-lg py-4">Your email</h1>
         </div>
@@ -74,19 +74,19 @@ const InnerForm = (props: FormikProps<FormValues>) => {
       </div>
 
 
-      <div className="flex flex-col items-baseline xl:pt-4 xl:pb-12 py-16">
+      <div className="flex flex-col items-baseline lg:pt-4 py-16 lg:py-8">
 
         <div>
           <h1 className="lg:text-lg py-4">Message</h1>
         </div>
         <div>
-          <Field as='textarea' id="message" name="message" rows={10} cols={34} className="hidden md:block border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
-          <Field as='textarea' id="message" name="message" rows={10} cols={24} className="block md:hidden border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
+          <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden md:block border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
+          <Field as='textarea' id="message" name="message" rows={10} cols={25} className="block md:hidden border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
         </div>
         {values.picked === 'delete' && <div className="flex flex-row pt-6 lg:pt-8 space-x-4 lg:space-x-4 items-center">
           <Field type="checkbox" name="checked" className="rounded-full shadow w-8 h-8 text-primaryContainer" />
-          <p className='text-sm lg:text-xl'>I agree to delete my Fritilaria account and associated data.</p>
-          {errors.checked && <div className="lg:py-2 text-onPrimaryContainer text-sm lg:text-xl">{errors.checked}</div>}
+          <p className='text-sm lg:text-base'>I agree to delete my Fritilaria account and associated data.</p>
+          {errors.checked && <div className="lg:py-2 text-onPrimaryContainer text-sm lg:text-base">{errors.checked}</div>}
 
         </div>}
       </div>
