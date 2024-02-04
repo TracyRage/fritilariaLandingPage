@@ -14,16 +14,16 @@ export function Summary({
     return (
 
 
-        <div className='flex flex-col h-fit border-2 rounded-[25px] w-fit lg:w-[380px] border-primary py-6'>
+        <div className='flex flex-col h-fit border-2 rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary py-6'>
 
 
-                <div className="flex flex-col px-6">
+                <div className="flex flex-col px-5 lg:px-6">
 
                     <div className="flex space-x-4 flex-row">
 
                         <div>
                             <Link href={"/"}>
-                            <h1 className={`${sourceSerif.className} text-2xl text-onBackground lg:text-3xl pb-6`}>
+                            <h1 className={`${sourceSerif.className} text-onBackground text-xl md:text-3xl pb-6`}>
                                 {title}
                             </h1>
                             </Link>
@@ -38,7 +38,7 @@ export function Summary({
 
                     </div>
 
-                    <div className="flex md:justify-center lg:pt-6 lg:pb-6 md:pe-6">
+                    <div className="flex md:justify-center lg:pt-6 lg:pb-6 lg:px-6 md:pe-6">
                         <div className="w-[174px] h-[183px] hidden md:block">
                             <Link href={'/'}>
                             <RenderDensityGraph pathname='./animation/logo/fritilaria_logo_dark.json' loop={true} />
@@ -52,13 +52,13 @@ export function Summary({
                 </div>
 
 
-                <div className="flex px-6 pb-2 text-left md:pt-4">
+                <div className="flex px-5 lg:px-6 pb-2 text-left md:pt-4">
                     <h1 className={' text-onBackground text-pretty md:tracking-wide tracking-tight'}>
                         <span className="text-fritilariaGreen">Skidetic statistical models </span> for value investing.
                     </h1>
                 </div>
 
-                <div className="flex px-6 pb-8 text-left md:pb-4">
+                <div className="flex px-5 lg:px-6 pb-8 text-left md:pb-4">
                     <h1 className={'text-onBackground md:tracking-wide tracking-tight text-pretty'}>
                         Transform your subjective opinion into statistically accurate <span className="text-fritilariaGreen">fundamental analysis</span>.
 

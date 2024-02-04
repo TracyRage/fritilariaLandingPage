@@ -25,9 +25,9 @@ export default function Guide() {
     ])
 
     const [probabilityButtons, setProbabilityButtons] = useState([
-        { id: "unlikely_low", label: "Low", state: false, icon: <ArrowTrendingDownIcon className="w-1/4 lg:w-[32px]" /> },
+        { id: "unlikely_low", label: "Low", state: false, icon: <ArrowTrendingDownIcon className="w-1/4 sm:w-[24px] lg:w-[32px]" /> },
         { id: "fair", label: "Fair value", state: true },
-        { id: "unlikely_high", label: 'High', state: false, icon: <ArrowTrendingUpIcon className="w-1/4 lg:w-[32px]" /> },
+        { id: "unlikely_high", label: 'High', state: false, icon: <ArrowTrendingUpIcon className="w-1/4 sm:w-[24px] lg:w-[32px]" /> },
     ])
 
     const [pathName, setPathName] = useState(financialParams[0].iconPath);
@@ -181,11 +181,11 @@ export default function Guide() {
 
         <div className="text-onBackground">
 
-            <div className={`${sourceSerif.className} text-lg md:text-3xl md:pt-14 py-4 ps-2`}>
+            <div className={`${sourceSerif.className} text-lg md:text-3xl md:py-8 py-2 lg:px-2`}>
                 <span className="text-fritilariaGreen">Skidetics</span> + <span className="text-primary">Fritilaria</span> = statistically sound fundamental analysis
             </div>
 
-            <div className="px-6 pt-4 text-sm tracking-wide lg:leading-relaxed">
+            <div className="lg:px-8 px-5 pt-4 text-sm tracking-wide lg:leading-relaxed">
                 <ul className="list-decimal">
                     <div className="flex flex-col pb-8 space-y-4">
                         <li className="lg:text-base">Select a company. Let&apos;s choose something historical.</li>
@@ -273,7 +273,7 @@ export default function Guide() {
                                 <button type="submit" onClick={() => {
                                     handleProbabilityButton(button.id);
 
-                                }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] h-[36px] rounded-xl items-center text-sm justify-center',
+                                }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] sm:w-[120px] h-[36px] rounded-xl items-center text-sm justify-center',
                                     {
                                         'bg-background text-onBackground border-2 border-fritilariaGreen': button.state === false && button.id == 'fair',
                                         'bg-fritilariaGreen text-background': button.state === true && button.id === 'fair',

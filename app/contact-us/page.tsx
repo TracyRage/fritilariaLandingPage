@@ -68,12 +68,12 @@ export default async function ContactUs() {
 
   return (
 
-    <div className="flex flex-col h-fit border-2 rounded-[25px] min-w-screen lg:w-[1000px] border-primary text-onBackground py-6 px-5 lg:py-4 lg:px-6">
+    <div className="flex flex-col h-fit border-2 rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground py-5 px-5 lg:py-5 lg:px-8">
       <div className="flex flex-col">
         <div className="flex flex-row lg:space-x-4 items-baseline">
           <div className="flex">
             <Link key={"Home"} href={"/"}>
-              <LinkIcon className="w-[20px] font-extrabold md:block hidden" />
+              <LinkIcon className="w-[20px] font-extrabold lg:block hidden" />
             </Link>
           </div>
           <div className="flex">

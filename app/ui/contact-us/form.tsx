@@ -52,7 +52,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
 
 
-            <div className="flex xl:flex-row xl:space-x-4 flex-col xl:space-y-0 space-y-4 h-[38px]">
+            <div className="flex xl:flex-row xl:space-x-4 flex-col  xl:space-y-0 space-y-4 h-[38px]">
               <div className="flex flex-row space-x-2 items-center">
                 <Field className="h-[24px] w-[24px] text-primaryContainer" type="radio" name="picked" value={"technical"} />
                 <label className="flex lg:text-md">Technical</label>
@@ -74,14 +74,13 @@ const InnerForm = (props: FormikProps<FormValues>) => {
       </div>
 
 
-      <div className="flex flex-col items-baseline lg:pt-4 py-16 lg:py-8">
+      <div className="flex flex-col items-baseline py-16 xl:py-4">
 
         <div>
           <h1 className="lg:text-lg py-4">Message</h1>
-        </div>
         <div>
-          <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden md:block border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
-          <Field as='textarea' id="message" name="message" rows={10} cols={25} className="block md:hidden border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
+          <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden sm:block border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
+          <Field as='textarea' id="message" name="message" rows={10} cols={25} className="block sm:hidden border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2" />
         </div>
         {values.picked === 'delete' && <div className="flex flex-row pt-6 lg:pt-8 space-x-4 lg:space-x-4 items-center">
           <Field type="checkbox" name="checked" className="rounded-full shadow w-8 h-8 text-primaryContainer" />
@@ -90,8 +89,9 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
         </div>}
       </div>
+      </div>
 
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col xl:pt-4 justify-center">
 
         <button type="submit" disabled={isSubmitting} className="flex w-[220px] h-[38px] bg-onPrimaryContainer text-primaryContainer border-onPrimary active:bg-fritilariaGreen active:text-onPrimary hover:bg-primary hover:text-onPrimary border-3 rounded-xl items-center justify-center">
           Submit

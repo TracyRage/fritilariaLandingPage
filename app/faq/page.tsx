@@ -11,22 +11,22 @@ export default function FAQ() {
     const LinkIcon = ArrowLeftIcon;
     return (
  
-          <div className="flex flex-col h-fit border-2 rounded-[25px] min-w-screen lg:w-[1000px] border-primary text-onBackground py-5 px-5 lg:py-4 lg:px-6">
+          <div className="flex flex-col h-fit border-2 rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground py-5 px-5 lg:py-5 lg:px-8">
       <div className="flex flex-col">
       <div className="flex flex-row lg:space-x-4 items-baseline">
           <div className="flex">
             <Link key={"Home"} href={"/"}>
-              <LinkIcon className="w-[20px] font-extrabold md:block hidden" />
+              <LinkIcon className="w-[20px] font-extrabold lg:block hidden" />
             </Link>
           </div>
           <div className="flex">
-            <h1 className={`${sourceSerif.className} text-xl md:text-3xl md:tracking-tight`}>
+            <h1 className={`${sourceSerif.className} text-xl md:text-3xl md:tracking-tight pb-6`}>
               FAQ
             </h1>
           </div>
         </div>
 
-        <div className="lg:pt-6 pt-4">
+        <div className="">
 
         <RenderFAQListItem name="What's Skidetica?" content="Skidetica /σχέδιο/ represents the process of converting subjective opinions into Bayesian statistical models." />
         <RenderFAQListItem name="What's Fritilaria?" content="Fritilaria represents the first implementation of skidetics in realm if value investing and by extension finance." />

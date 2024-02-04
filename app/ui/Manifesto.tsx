@@ -3,7 +3,7 @@ import { sourceSerif } from "./fonts"
 
 export default function Manifesto() {
     return (
-        <div className="hidden md:block text-onBackground">
+        <div className="hidden lg:block text-onBackground">
             <div>
                 <h1 className={`${sourceSerif.className} text-xl px-2 lg:text-3xl pb-4`}>
                     Skidetic /σχέδιο/ manifesto
