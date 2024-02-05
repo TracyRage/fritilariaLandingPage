@@ -55,7 +55,7 @@ export default function FAQ() {
             <Image src="threads.svg" width={20} height={10} alt="x" />
 
           </div>
-          <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All right Reserved.</p>
+          <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
         </div>
 
 

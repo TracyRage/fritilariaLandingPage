@@ -23,7 +23,7 @@ export function Summary({
 
                         <div>
                             <Link href={"/"}>
-                            <h1 className={`${sourceSerif.className} text-onBackground text-xl md:text-3xl pb-6`}>
+                            <h1 className={`${sourceSerif.className} text-onBackground text-2xl md:text-3xl pb-6`}>
                                 {title}
                             </h1>
                             </Link>

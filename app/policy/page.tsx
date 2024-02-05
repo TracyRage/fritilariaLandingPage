@@ -7,7 +7,7 @@ import Image from "next/image";
 
 
 
-export default function Terms() {
+export default function Privacy() {
   const LinkIcon = ArrowLeftIcon;
   return (
 
@@ -21,7 +21,7 @@ export default function Terms() {
           </div>
           <div className="flex">
             <h1 className={`${sourceSerif.className} text-xl md:text-3xl pb-6`}>
-              Terms & Conditions
+              Privacy policy
             </h1>
           </div>
         </div>
@@ -31,8 +31,6 @@ export default function Terms() {
         <RenderTermsListItem name="Intellectual Property" content="All content, trademarks, and intellectual property within the app are the property of Aremti Statistica. Users may not reproduce, distribute, or create derivative works without explicit permission." />
         <RenderTermsListItem name="Limitation of Liability" content="Aremti Statistica is not liable for any direct, indirect, incidental, consequential, or special damages arising out of or in any way connected with the use of the app." />
         <RenderTermsListItem name="Acceptance of Terms" content="By using Fritilaria, you agree to comply with and be bound by these terms and conditions. If you do not agree, please refrain from using the app." />
-
-        <p className="pt-6 pb-8 text-balance">By using Fritilaria, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you have any questions, please contact Aremti Statistica <Link className="text-primary" href={"/contact-us"}> aremti@company.com</Link>.</p>
 
         <div className="flex flex-col lg:pt-12 pt-6 space-y-6 text-onBackground align-bottom">
           <hr className="opacity-50" />

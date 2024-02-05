@@ -7,7 +7,7 @@ const links = [
     { name: 'Terms & Conditions', href: '/terms' },
     { name: 'Privacy policy', href: '/privacy' },
     { name: 'FAQ', href: '/faq' },
-    { name: 'Company', href: '/about-company' },
+    { name: 'About us', href: '/company' },
     { name: 'Contact us', href: '/contact-us' },
 ];
 
