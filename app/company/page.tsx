@@ -25,22 +25,22 @@ export default function Comapny() {
                     </div>
                 </div>
 
-                <div className="pb-4 lg:leading-relaxed lg:tracking-wide text-pretty">
+                <div className="lg:leading-relaxed lg:tracking-wide text-pretty indent-8">
                     <p>Aremti Statistica was founded in 2024 by a group of natural science researchers with a burning passion for statistics. </p>
                 </div>
 
-                <div className="lg:pb-12 pb-8 lg:leading-relaxed lg:tracking-wide text-pretty">
-                    <p>Our main goal is simple. We try to help retail investors to decypher stock markets. We analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </p>
+                <div className="lg:pb-6 pb-6 lg:leading-relaxed lg:tracking-wide text-pretty indent-8">
+                    <p>Our main goal is simple. We try to help retail investors to decypher stock markets. We <span className="text-primary font-semibold">track markets</span> and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </p>
                 </div>
 
 
-                <div className="flex lg:pb-14 pb-8 lg:text-xl font-semibold leading-relaxed tracking-tight text-pretty justify-center">
+                <div className="flex lg:pb-14 pb-8 lg:text-xl font-semibold leading-relaxed tracking-tight text-pretty justify-left ps-8">
                     <p>Markets that we track</p>
                 </div>
 
                 <div className="hidden md:block">
 
-                <div className="flex flex-col space-y-20">
+                <div className="flex flex-col space-y-20 tracking-tight">
 
                     <div className="flex flex-row justify-around items-end">
                         <div className="flex flex-col justify-center space-y-8">
@@ -89,7 +89,7 @@ export default function Comapny() {
 
                 <div className="block md:hidden">
 
-                <div className="flex flex-col space-y-10">
+                <div className="flex flex-col space-y-10 tracking-tight">
 
                     <div className="flex flex-row justify-around items-end">
                         <div className="flex flex-col justify-center space-y-4">
@@ -138,7 +138,7 @@ export default function Comapny() {
 
 
 
-                <div className="flex lg:pt-24 pt-8 lg:text-xl text-base text-center leading-relaxed tracking-tight text-pretty justify-center">
+                <div className="flex lg:pt-16 pt-8 lg:text-xl text-base font-semibold text-center leading-relaxed tracking-tight text-pretty justify-left ps-8">
                     <p>Foresake your doubts, employ statistics. <span className="text-primary">Fritilaria</span>.</p>
                 </div>
 

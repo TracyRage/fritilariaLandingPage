@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="25.335409mm"
-   height="43.752213mm"
-   viewBox="0 0 25.335409 43.752213"
+   width="25.188332mm"
+   height="44.928368mm"
+   viewBox="0 0 25.188332 44.928368"
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.73406285"
-     inkscape:cx="107.62021"
-     inkscape:cy="163.47374"
+     inkscape:cx="113.75048"
+     inkscape:cy="213.87814"
      inkscape:window-width="1920"
      inkscape:window-height="1019"
      inkscape:window-x="0"
@@ -33,35 +33,82 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs1" />
+     id="defs1">
+    <filter
+       id="filter0_d_209_6"
+       x="0.900002"
+       y="0.89990199"
+       width="95.199997"
+       height="169.808"
+       filterUnits="userSpaceOnUse"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix"
+         id="feFlood3" />
+      <feColorMatrix
+         in="SourceAlpha"
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+         result="hardAlpha"
+         id="feColorMatrix3" />
+      <feOffset
+         dy="5"
+         id="feOffset3" />
+      <feComposite
+         in2="hardAlpha"
+         operator="out"
+         id="feComposite3" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0.490196 0 0 0 0 0.160784 0 0 0 0 0.231373 0 0 0 1 0"
+         id="feColorMatrix4" />
+      <feBlend
+         mode="normal"
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_209_6"
+         id="feBlend4" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="effect1_dropShadow_209_6"
+         result="shape"
+         id="feBlend5" />
+    </filter>
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-76.31787,-105.22672)">
-    <path
-       d="m 88.539272,139.48282 0.751682,1.03346 -0.610712,1.83224 -1.456504,-0.98663 -0.986605,0.70485 0.04696,1.73831 -2.020196,-0.84561 -0.563801,-1.40943 0.610791,-1.83251 1.597395,0.37598 0.469821,-1.26842 z"
-       fill="#ffb2bc"
-       stroke="#000000"
-       stroke-width="0.2"
-       stroke-linecap="round"
-       stroke-linejoin="round"
-       id="path1" />
-    <path
-       d="m 100.09685,130.46209 0.28186,2.39609 1.17457,1.50336 -0.28189,2.11429 -2.537034,1.40943 -4.322339,0.18786 -2.067216,3.47662 -2.208133,-1.17448 -1.127575,-2.25505 -4.040452,0.65776 -2.396067,1.40943 -2.91293,0.0939 3.476678,2.20821 0.375894,5.12101 -1.174565,1.26842 -1.691402,-1.17449 -0.422778,-2.72494 -1.926325,-0.84561 -1.879283,-2.06719 2.020253,-0.9398 0.516784,-1.92617 1.832319,-1.55046 0.939641,-2.06719 4.557236,-0.8927 2.959894,0.61092 v -5.35606 l 2.396093,1.45645 2.11418,-3.00686 0.798724,-1.17454 -0.469821,-3.66461 -2.396119,-3.3827 -0.09395,-1.87928 2.255176,-0.5638 3.852492,4.1814 1.315535,2.39609 -0.61079,3.05385 z"
-       fill="#ffb2bc"
-       stroke="#000000"
-       stroke-width="0.2"
-       stroke-linecap="round"
-       stroke-linejoin="round"
-       id="path2" />
-    <path
-       d="m 94.505918,109.41414 2.114179,0.61076 0.845714,-1.22153 2.818919,3.33574 -3.006879,0.7987 -0.187933,2.95986 -5.120984,-2.02022 0.751681,3.24175 -2.678006,0.047 -2.208134,-2.95986 -0.281887,-2.30214 2.443057,-0.14095 -2.067216,-4.13442 -0.845661,-2.30212 4.933129,3.10081 z"
-       fill="#ffb2bc"
-       stroke="#000000"
-       stroke-width="0.2"
-       stroke-linecap="round"
-       stroke-linejoin="round"
-       id="path3" />
+     transform="translate(-75.115209,-92.048516)">
+    <g
+       filter="url(#filter0_d_209_6)"
+       id="g3"
+       transform="matrix(0.26458333,0,0,0.26458333,74.877083,91.810417)">
+      <path
+         d="m 46.8132,130.094 2.841,3.906 -2.3082,6.925 -5.5049,-3.729 -3.7289,2.664 0.1775,6.57 -7.6354,-3.196 -2.1309,-5.327 2.3085,-6.926 6.0374,1.421 1.7757,-4.794 z"
+         fill="#ffb2bc"
+         stroke="#000000"
+         stroke-width="0.2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path1" />
+      <path
+         d="m 90.4954,95.9999 1.0653,9.0561 4.4393,5.682 -1.0654,7.991 -9.5888,5.327 -16.3364,0.71 -7.8131,13.14 -8.3457,-4.439 -4.2617,-8.523 -15.271,2.486 -9.056,5.327 -11.0095,0.355 13.1402,8.346 1.4207,19.355 -4.4393,4.794 -6.3927,-4.439 L 15.3834,150.869 8.1028,147.673 1,139.86 l 7.6356,-3.552 1.9532,-7.28 6.9253,-5.86 3.5514,-7.813 17.2242,-3.374 11.187,2.309 V 94.0466 l 9.0561,5.5047 7.9906,-11.3645 3.0188,-4.4392 -1.7757,-13.8505 -9.0562,-12.785 -0.3551,-7.1028 8.5235,-2.1309 14.5606,15.8037 4.9721,9.0561 -2.3085,11.5421 z"
+         fill="#ffb2bc"
+         stroke="#000000"
+         stroke-width="0.2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path2" />
+      <path
+         d="m 69.3643,16.4486 7.9906,2.3084 3.1964,-4.6168 10.6542,12.6075 -11.3646,3.0187 -0.7103,11.1869 -19.3549,-7.6355 2.841,12.2523 L 52.4951,45.7477 44.1494,34.5608 43.084,25.8598 52.3176,25.3271 44.5045,9.70095 41.3083,1 59.9532,12.7196 Z"
+         fill="#ffb2bc"
+         stroke="#000000"
+         stroke-width="0.2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path3" />
+    </g>
   </g>
 </svg>

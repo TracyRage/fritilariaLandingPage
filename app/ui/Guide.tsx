@@ -289,7 +289,7 @@ export default function Guide() {
                             ))}
 
                         </div>
-                        <div className="container w-4/4 bg-onBackground text-background text-md px-4 py-3 rounded-xl">
+                        <div className="container w-4/4 bg-onBackground text-background text-base px-4 py-3 rounded-xl">
                             <div className="flex text-center justify-center font-semibold tracking-wide">
 
                                 {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
