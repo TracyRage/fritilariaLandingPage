@@ -10,9 +10,9 @@ export default function MacroTable() {
 
     return (
         <div
-  className="flex flex-col shadow-md rounded-xl">
+  className="flex flex-col shadow-md  rounded-xl">
   <table className="text-left">
-    <caption className="pb-2 text-sm cattion-top">
+    <caption className="pb-2 text-sm caption-top">
 
       <span className="font-bold leading-4">Table 1</span>. Macroeconomic and company specific parameters included in the Fritilaria predifined models (not the extended list)
 

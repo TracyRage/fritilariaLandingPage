@@ -6,11 +6,11 @@ import Image from "next/image";
 
 
 
-export default function Comapny() {
+export default function Company() {
     const LinkIcon = ArrowLeftIcon;
     return (
 
-        <div className="flex flex-col h-fit border-2 rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground py-5 px-5 lg:py-5 lg:px-8">
+        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground py-5 px-5 lg:py-5 lg:px-8 lg:shadow-2xl lg:shadow-primary shadow-md shadow-primary">
             <div className="flex flex-col">
                 <div className="flex flex-row lg:space-x-4 items-baseline">
                     <div className="flex">
@@ -34,7 +34,7 @@ export default function Comapny() {
                 </div>
 
 
-                <div className="flex lg:pb-14 pb-8 lg:text-xl font-semibold leading-relaxed tracking-tight text-pretty justify-left ps-8">
+                <div className={`${sourceSerif.className} flex lg:pb-14 pb-8 lg:text-2xl leading-relaxed tracking-tight text-pretty justify-center ps-8`}>
                     <p>Markets that we track</p>
                 </div>
 
@@ -45,41 +45,41 @@ export default function Comapny() {
                     <div className="flex flex-row justify-around items-end">
                         <div className="flex flex-col justify-center space-y-8">
                             <Image src="europe.svg" alt={""} width={150} height={150} />
-                            <h1 className="text-xl text-center">Europe</h1>
+                            <h1 className={`${sourceSerif.className} text-xl text-center`}>Europe</h1>
                         </div>
                         <div className="flex flex-col justify-center space-y-8">
                             <Image src="japan.svg" alt={""} width={100} height={100} />
-                            <h1 className="text-xl text-center">Japan</h1>
+                            <h1 className={`${sourceSerif.className} text-xl text-center`}>Japan</h1>
                         </div>
                         <div className="flex flex-col justify-center space-y-8">
                             <Image src="india.svg" alt={""} width={150} height={150} />
-                            <h1 className="text-xl text-center">India</h1>
+                            <h1 className={`${sourceSerif.className} text-xl text-center`}>India</h1>
                         </div>
                     </div>
 
                     <div className="flex flex-row justify-around items-end">
                         <div className="flex flex-col justify-center space-y-8">
                             <Image src="australia.svg" alt={""} width={150} height={150} />
-                            <h1 className="text-xl text-center">Australia</h1>
+                            <h1 className={`${sourceSerif.className} text-xl text-center`}>Australia</h1>
                         </div>
                         <div className="flex flex-col justify-center space-y-8">
                             <Image src="nigeria.svg" alt={""} width={150} height={150} />
-                            <h1 className="text-xl text-center">Nigeria</h1>
+                            <h1 className={`${sourceSerif.className} text-xl text-center`}>Nigeria</h1>
                         </div>
                         <div className="flex flex-col justify-center space-y-8">
                             <Image src="brazil.svg" alt={""} width={150} height={150} />
-                            <h1 className="text-xl text-center">Brazil</h1>
+                            <h1 className={`${sourceSerif.className} text-xl text-center`}>Brazil</h1>
                         </div>
                     </div>
 
                     <div className="flex flex-row justify-around items-end">
                         <div className="flex flex-col justify-center space-y-8">
                             <Image src="canada.svg" alt={""} width={200} height={200} />
-                            <h1 className="text-xl text-center">Canada</h1>
+                            <h1 className={`${sourceSerif.className} text-xl text-center`}>Canada</h1>
                         </div>
                         <div className="flex flex-col justify-center space-y-8">
                             <Image src="us.svg" alt={""} width={200} height={200} />
-                            <h1 className="text-xl text-center">US</h1>
+                            <h1 className={`${sourceSerif.className} text-xl text-center`}>US</h1>
                         </div>
                     </div>
 
@@ -138,7 +138,7 @@ export default function Comapny() {
 
 
 
-                <div className="flex lg:pt-16 pt-8 lg:text-xl text-base font-semibold text-center leading-relaxed tracking-tight text-pretty justify-left ps-8">
+                <div className={`${sourceSerif.className} flex lg:pt-16 pt-8 lg:text-xl text-base leading-relaxed tracking-tight text-pretty justify-center ps-8`}>
                     <p>Foresake your doubts, employ statistics. <span className="text-primary">Fritilaria</span>.</p>
                 </div>
 

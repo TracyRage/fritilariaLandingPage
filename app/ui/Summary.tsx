@@ -14,7 +14,7 @@ export function Summary({
     return (
 
 
-        <div className='flex flex-col h-fit border-2 rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary py-6'>
+        <div className='flex flex-col h-fit rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary py-6 shadow-md lg:shadow-primary lg:shadow-2xl shadow-primary'>
 
 
                 <div className="flex flex-col px-5 lg:px-6">

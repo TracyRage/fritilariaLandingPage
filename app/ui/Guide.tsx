@@ -182,15 +182,19 @@ export default function Guide() {
         <div className="text-onBackground">
 
             <div className={`${sourceSerif.className} text-lg md:text-3xl md:py-8 py-2 lg:px-2`}>
-                <span className="text-fritilariaGreen">Skidetics</span> + <span className="text-primary">Fritilaria</span> = statistically sound fundamental analysis
+               <p> <span className="text-fritilariaGreen">Skidetics</span> + <span className="text-primary">Fritilaria</span> crash course </p>
             </div>
 
-            <div className="lg:px-8 px-5 pt-4 text-sm tracking-wide lg:leading-relaxed">
+            <div className="lg:px-8 px-5 pt-4 lg:pt-0 text-sm tracking-wide lg:leading-relaxed">
                 <ul className="list-decimal">
                     <div className="flex flex-col pb-8 space-y-4">
                         <li className="lg:text-base">Select a company. Let&apos;s choose something historical.</li>
-                        <div className="flex justify-center py-2">
-                            <h1 className="text-base tracking-wide underline underline-offset-8 decoration-1 decoration-onBackground lg:text-2xl">Société des Moulins du Bazacle</h1>
+
+                        <div className="flex justify-center pt-2">
+                        <div className="flex w-fit bg-background text-onBackground shadow-inner shadow-primary text-base px-4 py-3 rounded-xl justify-center">
+                            <h1 className="text-base tracking-wide lg:text-base">Société des Moulins du Bazacle</h1>
+                        </div>
+
                         </div>
                     </div>
                     <li className="pb-6 lg:text-base">Select the growth magnitude (%) and pattern for the next 5 years. This is the moment when you translate your subjective opinion into a model</li>
@@ -204,8 +208,8 @@ export default function Guide() {
 
                                     }} key={button.id} className={clsx('flex w-3/6 h-[36px] rounded-xl items-center justify-center',
                                         {
-                                            'bg-background text-onBackground border-2 border-onBackground': button.state === false,
-                                            'bg-primary text-onPrimary': button.state === true
+                                            'bg-background text-onBackground shadow-md shadow-primary': button.state === false,
+                                            'bg-background text-onBackground shadow-inner shadow-fritilariaGreen': button.state === true
                                         })}>
                                         {button.label}
                                     </button>
@@ -225,8 +229,8 @@ export default function Guide() {
                                         handlePatternButton(button.id);
                                     }} key={button.id} className={clsx('flex w-3/6 h-[36px] rounded-xl items-center justify-center',
                                         {
-                                            'bg-background text-onBackground border-2 border-onBackground': button.state === false,
-                                            'bg-primary text-onPrimary': button.state === true
+                                            'bg-background text-onBackground shadow-md shadow-primary': button.state === false,
+                                            'bg-background text-onBackground shadow-inner shadow-fritilariaGreen': button.state === true
                                         })}>
 
                                         <Image
@@ -234,8 +238,7 @@ export default function Guide() {
                                             width={26}
                                             height={26}
                                             alt="ahaha"
-                                            className={clsx('invert', { 'invert-0': button.state === true })} />
-
+                                            className="invert" />
 
                                     </button>
                                 ))}
@@ -246,10 +249,11 @@ export default function Guide() {
                     </div>
                     <li className="pt-6 pb-8 lg:text-base">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs. This is the moment when you validate your opinion.</li>
                     <div className="flex pb-4 justify-center">
-                        <div>
-                            <h1 className="text-3xl lg:text-4xl tracking-wide underline text-primary underline-offset-8 decoration-1 decoration-onBackground">{revenue}M</h1>
+                        <div className="flex justify-center pt-2">
+                        <div className="flex w-fit bg-background text-onBackground shadow-inner shadow-primary text-base px-4 py-3 rounded-xl justify-center">
+                            <h1 className="text-base tracking-wide lg:text-3xl">100M</h1>
                         </div>
-                        <div>
+
                         </div>
                     </div>
                     <li className="pt-8 pb-12 lg:text-base">Finally, estimate the fundamental value of the selected company. If median value is lower than the current market price, then the company is undervalued.</li>
@@ -273,12 +277,12 @@ export default function Guide() {
                                 <button type="submit" onClick={() => {
                                     handleProbabilityButton(button.id);
 
-                                }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] sm:w-[120px] h-[36px] rounded-xl items-center text-sm justify-center',
+                                }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] sm:w-[120px] h-[36px] rounded-xl items-center text-md justify-center',
                                     {
-                                        'bg-background text-onBackground border-2 border-fritilariaGreen': button.state === false && button.id == 'fair',
-                                        'bg-fritilariaGreen text-background': button.state === true && button.id === 'fair',
-                                        'bg-primary text-onPrimary': button.state === true && button.id !== 'fair',
-                                        'bg-background text-onBackground border-2 border-onBackground border-dashed': button.state === false && button.id !== 'fair'
+                                        'bg-background text-onBackground shadow-inner shadow-fritilariaGreen': button.state === false && button.id === 'fair',
+                                        'bg-background text-onBackground shadow-md shadow-fritilariaGreen': button.state === true && button.id === 'fair',
+                                        'bg-background text-onBackground shadow-inner shadow-primary': button.state === false && button.id !== 'fair',
+                                        'bg-background text-onBackground shadow-md shadow-primary': button.state === true && button.id !== 'fair'
                                     })}>
                                     <div className="flex flex-row justify-center">
 
@@ -289,8 +293,8 @@ export default function Guide() {
                             ))}
 
                         </div>
-                        <div className="container w-4/4 bg-onBackground text-background text-base px-4 py-3 rounded-xl">
-                            <div className="flex text-center justify-center font-semibold tracking-wide">
+                        <div className="container w-4/4 bg-background text-onBackground shadow-inner shadow-fritilariaGreen text-base px-4 py-3 rounded-xl">
+                            <div className="flex text-center justify-center tracking-wide font-semibold">
 
                                 {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
                                 {probabilityType === 'ci5' && (<p>There&apos;s 5% that fair value is less than {probabilityValue} (€).</p>)}

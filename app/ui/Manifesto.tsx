@@ -6,7 +6,7 @@ export default function Manifesto() {
         <div className="hidden lg:block text-onBackground">
             <div>
                 <h1 className={`${sourceSerif.className} text-xl px-2 lg:text-3xl pb-4`}>
-                    Skidetic /σχέδιο/ manifesto
+                    <p>Skidetic <span className="tracking-wide">/σχέδιο/</span> manifesto</p>
                 </h1>
             </div>
             <div className="px-6 pt-2 lg:text-base lg:leading-relaxed">
