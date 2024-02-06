@@ -22,7 +22,7 @@ export default async function ContactUs() {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const ticket = getTicketNumber(1, 1e7);
     const timestamp = generateTimastamp();
- 
+
 
 
     if (type == 'delete') {
@@ -47,7 +47,7 @@ export default async function ContactUs() {
       });
 
 
-    } else if(type == "feedback") {
+    } else if (type == "feedback") {
 
       const { data } = await resend.emails.send({
         from: 'noreply@fritilaria.com',
@@ -83,7 +83,7 @@ export default async function ContactUs() {
           </div>
         </div>
         <div className="pb-4">
-        <ContactForm sendEmail={sendEmail} />
+          <ContactForm sendEmail={sendEmail} />
         </div>
         <div className="flex flex-col space-y-6 lg:pt-12 pt-12 text-onBackground align-bottom">
           <hr className="opacity-50" />
@@ -92,12 +92,13 @@ export default async function ContactUs() {
             <Image src="reddit.svg" width={25} height={10} alt="x" />
             <Image src="x.svg" width={20} height={10} alt="x" />
             <Image src="threads.svg" width={20} height={10} alt="x" />
+            <Image src="discord.svg" width={25} height={10} alt="x" />
 
 
           </div>
           <div className="flex flex-col space-y-2">
-          <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
-          <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
+            <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
+            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
           </div>
         </div>
       </div>

@@ -197,7 +197,7 @@ export default function Guide() {
 
                         </div>
                     </div>
-                    <li className="pb-6 lg:text-base">Select the growth magnitude (%) and pattern for the next 5 years. This is the moment when you translate your subjective opinion into a model</li>
+                    <li className="pb-6 lg:text-base">Select the growth magnitude (%) and pattern for the next 5 years. This is the moment when you translate your subjective opinion into a model.</li>
                     <div className="flex justify-center lg:pt-6 md:pe-6">
                         <div className="flex flex-col pb-6 space-y-10">
                             <div className="flex flex-row space-x-4">
@@ -258,7 +258,7 @@ export default function Guide() {
                     </div>
                     <li className="pt-8 pb-12 lg:text-base">Finally, estimate the fundamental value of the selected company. If median value is lower than the current market price, then the company is undervalued.</li>
                     <div className="flex justify-center">
-                        <div className="block md:hidden space-y-4">
+                        <div className="block lg:hidden space-y-4">
                             <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>
@@ -310,7 +310,7 @@ export default function Guide() {
                                 width={160}
                                 height={120}
                                 alt="Fritilaria"
-                                className="hidden md:block"
+                                className="hidden md:block "
                             />
 
                             <Image
@@ -336,8 +336,12 @@ export default function Guide() {
                             <Image src="reddit.svg" width={25} height={10} alt="x" />
                             <Image src="x.svg" width={20} height={10} alt="x" />
                             <Image src="threads.svg" width={20} height={10} alt="x" />
+                            <Image src="discord.svg" width={25} height={10} alt="x" />
                         </div>
-                        <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
+                         <div className="flex flex-col space-y-2">
+            <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
+            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
+          </div>
 
                     </div>
 

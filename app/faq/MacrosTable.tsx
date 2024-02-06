@@ -10,7 +10,7 @@ export default function MacroTable() {
 
     return (
         <div
-  className="flex flex-col shadow-md  rounded-xl">
+  className="flex flex-col shadow-2xl  rounded-xl">
   <table className="text-left">
     <caption className="pb-2 text-sm caption-top">
 

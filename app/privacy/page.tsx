@@ -39,9 +39,13 @@ export default function Privacy() {
             <Image src="reddit.svg" width={25} height={10} alt="x" />
             <Image src="x.svg" width={20} height={10} alt="x" />
             <Image src="threads.svg" width={20} height={10} alt="x" />
+            <Image src="discord.svg" width={25} height={10} alt="x" />
 
           </div>
-          <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
+           <div className="flex flex-col space-y-2">
+            <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
+            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
+          </div>
         </div>
 
       </div>
