@@ -306,7 +306,7 @@ export default function Guide() {
                         <div className="flex flex-col pt-4 space-y-6 text-lg justify-center items-center">
                             <h1 className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</h1>
                             <Image
-                                src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
+                                src="google.svg"
                                 width={160}
                                 height={120}
                                 alt="Fritilaria"
@@ -314,7 +314,7 @@ export default function Guide() {
                             />
 
                             <Image
-                                src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
+                                src="google.svg"
                                 width={130}
                                 height={90}
                                 alt="Fritilaria"

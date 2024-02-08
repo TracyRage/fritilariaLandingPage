@@ -93,7 +93,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
       <div className="flex flex-col xl:pt-4 justify-center">
 
-        <button type="submit" disabled={isSubmitting} className="flex w-[220px] h-[38px] bg-onPrimaryContainer text-primaryContainer border-onPrimary active:bg-fritilariaGreen active:text-onPrimary hover:bg-primary hover:text-onPrimary border-3 rounded-xl items-center justify-center">
+        <button type="submit" disabled={isSubmitting} className="flex w-[220px] h-[38px] active:bg-background active:text-onBackground active:shadow-fritilariaGreen active:shadow-inner shadow-fritilariaGreen shadow-md  rounded-xl items-center justify-center">
           Submit
         </button>
         {<Toaster toastOptions={{

@@ -71,7 +71,7 @@ export function Summary({
 
                     <div className="flex justify-center">
                         <Image
-                            src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
+                            src="google.svg"
                             width={130}
                             height={90}
                             alt="Fritilaria"
@@ -81,7 +81,7 @@ export function Summary({
 
                     <div className="flex items-center pb-8 md:justify-center lg:justify-center justify-left md:px-8 md:py-8">
                         <Image
-                            src="https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/google-play-badge.svg"
+                            src="google.svg"
                             width={160}
                             height={120}
                             alt="Fritilaria"
