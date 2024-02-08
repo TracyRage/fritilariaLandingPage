@@ -325,6 +325,7 @@ export default function Guide() {
                             <p>Check the  <Link className="text-primary font-bold" href={"/faq"}><span> FAQ</span>
                             </Link>.</p>
                             </div>
+                            <div></div>
                         </div>
                     </div>
                     </div>
