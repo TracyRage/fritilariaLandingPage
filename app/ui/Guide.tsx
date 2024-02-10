@@ -277,7 +277,7 @@ export default function Guide() {
                     </div>
                     <li className="pt-6 pb-4 lg:text-base">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs.</li>
                     <div className="pb-8 lg:text-base space-y-1 hidden lg:block">
-                        <p><span className="text-primary">Example</span>: I think company revenue in year five won't exceed {revenue}M.</p> 
+                        <p><span className="text-primary">Example</span>: I think company revenue in year five won&apos;t exceed {revenue}M.</p> 
                         <p><span className="text-primary">Context</span>: This is the moment when you validate your opinion.</p>
 
                         </div>
