@@ -13,8 +13,8 @@ export default function Guide() {
 
 
     const [buttons, setButtons] = useState([
-        { id: "low", label: "Low", state: true },
-        { id: "moderate", label: "Medium", state: false },
+        { id: "low", label: "Low", state: false },
+        { id: "moderate", label: "Medium", state: true },
         { id: "high", label: 'High', state: false }
     ])
 
@@ -30,7 +30,7 @@ export default function Guide() {
         { id: "unlikely_high", label: 'High', state: false, icon: <ArrowTrendingUpIcon className="w-1/4 sm:w-[24px] lg:w-[32px]" /> },
     ])
 
-    const [pathName, setPathName] = useState(financialParams[0].iconPath);
+    const [pathName, setPathName] = useState(financialParams[0].path);
     const [revenue, setRevenue] = useState(financialParams[0].revenue);
     const [median, setMedian] = useState(financialParams[0].median);
     const [ci5, setCI5] = useState(financialParams[0].median);
@@ -106,62 +106,84 @@ export default function Guide() {
             case "low":
                 switch (activeButtonId2) {
                     case "arrowUp":
-                        setPathName(financialParams[0].iconPath);
+                        setPathName(financialParams[0].path);
                         setRevenue(financialParams[0].revenue);
                         setMedian(financialParams[0].median);
                         setCI5(financialParams[0].quantile5);
                         setCI95(financialParams[0].quantile95);
                         break;
                     case "up":
-                        setPathName(financialParams[1].iconPath);
+                        setPathName(financialParams[1].path);
                         setRevenue(financialParams[1].revenue);
                         setMedian(financialParams[1].median);
                         setCI5(financialParams[1].quantile5);
                         setCI95(financialParams[1].quantile95);
                         break;
                     case "down":
-                        setPathName(financialParams[2].iconPath);
+                        setPathName(financialParams[2].path);
                         setRevenue(financialParams[2].revenue);
                         setMedian(financialParams[2].median);
                         setCI5(financialParams[2].quantile5);
                         setCI95(financialParams[2].quantile95);
                         break;
+                };
+                break
+
+            case "moderate":
+                switch (activeButtonId2) {
+                    case "arrowUp":
+                        setPathName(financialParams[3].path);
+                        setRevenue(financialParams[3].revenue);
+                        setMedian(financialParams[3].median);
+                        setCI5(financialParams[3].quantile5);
+                        setCI95(financialParams[3].quantile95);
+                        break;
+                    case "up":
+                        setPathName(financialParams[4].path);
+                        setRevenue(financialParams[4].revenue);
+                        setMedian(financialParams[4].median);
+                        setCI5(financialParams[4].quantile5);
+                        setCI95(financialParams[4].quantile95);
+                        break;
+                    case "down":
+                        setPathName(financialParams[5].path);
+                        setRevenue(financialParams[5].revenue);
+                        setMedian(financialParams[5].median);
+                        setCI5(financialParams[5].quantile5);
+                        setCI95(financialParams[5].quantile95);
+                        break;
+                };
+                break;
+
+            case "high":
+                switch (activeButtonId2) {
+                    case "arrowUp":
+                        setPathName(financialParams[6].path);
+                        setRevenue(financialParams[6].revenue);
+                        setMedian(financialParams[6].median);
+                        setCI5(financialParams[6].quantile5);
+                        setCI95(financialParams[6].quantile95);
+                        break;
+                    case "up":
+                        setPathName(financialParams[7].path);
+                        setRevenue(financialParams[7].revenue);
+                        setMedian(financialParams[7].median);
+                        setCI5(financialParams[7].quantile5);
+                        setCI95(financialParams[7].quantile95);
+                        break;
+                    case "down":
+                        setPathName(financialParams[8].path);
+                        setRevenue(financialParams[8].revenue);
+                        setMedian(financialParams[8].median);
+                        setCI5(financialParams[8].quantile5);
+                        setCI95(financialParams[8].quantile95);
+                        break;
                 }
+                break;
 
-            //  case "moderate":
-            //      switch (activeButtonId2) {
-            //          case "arrowUp":
-            //             setPathName(financialParams[3].iconPath);
-            //             setRevenue(financialParams[3].revenue);
-            //             setMedian(financialParams[3].median);
-            //          case "up":
-            //             setPathName(financialParams[4].iconPath);
-            //             setRevenue(financialParams[4].revenue);
-            //             setMedian(financialParams[4].median);
-            //          case "down":
-            //             setPathName(financialParams[5].iconPath);
-            //             setRevenue(financialParams[5].revenue);
-            //             setMedian(financialParams[5].median);
-            //      }
+            default:
+                break;
 
-            //  case "high":
-            //      switch (activeButtonId2) {
-            //          case "arrowUp":
-            //             setPathName(financialParams[6].iconPath);
-            //             setRevenue(financialParams[6].revenue);
-            //             setMedian(financialParams[6].median);
-            //          case "up":
-            //             setPathName(financialParams[7].iconPath);
-            //             setRevenue(financialParams[7].revenue);
-            //             setMedian(financialParams[7].median);
-            //          case "down":
-            //             setPathName(financialParams[8].iconPath);
-            //             setRevenue(financialParams[8].revenue);
-            //             setMedian(financialParams[8].median);
-            //      }
-
-            //  default:
-            //      return "";
 
         }
 
@@ -171,6 +193,7 @@ export default function Guide() {
 
     useEffect(() => {
         handlePathname();
+        console.log(pathName);
         handleProbabilityValue();
     }
 
@@ -182,7 +205,7 @@ export default function Guide() {
         <div className="text-onBackground">
 
             <div className={`${sourceSerif.className} text-lg md:text-3xl md:py-8 py-2 lg:px-2`}>
-               <p> <span className="text-fritilariaGreen">Skidetics</span> + <span className="text-primary">Fritilaria</span> crash course </p>
+                <p> <span className="text-fritilariaGreen">Skidetics</span> + <span className="text-primary">Fritilaria</span> crash course </p>
             </div>
 
             <div className="lg:px-8 px-5 pt-4 lg:pt-0 text-sm tracking-wide lg:leading-relaxed">
@@ -191,20 +214,25 @@ export default function Guide() {
                         <li className="lg:text-base">Select a company. Let&apos;s choose something historical.</li>
 
                         <div className="flex justify-center pt-2">
-                        <div className="flex w-fit bg-background text-onBackground shadow-inner shadow-primary text-base px-4 py-3 rounded-xl justify-center">
-                            <h1 className="text-base tracking-wide lg:text-base">Société des Moulins du Bazacle</h1>
-                        </div>
+                            <div className="flex w-fit bg-background text-onBackground shadow-inner shadow-primary text-base px-4 py-3 rounded-xl justify-center">
+                                <h1 className="text-base tracking-wide lg:text-base">Société des Moulins du Bazacle</h1>
+                            </div>
 
                         </div>
                     </div>
-                    <li className="pb-6 lg:text-base">Select the growth magnitude (%) and pattern for the next 5 years. This is the moment when you translate your subjective opinion into a model.</li>
+                    <li className="pb-6 lg:pb-4 lg:text-base">Select the growth magnitude (%) and pattern for the next 5 years.</li>
+                    <div className="pb-4 lg:text-base space-y-1 hidden lg:block">
+                        <p><span className="text-primary">Example</span>: I think company revenues will grow up to 20% until year three and after that revenues will gradually decrease.</p> 
+                        <p><span className="text-primary">Context</span>: This is the moment when you translate your subjective opinion into a model.</p>
+
+                        </div>
                     <div className="flex justify-center lg:pt-6 md:pe-6">
                         <div className="flex flex-col pb-6 space-y-10">
                             <div className="flex flex-row space-x-4">
 
                                 {buttons.map((button) => (
                                     <button type="submit" onClick={() => {
-                                        handleGrowthButton(button.id)
+                                        handleGrowthButton(button.id);
 
                                     }} key={button.id} className={clsx('flex w-3/6 h-[36px] rounded-xl items-center justify-center',
                                         {
@@ -247,16 +275,25 @@ export default function Guide() {
 
                         </div>
                     </div>
-                    <li className="pt-6 pb-8 lg:text-base">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs. This is the moment when you validate your opinion.</li>
+                    <li className="pt-6 pb-4 lg:text-base">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs.</li>
+                    <div className="pb-8 lg:text-base space-y-1 hidden lg:block">
+                        <p><span className="text-primary">Example</span>: I think company revenue in year five won't exceed {revenue}M.</p> 
+                        <p><span className="text-primary">Context</span>: This is the moment when you validate your opinion.</p>
+
+                        </div>
                     <div className="flex pb-4 justify-center">
                         <div className="flex justify-center pt-2">
-                        <div className="flex w-fit bg-background text-onBackground shadow-inner shadow-primary text-base px-4 py-3 rounded-xl justify-center">
-                            <h1 className="text-base tracking-wide lg:text-3xl">100M</h1>
-                        </div>
+                            <div className="flex w-fit bg-background text-onBackground shadow-inner shadow-primary text-base px-4 py-3 rounded-xl justify-center">
+                                <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M</h1>
+                            </div>
 
                         </div>
                     </div>
-                    <li className="pt-8 pb-12 lg:text-base">Finally, estimate the fundamental value of the selected company. If median value is lower than the current market price, then the company is undervalued.</li>
+                    <li className="pt-8 pb-8 lg:pb-4  lg:text-base">Finally, estimate the fundamental value of the selected company. If median value is lower than the current market price, then the company is undervalued.</li>
+                    <div className="pb-12 lg:text-base space-y-1 hidden lg:block">
+                        <p><span className="text-primary">Context</span>: This is the moment when your opinion becomes probability distribution.</p>
+
+                        </div>
                     <div className="flex justify-center">
                         <div className="block lg:hidden space-y-4">
                             <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
@@ -266,68 +303,67 @@ export default function Guide() {
                             <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>
-                        <div>
+                        <div> 
                         </div>
                     </div>
                     <div className="flex justify-center">
-                    <div className="flex flex-col pt-8 space-y-8">
-                        <div className="flex flex-row space-x-4">
+                        <div className="flex flex-col pt-8 space-y-8">
+                            <div className="flex flex-row space-x-4">
 
-                            {probabilityButtons.map((button) => (
-                                <button type="submit" onClick={() => {
-                                    handleProbabilityButton(button.id);
+                                {probabilityButtons.map((button) => (
+                                    <button type="submit" onClick={() => {
+                                        handleProbabilityButton(button.id);
 
-                                }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] sm:w-[120px] h-[36px] rounded-xl items-center text-md justify-center',
-                                    {
-                                        'bg-background text-onBackground shadow-inner shadow-fritilariaGreen': button.state === false && button.id === 'fair',
-                                        'bg-background text-onBackground shadow-md shadow-fritilariaGreen': button.state === true && button.id === 'fair',
-                                        'bg-background text-onBackground shadow-inner shadow-primary': button.state === false && button.id !== 'fair',
-                                        'bg-background text-onBackground shadow-md shadow-primary': button.state === true && button.id !== 'fair'
-                                    })}>
-                                    <div className="flex flex-row justify-center">
+                                    }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] sm:w-[120px] h-[36px] rounded-xl items-center text-md justify-center',
+                                        {
+                                            'bg-background text-onBackground shadow-inner shadow-fritilariaGreen': button.state === false && button.id === 'fair',
+                                            'bg-background text-onBackground shadow-md shadow-fritilariaGreen': button.state === true && button.id === 'fair',
+                                            'bg-background text-onBackground shadow-inner shadow-primary': button.state === false && button.id !== 'fair',
+                                            'bg-background text-onBackground shadow-md shadow-primary': button.state === true && button.id !== 'fair'
+                                        })}>
+                                        <div className="flex flex-row justify-center">
 
-                                        {button.id == 'fair' ? button.label : button.icon}
+                                            {button.id == 'fair' ? button.label : button.icon}
 
-                                    </div>
-                                </button>
-                            ))}
-
-                        </div>
-                        <div className="container w-4/4 bg-background text-onBackground shadow-inner shadow-fritilariaGreen text-base px-4 py-3 rounded-xl">
-                            <div className="flex text-center justify-center tracking-wide font-semibold">
-
-                                {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
-                                {probabilityType === 'ci5' && (<p>There&apos;s 5% that fair value is less than {probabilityValue} (€).</p>)}
-                                {probabilityType === 'ci95' && (<p>There&apos;s 5% that fair value is more than {probabilityValue} (€).</p>)}
+                                        </div>
+                                    </button>
+                                ))}
 
                             </div>
+                            <div className="container w-4/4 bg-background text-onBackground shadow-inner shadow-fritilariaGreen px-4 py-3 rounded-xl">
+                                <div className="flex text-center justify-center tracking-wide font-semibold">
 
-                        </div>
-                        <div className="flex flex-col pt-4 space-y-6 text-lg justify-center items-center">
-                            <h1 className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</h1>
-                            <Image
-                                src="google.svg"
-                                width={160}
-                                height={120}
-                                alt="Fritilaria"
-                                className="hidden md:block "
-                            />
+                                    {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
+                                    {probabilityType === 'ci5' && (<p>There&apos;s 5% that fair value is less than {probabilityValue} (€).</p>)}
+                                    {probabilityType === 'ci95' && (<p>There&apos;s 5% that fair value is more than {probabilityValue} (€).</p>)}
 
-                            <Image
-                                src="google.svg"
-                                width={130}
-                                height={90}
-                                alt="Fritilaria"
-                                className="block md:hidden"
-                            />
-                            <div className="flex flex-col justify-center leading-7 text-center text-sm">
-                            <p>Do you have any other questions?</p>
-                            <p>Check the  <Link className="text-primary font-bold" href={"/faq"}><span> FAQ</span>
-                            </Link>.</p>
+                                </div>
+
                             </div>
-                            <div></div>
+                            <div className="flex flex-col pt-4 space-y-6 text-lg justify-center items-center">
+                                <h1 className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</h1>
+                                <Image
+                                    src="google.svg"
+                                    width={160}
+                                    height={120}
+                                    alt="Fritilaria"
+                                    className="hidden md:block "
+                                />
+
+                                <Image
+                                    src="google.svg"
+                                    width={130}
+                                    height={90}
+                                    alt="Fritilaria"
+                                    className="block md:hidden"
+                                />
+                                <div className="flex flex-col justify-center leading-7 text-center text-sm">
+                                    <p>Do you have any other questions?</p>
+                                    <p>Check the  <Link className="text-primary font-bold" href={"/faq"}><span> FAQ</span>
+                                    </Link>.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                     </div>
 
                     <div className="flex flex-col pt-12 space-y-6 text-onBackground">
@@ -339,10 +375,10 @@ export default function Guide() {
                             <Image src="threads.svg" width={20} height={10} alt="x" />
                             <Image src="discord.svg" width={25} height={10} alt="x" />
                         </div>
-                         <div className="flex flex-col space-y-2">
-            <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
-            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
-          </div>
+                        <div className="flex flex-col space-y-2">
+                            <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
+                            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
+                        </div>
 
                     </div>
 

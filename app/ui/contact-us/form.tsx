@@ -28,7 +28,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           <h1 className="lg:text-lg py-4">Your email</h1>
         </div>
         <Field type="email" name="email"
-          className="flex lg:w-[270px] h-[38px] border-onBackground border-2 bg-onBackground text-background rounded-md font-medium tracking-wider px-2 shadow-sm shadow-primary" />
+          className="flex lg:w-[270px] h-[38px] border-onBackground border-2 bg-onBackground text-background rounded-md font-medium tracking-wider px-2 shadow-inner" />
         {touched.email && errors.email && <div className="py-2 font text-onPrimaryContainer">{errors.email}</div>}
       </div>
 
@@ -39,7 +39,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
             <h1 className="lg:text-lg py-4">Subject</h1>
           </div>
           <Field id="subject" name="subject"
-            className="flex lg:w-[270px] h-[38px] border-primar bg-onBackground text-background rounded-md font-medium tracking-wider px-2 shadow-sm shadow-primary" />
+            className="flex lg:w-[270px] h-[38px] border-primar bg-onBackground text-background rounded-md font-medium tracking-wider px-2 shadow-inner" />
           {touched.subject && errors.subject && <div className="py-2 text-onPrimaryContainer">{errors.subject}</div>}
 
         </div>
@@ -79,8 +79,8 @@ const InnerForm = (props: FormikProps<FormValues>) => {
         <div>
           <h1 className="lg:text-lg py-4">Message</h1>
         <div>
-          <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden sm:block border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2 shadow-md shadow-primary" />
-          <Field as='textarea' id="message" name="message" rows={10} cols={25} className="block sm:hidden border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2 shadow-md shadow-primary" />
+          <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden sm:block border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2 shadow-inner " />
+          <Field as='textarea' id="message" name="message" rows={10} cols={25} className="block sm:hidden border-primary bg-onBackground rounded-md font-medium text-background tracking-wider p-2 shadow-inner" />
         </div>
         {values.picked === 'delete' && <div className="flex flex-row pt-6 lg:pt-8 space-x-4 lg:space-x-4 items-center">
           <Field type="checkbox" name="checked" className="rounded-full shadow w-8 h-8 text-primaryContainer" />

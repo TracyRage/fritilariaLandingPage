@@ -9,6 +9,9 @@ const config: Config = {
   theme: {
     colors: {
       background: '#201a1b',
+      elevated: '#282022',
+      elevated2: '#3D3033',
+      elevated3: '#32272A',
       onBackground: '#ece0e0',
       primary: '#ffb2bc',
       primaryContainer: '#7d293b',

@@ -34,7 +34,7 @@ export default function Company() {
                 </div>
 
 
-                <div className={`${sourceSerif.className} flex lg:pb-14 pb-8 lg:text-2xl leading-relaxed tracking-tight text-pretty justify-center ps-8`}>
+                <div className={`${sourceSerif.className} flex lg:pb-14 pb-8 lg:text-2xl leading-relaxed tracking-tight text-pretty justify-left ps-8`}>
                     <p>Markets we track</p>
                 </div>
 
@@ -138,7 +138,7 @@ export default function Company() {
 
 
 
-                <div className={`${sourceSerif.className} flex lg:pt-16 pt-8 lg:text-xl text-base leading-relaxed tracking-tight text-pretty justify-center ps-8`}>
+                <div className={`${sourceSerif.className} flex lg:pt-16 pt-8 lg:text-xl text-base leading-relaxed tracking-tight text-pretty justify-left ps-8`}>
                     <p>Foresake your doubts, employ statistics. <span className="text-primary">Fritilaria</span>.</p>
                 </div>
 
