@@ -289,9 +289,10 @@ export default function Guide() {
 
                         </div>
                     </div>
-                    <li className="pt-8 pb-8 lg:pb-4  lg:text-base">Finally, estimate the fundamental value of the selected company. If median value is lower than the current market price, then the company is undervalued.</li>
+                    <li className="pt-8 pb-8 lg:pb-4  lg:text-base">Finally, estimate the fundamental value of the selected company.</li>
                     <div className="pb-12 lg:text-base space-y-1 hidden lg:block">
-                        <p><span className="text-primary">Context</span>: This is the moment when your opinion becomes probability distribution.</p>
+                        <p><span className="text-primary">Example</span>: If median value is lower than the current market price, then the company is undervalued.</p>
+                        <p><span className="text-primary">Context</span>: This is the moment when your opinion becomes a probability distribution.</p>
 
                         </div>
                     <div className="flex justify-center">
