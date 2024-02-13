@@ -80,7 +80,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           <h1 className="lg:text-lg py-4">Message</h1>
         <div>
           <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden sm:block bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner " />
-          <Field as='textarea' id="message" name="message" rows={10} cols={25} className="block sm:hidden bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner" />
+          <Field as='textarea' id="message" name="message" rows={10} cols={28} className="block sm:hidden bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner" />
         </div>
         {values.picked === 'delete' && <div className="flex flex-row pt-6 lg:pt-8 space-x-4 lg:space-x-4 items-center">
           <Field type="checkbox" name="checked" className="rounded-full shadow w-8 h-8 text-primaryContainer" />
