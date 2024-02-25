@@ -1,5 +1,9 @@
 import type { Config } from 'tailwindcss'
 
+
+const colors = require('tailwindcss/colors')
+
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -18,10 +22,14 @@ const config: Config = {
       primaryContainer: '#7d293b',
       onPrimaryContainer: '#ffd9dd',
       onPrimary: '#5f1125',
-      fritilariaGreen: '#B2FFCF'
+      fritilariaGreen: '#B2FFCF',
 
     },
     extend: {
+      colors: {
+        ...colors,
+        transparent: colors.transparent
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

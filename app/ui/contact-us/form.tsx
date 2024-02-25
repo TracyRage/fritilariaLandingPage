@@ -23,9 +23,9 @@ const InnerForm = (props: FormikProps<FormValues>) => {
   return (
 
     <Form>
-      <div className="flex flex-col items-baseline pt-4">
+      <div className="flex flex-col items-baseline lg:pt-4">
         <div>
-          <h1 className="lg:text-lg py-4">Your email</h1>
+          <h1 className="lg:text-lg py-4">Email</h1>
         </div>
         <Field type="email" name="email"
           className="flex lg:w-[270px] h-[38px] border-2 bg-elevated4 text-onBackground rounded-md font-medium tracking-wider px-2 shadow-inner" />
@@ -74,7 +74,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
       </div>
 
 
-      <div className="flex flex-col items-baseline py-16 xl:py-4">
+      <div className="flex flex-col items-baseline pt-16 pb-8 xl:py-4">
 
         <div>
           <h1 className="lg:text-lg py-4">Message</h1>
@@ -93,7 +93,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
       <div className="flex flex-col xl:pt-4 justify-center">
 
-        <button type="submit" disabled={isSubmitting} className="flex w-[220px] h-[38px] active:bg-background active:text-onBackground active:shadow-fritilariaGreen active:shadow-inner shadow-fritilariaGreen shadow-md  rounded-xl items-center justify-center">
+        <button type="submit" disabled={isSubmitting} className="flex w-[220px] h-[38px] bg-elevated hover:bg-elevated2 active:bg-fritilariaGreen active:text-background text-onBackground shadow-md rounded-xl items-center justify-center">
           Submit
         </button>
         {<Toaster toastOptions={{

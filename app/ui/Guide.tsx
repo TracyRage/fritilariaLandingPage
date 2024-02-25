@@ -202,10 +202,10 @@ export default function Guide() {
 
     return (
 
-        <div className="text-onBackground">
+        <div className="text-onBackground lg:container lg:bg-background lg:shadow-2xl lg:px-4 lg:py-6 lg:rounded-3xl">
 
-            <div className={`${sourceSerif.className} text-lg md:text-3xl md:py-8 py-2 lg:px-2`}>
-                <p> <span className="text-fritilariaGreen">Skidetics</span> + <span className="text-primary">Fritilaria</span> crash course </p>
+            <div className={`${sourceSerif.className} text-lg md:text-3xl pt-2 pb-4 lg:px-2`}>
+                <p>Skidetics + Fritilaria crash course </p>
             </div>
 
             <div className="lg:px-8 px-5 pt-4 lg:pt-0 text-sm tracking-wide lg:leading-relaxed">
@@ -214,87 +214,87 @@ export default function Guide() {
                         <li className="lg:text-base">Select a company. Let&apos;s choose something historical.</li>
 
                         <div className="flex justify-center pt-2">
-                            <div className="flex w-fit bg-background text-onBackground shadow-inner shadow-primary text-base px-4 py-3 rounded-xl justify-center">
-                                <h1 className="text-base tracking-wide lg:text-base">Société des Moulins du Bazacle</h1>
+                            <div className="flex w-fit  text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-3 rounded-xl justify-center">
+                                <h1 className="text-base tracking-wide lg:text-base">Société des Moulins du Bazacle <i>(est. 1070)</i></h1>
                             </div>
 
                         </div>
                     </div>
                     <li className="pb-6 lg:text-base">Select the growth magnitude (%) and pattern for the next 5 years.</li>
                     <div className="pb-6 lg:text-base space-y-1">
-                        <p><span className="text-primary">Example</span>: I think company revenues will grow up to 20% until year three and after that revenues will gradually decrease.</p> 
+                        <p><span className="text-primary">Example</span>: I think company revenues will grow up to 20% until year three and after that revenues will gradually decrease.</p>
                         <p><span className="text-primary">Context</span>: This is the moment when you translate your subjective opinion into a model.</p>
+                        <div className="flex justify-center pt-6 lg:pt-6">
+                            <div className="flex flex-col space-y-10">
+                                <div className="flex flex-row space-x-4">
 
+                                    {buttons.map((button) => (
+                                        <button type="submit" onClick={() => {
+                                            handleGrowthButton(button.id);
+
+                                        }} key={button.id} className={clsx('flex w-3/6 h-[36px] rounded-xl items-center justify-center',
+                                            {
+                                                'bg-elevated text-onBackground': button.state === false,
+                                                'bg-elevated2 text-onBackground shadow-2xl': button.state === true
+                                            })}>
+                                            {button.label}
+                                        </button>
+                                    ))}
+
+                                </div>
+                                <div className="w-[273px] min-h-[106px] block md:hidden">
+                                    <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
+                                </div>
+                                <div className="w-[340px] min-h-[106px] hidden md:block">
+                                    <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
+                                </div>
+                                <div className="flex flex-row space-x-4">
+
+                                    {patternButtons.map((button) => (
+                                        <button type="submit" onClick={() => {
+                                            handlePatternButton(button.id);
+                                        }} key={button.id} className={clsx('flex w-3/6 h-[36px] rounded-xl items-center justify-center',
+                                            {
+                                                'bg-elevated text-onBackground': button.state === false,
+                                                'bg-elevated2 text-onBackground shadow-2xl': button.state === true
+                                            })}>
+
+                                            <Image
+                                                src={button.icon}
+                                                width={26}
+                                                height={26}
+                                                alt="ahaha"
+                                                className="invert" />
+
+                                        </button>
+                                    ))}
+
+                                </div>
+
+                            </div>
                         </div>
-                    <div className="flex justify-center lg:pt-6 md:pe-6">
-                        <div className="flex flex-col pb-6 space-y-10">
-                            <div className="flex flex-row space-x-4">
 
-                                {buttons.map((button) => (
-                                    <button type="submit" onClick={() => {
-                                        handleGrowthButton(button.id);
-
-                                    }} key={button.id} className={clsx('flex w-3/6 h-[36px] rounded-xl items-center justify-center',
-                                        {
-                                            'bg-background text-onBackground shadow-md shadow-primary': button.state === false,
-                                            'bg-background text-onBackground shadow-inner shadow-fritilariaGreen': button.state === true
-                                        })}>
-                                        {button.label}
-                                    </button>
-                                ))}
-
-                            </div>
-                            <div className="w-[273px] min-h-[106px] block md:hidden">
-                                <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
-                            </div>
-                            <div className="w-[340px] min-h-[106px] hidden md:block">
-                                <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
-                            </div>
-                            <div className="flex flex-row space-x-4">
-
-                                {patternButtons.map((button) => (
-                                    <button type="submit" onClick={() => {
-                                        handlePatternButton(button.id);
-                                    }} key={button.id} className={clsx('flex w-3/6 h-[36px] rounded-xl items-center justify-center',
-                                        {
-                                            'bg-background text-onBackground shadow-md shadow-primary': button.state === false,
-                                            'bg-background text-onBackground shadow-inner shadow-fritilariaGreen': button.state === true
-                                        })}>
-
-                                        <Image
-                                            src={button.icon}
-                                            width={26}
-                                            height={26}
-                                            alt="ahaha"
-                                            className="invert" />
-
-                                    </button>
-                                ))}
-
-                            </div>
-
-                        </div>
                     </div>
                     <li className="pt-6 pb-4 lg:text-base">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs.</li>
-                    <div className="pb-6 lg:text-base space-y-1">
-                        <p><span className="text-primary">Example</span>: I think company revenue in year five won&apos;t exceed {revenue}M.</p> 
-                        <p><span className="text-primary">Context</span>: This is the moment when you validate your opinion.</p>
-
+                    <div className="flex flex-col pb-6 lg:text-base space-y-1 justify-center">
+                        <div className="flex flex-col">
+                        <p><span className="text-primary">Example</span>: I think company revenue in year five won&apos;t exceed {revenue}M.</p>
+                        <p><span className="text-primary pb-6 lg:pb-4">Context</span>: This is the moment when you validate your opinion.</p>
                         </div>
-                    <div className="flex pb-4 justify-center">
-                        <div className="flex justify-center pt-2">
-                            <div className="flex w-fit bg-background text-onBackground shadow-inner shadow-primary text-base px-4 py-3 rounded-xl justify-center">
-                                <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M</h1>
-                            </div>
-
+                        <div className="flex justify-center lg:pt-6 pt-4">
+                        <div className="flex w-2/4 justify-center text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-2 rounded-xl">
+                            <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M</h1>
                         </div>
+                        </div>
+
+
                     </div>
-                    <li className="pt-8 pb-6  lg:text-base">Finally, estimate the fundamental value of the selected company.</li>
+                    <li className="pt-4 pb-6  lg:text-base">Finally, estimate the fundamental value of the selected company.</li>
                     <div className="pb-12 lg:text-base space-y-1">
                         <p><span className="text-primary">Example</span>: If median value is lower than the current market price, then the company is undervalued.</p>
                         <p><span className="text-primary">Context</span>: This is the moment when your opinion becomes a probability distribution.</p>
 
-                        </div>
+                    </div>
                     <div className="flex justify-center">
                         <div className="block lg:hidden space-y-4">
                             <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
@@ -304,7 +304,7 @@ export default function Guide() {
                             <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>
-                        <div> 
+                        <div>
                         </div>
                     </div>
                     <div className="flex justify-center">
@@ -315,12 +315,10 @@ export default function Guide() {
                                     <button type="submit" onClick={() => {
                                         handleProbabilityButton(button.id);
 
-                                    }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] sm:w-[120px] h-[36px] rounded-xl items-center text-md justify-center',
+                                    }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] sm:w-[120px] h-[38px] rounded-xl items-center lg:text-base text-sm justify-center',
                                         {
-                                            'bg-background text-onBackground shadow-inner shadow-fritilariaGreen': button.state === false && button.id === 'fair',
-                                            'bg-background text-onBackground shadow-md shadow-fritilariaGreen': button.state === true && button.id === 'fair',
-                                            'bg-background text-onBackground shadow-inner shadow-primary': button.state === false && button.id !== 'fair',
-                                            'bg-background text-onBackground shadow-md shadow-primary': button.state === true && button.id !== 'fair'
+                                            'bg-elevated text-onBackground': button.state === false,
+                                            'bg-elevated2 text-onBackground shadow-2xl': button.state === true
                                         })}>
                                         <div className="flex flex-row justify-center">
 
@@ -331,8 +329,8 @@ export default function Guide() {
                                 ))}
 
                             </div>
-                            <div className="container w-4/4 bg-background text-onBackground shadow-inner shadow-fritilariaGreen px-4 py-3 rounded-xl">
-                                <div className="flex text-center justify-center tracking-wide font-semibold">
+                            <div className="container w-4/4  text-onBackground shadow-2xl bg-elevated  px-4 py-3 rounded-xl">
+                                <div className="flex text-center justify-center lg:text-base text-sm">
 
                                     {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
                                     {probabilityType === 'ci5' && (<p>There&apos;s 5% that fair value is less than {probabilityValue} (€).</p>)}
