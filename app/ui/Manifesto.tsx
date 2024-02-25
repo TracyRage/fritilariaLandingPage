@@ -15,7 +15,7 @@ export default function Manifesto() {
                         Have you ever tried to be a value investor and perform high-quality fundamental analyses and to suddenly find yourself lost in math?
                     </li>
                     <li className="pb-4">
-                        You've definitely tried. You've definitely gotten lost.
+                        You&apos;ve definitely tried. You&apos;ve definitely gotten lost.
                     </li>
                     <li className="pb-4">
                         The majority of retail investors have found it challenging to perform good quality fundamental analyses and usually pretend to value invest.
