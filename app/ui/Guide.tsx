@@ -7,6 +7,7 @@ import { sourceSerif } from "./fonts";
 import clsx from "clsx";
 import Image from 'next/image';
 import Link from "next/link";
+import RenderDensityGraph from "./RenderDensityGraph";
 
 
 export default function Guide() {
@@ -205,7 +206,22 @@ export default function Guide() {
         <div className="text-onBackground lg:container lg:bg-background lg:shadow-2xl lg:px-4 lg:py-6 lg:rounded-3xl">
 
             <div className={`${sourceSerif.className} text-lg md:text-3xl pt-2 pb-4 lg:px-2`}>
-                <p>Skidetics + Fritilaria crash course </p>
+                <div className="flex flex-row justify-between items-center">
+                    <div className="flex">
+                        <p>Skidetics + Fritilaria crash course </p>
+                    </div>
+                    <div className="flex">
+                    <div className="w-4 h-4 block md:hidden">
+                        <RenderDensityGraph pathname='./animation/green_dot.json' loop={true} />
+                    </div>
+                    <div className="flex">
+                    <div className="w-8 h-8 hidden md:block">
+                        <RenderDensityGraph pathname='./animation/green_dot.json' loop={true} />
+                    </div>
+                    </div>
+                    </div>
+
+                </div>
             </div>
 
             <div className="lg:px-8 px-5 pt-4 lg:pt-0 text-sm tracking-wide lg:leading-relaxed">
@@ -215,7 +231,7 @@ export default function Guide() {
 
                         <div className="flex justify-center pt-2">
                             <div className="flex w-fit  text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-3 rounded-xl justify-center">
-                                <h1 className="text-base tracking-wide lg:text-base">Société des Moulins du Bazacle <i>(est. 1070)</i></h1>
+                                <h1 className="text-sm tracking-wide lg:text-base">Société des Moulins du Bazacle <i>(est. 1070)</i></h1>
                             </div>
 
                         </div>
@@ -278,13 +294,13 @@ export default function Guide() {
                     <li className="pt-6 pb-4 lg:text-base">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs.</li>
                     <div className="flex flex-col pb-6 lg:text-base space-y-1 justify-center">
                         <div className="flex flex-col">
-                        <p><span className="text-primary">Example</span>: I think company revenue in year five won&apos;t exceed {revenue}M.</p>
-                        <p><span className="text-primary pb-6 lg:pb-4">Context</span>: This is the moment when you validate your opinion.</p>
+                            <p><span className="text-primary">Example</span>: I think company revenue in year five won&apos;t exceed {revenue}M.</p>
+                            <p><span className="text-primary pb-6 lg:pb-4">Context</span>: This is the moment when you validate your opinion.</p>
                         </div>
                         <div className="flex justify-center lg:pt-6 pt-4">
-                        <div className="flex w-2/4 justify-center text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-2 rounded-xl">
-                            <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M</h1>
-                        </div>
+                            <div className="flex w-2/4 justify-center text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-2 rounded-xl">
+                                <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M</h1>
+                            </div>
                         </div>
 
 

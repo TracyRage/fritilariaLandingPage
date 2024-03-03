@@ -23,7 +23,7 @@ export default function RootLayout({
             <Summary title='Fritilaria' />
             <div>{children}</div>
             <div className='hidden lg:block'>
-            <div className='flex flex-col w-[45px] h-fit shadow-2xl shadow-primary pt-2'>
+            <div className='flex flex-col w-[45px] h-fit space-y-2 shadow-2xl pt-2'>
               <Image alt={''} width={45} height={20} src={"fritilaria_white.svg"}/>
               <Image alt={''} width={45} height={20} src={"fritilaria_pink.svg"}/>
               <Image alt={''} width={45} height={20} src={"fritilaria_red.svg"}/>
