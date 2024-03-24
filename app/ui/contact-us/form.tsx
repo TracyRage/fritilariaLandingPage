@@ -83,7 +83,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           <Field as='textarea' id="message" name="message" rows={10} cols={28} className="block sm:hidden bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner" />
         </div>
         {values.picked === 'delete' && <div className="flex flex-row pt-6 lg:pt-8 space-x-4 lg:space-x-4 items-center">
-          <Field type="checkbox" name="checked" className="rounded-full shadow w-8 h-8 text-primaryContainer" />
+          <Field type="checkbox" name="checked" className="rounded-full shadow w-6 h-6 text-primaryContainer" />
           <p className='text-sm lg:text-base'>I agree to delete my Fritilaria account and associated data.</p>
           {errors.checked && <div className="lg:py-2 text-onPrimaryContainer text-sm lg:text-base">{errors.checked}</div>}
 

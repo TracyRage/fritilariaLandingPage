@@ -14,7 +14,7 @@ export function Summary({
     return (
 
 
-        <div className='flex flex-col h-fit rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary py-6 shadow-md lg:shadow-primary lg:shadow-2xl shadow-primary'>
+        <div className='flex flex-col h-fit rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary py-6  shadow-2xl'>
 
 
                 <div className="flex flex-col px-5 lg:px-6">
@@ -53,14 +53,14 @@ export function Summary({
 
 
                 <div className="flex px-5 lg:px-6 pb-2 text-left md:pt-4">
-                    <h1 className={' text-onBackground text-pretty md:tracking-wide tracking-tight'}>
-                        <span className="text-fritilariaGreen">Skidetic statistical models </span> for value investing.
+                    <h1 className={' text-onBackground text-pretty tracking-wide'}>
+                        Skidetic statistical models for value investing.
                     </h1>
                 </div>
 
                 <div className="flex px-5 lg:px-6 pb-8 text-left md:pb-4">
-                    <h1 className={'text-onBackground md:tracking-wide tracking-tight text-pretty'}>
-                        Transform your subjective opinion into statistically accurate <span className="text-fritilariaGreen">fundamental analysis</span>.
+                    <h1 className={'text-onBackground tracking-wide text-pretty'}>
+                        Transform your opinion into statistically accurate <span className="text-fritilariaGreen">fundamental analysis</span>.
 
                     </h1>
                 </div>
@@ -79,7 +79,7 @@ export function Summary({
                         />
                     </div>
 
-                    <div className="flex items-center pb-8 md:justify-center lg:justify-center justify-left md:px-8 md:py-8">
+                    <div className="flex items-center pb-8 md:justify-center lg:justify-center justify-left md:px-8 md:pt-6 md:pb-8">
                         <Image
                             src="google.svg"
                             width={160}

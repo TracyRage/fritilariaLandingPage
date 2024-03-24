@@ -224,7 +224,7 @@ export default function Guide() {
                 </div>
             </div>
 
-            <div className="lg:px-8 px-5 pt-4 lg:pt-0 text-sm tracking-wide lg:leading-relaxed">
+            <div className="lg:px-8 px-5 pt-4 lg:pt-0 text-sm tracking-wide lg:leading-relaxed md:tracking-wide">
                 <ul className="list-decimal">
                     <div className="flex flex-col pb-8 space-y-4">
                         <li className="lg:text-base">Select a company. Let&apos;s choose something historical.</li>
@@ -236,10 +236,10 @@ export default function Guide() {
 
                         </div>
                     </div>
-                    <li className="pb-6 lg:text-base">Select the growth magnitude (%) and pattern for the next 5 years.</li>
-                    <div className="pb-6 lg:text-base space-y-1">
-                        <p><span className="text-primary">Example</span>: I think company revenues will grow up to 20% until year three and after that revenues will gradually decrease.</p>
-                        <p><span className="text-primary">Context</span>: This is the moment when you translate your subjective opinion into a model.</p>
+                    <li className="pb-6 lg:text-base">Select the growth pattern and magnitude (%) of the company.</li>
+                    <div className="pb-6 lg:text-base space-y-[10px]">
+                        <p><span className="text-primary">Interpretation</span>: I think, revenue growth will reach 20% in three years. Afterwards, the growth will gradually decrease.</p>
+                        <p><span className="text-primary">Context</span>: This is the moment when you translate your subjective opinion / intuition into a model.</p>
                         <div className="flex justify-center pt-6 lg:pt-6">
                             <div className="flex flex-col space-y-10">
                                 <div className="flex flex-row space-x-4">
@@ -293,21 +293,21 @@ export default function Guide() {
                     </div>
                     <li className="pt-6 pb-4 lg:text-base">Check if the expected revenue for year five (in millions) is reasonable and aligns with your beliefs.</li>
                     <div className="flex flex-col pb-6 lg:text-base space-y-1 justify-center">
-                        <div className="flex flex-col">
-                            <p><span className="text-primary">Example</span>: I think company revenue in year five won&apos;t exceed {revenue}M.</p>
+                        <div className="flex flex-col space-y-[10px]">
+                            <p><span className="text-primary">Interpretation</span>: I think, company revenues won&apos;t exceed {revenue}M€ in year five.</p>
                             <p><span className="text-primary pb-6 lg:pb-4">Context</span>: This is the moment when you validate your opinion.</p>
                         </div>
                         <div className="flex justify-center lg:pt-6 pt-4">
                             <div className="flex w-2/4 justify-center text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-2 rounded-xl">
-                                <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M</h1>
+                                <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M€</h1>
                             </div>
                         </div>
 
 
                     </div>
-                    <li className="pt-4 pb-6  lg:text-base">Finally, estimate the fundamental value of the selected company.</li>
-                    <div className="pb-12 lg:text-base space-y-1">
-                        <p><span className="text-primary">Example</span>: If median value is lower than the current market price, then the company is undervalued.</p>
+                    <li className="pt-4 pb-6  lg:text-base">Given your opinion, estimate the fair value of the selected company.</li>
+                    <div className="pb-12 lg:text-base space-y-[10px]">
+                        <p><span className="text-primary leading-relaxed ">Interpretation</span>: I think, fair value of this company is {probabilityValue}$/share. Current stock price is 500$/share. Therefore, the selected company is undervalued.</p>
                         <p><span className="text-primary">Context</span>: This is the moment when your opinion becomes a probability distribution.</p>
 
                     </div>
@@ -345,7 +345,7 @@ export default function Guide() {
                                 ))}
 
                             </div>
-                            <div className="container w-4/4  text-onBackground shadow-2xl bg-elevated  px-4 py-3 rounded-xl">
+                            <div className="container w-4/4  text-onBackground shadow-2xl bg-elevated  px-4 py-4 rounded-xl">
                                 <div className="flex text-center justify-center lg:text-base text-sm">
 
                                     {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
@@ -355,7 +355,12 @@ export default function Guide() {
                                 </div>
 
                             </div>
-                            <div className="flex flex-col pt-4 space-y-6 text-lg justify-center items-center">
+
+                            <div>
+                                <hr className="opacity-50" />
+                            </div>
+
+                            <div className="flex flex-col pt-4 space-y-6 text-lg md:text-xl justify-center items-center">
                                 <h1 className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</h1>
                                 <Image
                                     src="google.svg"
@@ -391,8 +396,8 @@ export default function Guide() {
                             <Image src="discord.svg" width={25} height={10} alt="x" />
                         </div>
                         <div className="flex flex-col space-y-2">
-                            <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
-                            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
+                            <p className="text-center text-xs text-onBackground opacity-50">Edineț, MD-4601, Republic of Moldova.</p>
+                            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Skidetica Labs. All rights Reserved.</p>
                         </div>
 
                     </div>
