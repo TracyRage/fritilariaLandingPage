@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 
 export const metadata: Metadata = {
+  /// add google code
   title: {
     default: 'Fritilaria - Skidetic fundamental analysis',
     template: '%s | Fritilaria - Skidetic fundamental analysis'},
