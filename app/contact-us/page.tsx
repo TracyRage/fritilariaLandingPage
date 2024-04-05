@@ -9,7 +9,17 @@ import getTicketNumber from "../utils/generateTicket";
 import FritilariaFeedbackEmail from "@/components/feedback-template";
 import generateTimastamp from "../utils/generateTimestamp";
 import Image from "next/image";
+import Footer from "../ui/footer";
 
+
+export const metadata = {
+    title: 'Contact us',
+    description: 'Contact us and provide some feedback',
+    keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'contact us', 'feedback', 'delete data', 'business', 'delete account'],
+    alternates: {
+        canonical: '/contact-us'
+    }
+}
 
 export default async function ContactUs() {
 
@@ -68,7 +78,7 @@ export default async function ContactUs() {
 
   return (
 
-    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-2xl">
+    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground bg-background py-5 px-5 lg:py-5 lg:px-8 shadow-xl">
       <div className="flex flex-col">
         <div className="flex flex-row lg:space-x-4 items-baseline">
           <div className="flex">
@@ -85,22 +95,7 @@ export default async function ContactUs() {
         <div className="pb-4">
           <ContactForm sendEmail={sendEmail} />
         </div>
-        <div className="flex flex-col space-y-6 lg:pt-12 pt-12 text-onBackground align-bottom">
-          <hr className="opacity-50" />
-          <div className="flex flex-row space-x-6 justify-center">
-
-            <Image src="reddit.svg" width={25} height={10} alt="x" />
-            <Image src="x.svg" width={20} height={10} alt="x" />
-            <Image src="threads.svg" width={20} height={10} alt="x" />
-            <Image src="discord.svg" width={25} height={10} alt="x" />
-
-
-          </div>
-          <div className="flex flex-col space-y-2">
-            <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
-            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
-          </div>
-        </div>
+        <Footer/>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import clsx from "clsx";
 import Image from 'next/image';
 import Link from "next/link";
 import RenderDensityGraph from "./RenderDensityGraph";
+import Footer from "./footer";
 
 
 export default function Guide() {
@@ -203,10 +204,10 @@ export default function Guide() {
 
     return (
 
-        <div className="text-onBackground lg:container lg:bg-background lg:shadow-2xl lg:px-4 lg:py-6 lg:rounded-3xl">
+        <div className="text-onBackground lg:container bg-background shadow-xl lg:px-8 lg:py-6 px-4 py-4 rounded-[25px]">
 
             <div className={`${sourceSerif.className} text-lg md:text-3xl pt-2 pb-4 lg:px-2`}>
-                <div className="flex flex-row justify-between items-center">
+                <div className="flex flex-row justify-between items-center lg:pb-4">
                     <div className="flex">
                         <p>Skidetics + Fritilaria crash course </p>
                     </div>
@@ -236,9 +237,9 @@ export default function Guide() {
 
                         </div>
                     </div>
-                    <li className="pb-6 lg:text-base">Select the growth pattern and magnitude (%) of the company.</li>
+                    <li className="pb-6 lg:text-base">Select the growth pattern and magnitude (%) of the selected company.</li>
                     <div className="pb-6 lg:text-base space-y-[10px]">
-                        <p><span className="text-primary">Interpretation</span>: I think, revenue growth will reach 20% in three years. Afterwards, the growth will gradually decrease.</p>
+                        <p><span className="text-primary">Interpretation</span>: I think, revenue growth will reach 20% in three years. After year three, the growth will gradually decrease.</p>
                         <p><span className="text-primary">Context</span>: This is the moment when you translate your subjective opinion / intuition into a model.</p>
                         <div className="flex justify-center pt-6 lg:pt-6">
                             <div className="flex flex-col space-y-10">
@@ -357,7 +358,7 @@ export default function Guide() {
                             </div>
 
                             <div>
-                                <hr className="opacity-50" />
+                                <hr className="opacity-10" />
                             </div>
 
                             <div className="flex flex-col pt-4 space-y-6 text-lg md:text-xl justify-center items-center">
@@ -386,21 +387,8 @@ export default function Guide() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col pt-12 space-y-6 text-onBackground">
-                        <hr className="opacity-50" />
-                        <div className="flex flex-row space-x-6 justify-center">
+                    <Footer/>
 
-                            <Image src="reddit.svg" width={25} height={10} alt="x" />
-                            <Image src="x.svg" width={20} height={10} alt="x" />
-                            <Image src="threads.svg" width={20} height={10} alt="x" />
-                            <Image src="discord.svg" width={25} height={10} alt="x" />
-                        </div>
-                        <div className="flex flex-col space-y-2">
-                            <p className="text-center text-xs text-onBackground opacity-50">Edineț, MD-4601, Republic of Moldova.</p>
-                            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Skidetica Labs. All rights Reserved.</p>
-                        </div>
-
-                    </div>
 
                 </ul>
             </div>

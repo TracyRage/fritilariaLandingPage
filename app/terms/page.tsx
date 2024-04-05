@@ -3,15 +3,24 @@ import RenderTermsListItem from "../ui/TermsListItem";
 import { sourceSerif } from "../ui/fonts";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Footer from "../ui/footer";
 
 
+export const metadata = {
+    title: 'Terms & Conditions',
+    description: 'Fritilaria terms and conditions',
+    keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'terms', 'conditions', 'terms & conditions'],
+    alternates: {
+        canonical: '/terms'
+    }
+}
 
 
 export default function Terms() {
   const LinkIcon = ArrowLeftIcon;
   return (
 
-    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px]  text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-2xl">
+    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] bg-background  text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-xl">
       <div className="flex flex-col">
         <div className="flex flex-row items-baseline lg:space-x-4">
           <div className="flex">
@@ -34,18 +43,7 @@ export default function Terms() {
 
         <p className="pt-6 pb-8 text-balance">By using Fritilaria, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you have any questions, please contact Aremti Statistica <Link className="text-primary" href={"/contact-us"}> aremti@company.com</Link>.</p>
 
-        <div className="flex flex-col lg:pt-12 pt-6 space-y-6 text-onBackground align-bottom">
-          <hr className="opacity-50" />
-          <div className="flex flex-row space-x-6 justify-center">
-
-            <Image src="reddit.svg" width={25} height={10} alt="x" />
-            <Image src="x.svg" width={20} height={10} alt="x" />
-            <Image src="threads.svg" width={20} height={10} alt="x" />
-            <Image src="discord.svg" width={25} height={10} alt="x" />
-
-          </div>
-          <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
-        </div>
+        <Footer/>
 
       </div>
     </div>

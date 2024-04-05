@@ -13,6 +13,7 @@ const config: Config = {
   theme: {
     colors: {
       background: '#201a1b',
+      background2: '#251A1B',
       elevated: '#282022',
       elevated2: '#3D3033',
       elevated4: '#1E1A1B',

@@ -3,6 +3,17 @@ import { sourceSerif } from "../ui/fonts";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import RenderTermsListItem, { RenderFAQListItem } from "../ui/TermsListItem";
 import Image from "next/image";
+import Footer from "../ui/footer";
+
+
+export const metadata = {
+    title: 'About us',
+    description: 'We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.',
+    keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'fundamental analysis', 'company', 'about us'],
+    alternates: {
+        canonical: '/company'
+    }
+}
 
 
 
@@ -10,7 +21,7 @@ export default function Company() {
     const LinkIcon = ArrowLeftIcon;
     return (
 
-        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-2xl">
+        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary bg-background text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-xl">
             <div className="flex flex-col">
                 <div className="flex flex-row lg:space-x-4 items-baseline">
                     <div className="flex">
@@ -27,12 +38,12 @@ export default function Company() {
 
 
                 <div className="lg:pb-6 pb-6 lg:leading-relaxed lg:tracking-wide text-pretty indent-8">
-                    <p>Our main goal is simple. We try to help retail investors to decypher stock markets. We <span className="text-primary font-semibold">track markets</span> and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </p>
+                    <p>We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </p>
                 </div>
 
 
                 <div className="flex flex-col justify-center">
-                    <div className={`${sourceSerif.className} flex lg:pb-14 pb-8 lg:text-2xl leading-relaxed tracking-tight text-pretty justify-center`}>
+                    <div className={`${sourceSerif.className} flex lg:pb-14 pb-8 lg:text-2xl leading-relaxed text-pretty justify-center`}>
                         <p>Markets we track</p>
                     </div>
 
@@ -139,28 +150,15 @@ export default function Company() {
 
 
 
-                    <div className={`${sourceSerif.className} flex lg:pt-14 pt-8 lg:text-xl text-base leading-relaxed tracking-tight text-pretty justify-center`}>
-                        <p>Foresake your doubts. <span className="text-primary">Fritilaria</span>.</p>
+                    <div className={`${sourceSerif.className} flex lg:pt-14 pt-8 lg:text-xl text-base leading-relaxed text-pretty justify-center`}>
+                        <p>Whispering certainty. <span className="text-primary">Fritilaria</span>.</p>
                     </div>
                 </div>
 
 
 
-                <div className="flex flex-col lg:pt-12 pt-6 space-y-6 text-onBackground align-bottom">
-                    <hr className="opacity-50" />
-                    <div className="flex flex-row space-x-6 justify-center">
 
-                        <Image src="reddit.svg" width={25} height={10} alt="x" />
-                        <Image src="x.svg" width={20} height={10} alt="x" />
-                        <Image src="threads.svg" width={20} height={10} alt="x" />
-                        <Image src="discord.svg" width={25} height={10} alt="x" />
-
-                    </div>
-                    <div className="flex flex-col space-y-2">
-                        <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
-                        <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
-                    </div>
-                </div>
+                <Footer/>
 
 
 

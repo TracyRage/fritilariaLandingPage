@@ -4,14 +4,25 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import MacroTable from "./MacrosTable";
 import RenderTermsListItem, { RenderFAQListItem} from "../ui/TermsListItem";
 import Image from "next/image";
+import Footer from "../ui/footer";
 
 
+export const metadata = {
+    title: 'FAQ',
+    description: 'Fritilaria most frequently asked questions',
+    keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'faq', 'question', 'algorithm', 'beta', 'cost of capital', 'models', 'statistics'],
+    alternates: {
+        canonical: '/faq'
+    }
+
+
+}
 
 export default function FAQ() {
     const LinkIcon = ArrowLeftIcon;
     return (
  
-          <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-2xl">
+          <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground bg-background py-5 px-5 lg:py-5 lg:px-8 shadow-xl">
       <div className="flex flex-col">
       <div className="flex flex-row lg:space-x-4 items-baseline">
           <div className="flex">
@@ -46,21 +57,7 @@ export default function FAQ() {
 
         </div>
 
-        <div className="flex flex-col lg:pt-12 pt-6 space-y-6 text-onBackground align-bottom">
-          <hr className="opacity-50" />
-          <div className="flex flex-row space-x-6 justify-center">
-
-            <Image src="reddit.svg" width={25} height={10} alt="x" />
-            <Image src="x.svg" width={20} height={10} alt="x" />
-            <Image src="threads.svg" width={20} height={10} alt="x" />
-            <Image src="discord.svg" width={25} height={10} alt="x" />
-
-          </div>
-           <div className="flex flex-col space-y-2">
-            <p className="text-center text-xs text-onBackground opacity-50">Moldova IT Park resident. Edineț, MD-4601, Republic of Moldova.</p>
-            <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Aremti Statistica. All rights Reserved.</p>
-          </div>
-        </div>
+      <Footer/>
 
 
 

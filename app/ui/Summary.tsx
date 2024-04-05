@@ -14,7 +14,7 @@ export function Summary({
     return (
 
 
-        <div className='flex flex-col h-fit rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary py-6  shadow-2xl'>
+        <div className='flex flex-col h-fit rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary py-6 shadow-2xl bg-background'>
 
 
                 <div className="flex flex-col px-5 lg:px-6">
@@ -29,7 +29,7 @@ export function Summary({
                             </Link>
                         </div>
 
-                        <div className="w-[30px] block md:hidden">
+                        <div className="w-[30px] block md:hidden pb-6">
                             <Link href={"/"}>
                             <RenderDensityGraph pathname='./animation/logo/fritilaria_logo_dark.json' loop={true} />
                             </Link>
@@ -52,18 +52,18 @@ export function Summary({
                 </div>
 
 
-                <div className="flex px-5 lg:px-6 pb-2 text-left md:pt-4">
+                <div className="flex px-5 lg:px-6 pb-4 text-left md:pb-4 md:pt-2">
                     <h1 className={' text-onBackground text-pretty tracking-wide'}>
-                        Skidetic statistical models for value investing.
+                        Transform your opinion into statistically accurate <span className="text-fritilariaGreen">fundamental analysis</span>.
                     </h1>
                 </div>
 
                 <div className="flex px-5 lg:px-6 pb-8 text-left md:pb-4">
                     <h1 className={'text-onBackground tracking-wide text-pretty'}>
-                        Transform your opinion into statistically accurate <span className="text-fritilariaGreen">fundamental analysis</span>.
-
+                        Skidetic statistical models for <span className="text-fritilariaGreen">value investing</span>.
                     </h1>
                 </div>
+
 
 
 

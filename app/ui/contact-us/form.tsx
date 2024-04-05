@@ -28,7 +28,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           <h1 className="lg:text-lg py-4">Email</h1>
         </div>
         <Field type="email" name="email"
-          className="flex lg:w-[270px] h-[38px] border-2 bg-elevated4 text-onBackground rounded-md font-medium tracking-wider px-2 shadow-inner" />
+          className="flex lg:w-[270px] h-[38px] border-2 bg-background text-onBackground rounded-md font-medium tracking-wider px-2 shadow-inner" />
         {touched.email && errors.email && <div className="py-2 font text-onPrimaryContainer">{errors.email}</div>}
       </div>
 

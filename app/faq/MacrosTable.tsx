@@ -10,7 +10,7 @@ export default function MacroTable() {
 
     return (
         <div
-  className="flex flex-col shadow-2xl  rounded-xl">
+  className="flex flex-col shadow-2xl rounded-xl bg-elevated px-2 pt-6 pb-4">
   <table className="text-left">
     <caption className="pb-2 text-sm caption-top">
 
@@ -130,22 +130,22 @@ export default function MacroTable() {
         </td>
       </tr>
       <tr>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-opacity-50 border-primary">
           <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].type}
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-opacity-50 border-primary">
           <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].median}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-opacity-50 border-primary">
           <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].lower}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-opacity-50 border-primary">
           <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].upper}%
             </p>
