@@ -20,7 +20,7 @@ export default function Terms() {
   const LinkIcon = ArrowLeftIcon;
   return (
 
-    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] bg-background  text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-xl">
+    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] bg-background  text-onBackground py-5 px-5 lg:py-5 lg:px-8 md:shadow-xl shadow-2xl">
       <div className="flex flex-col">
         <div className="flex flex-row items-baseline lg:space-x-4">
           <div className="flex">

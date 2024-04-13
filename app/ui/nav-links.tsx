@@ -61,3 +61,50 @@ export function NavLink2() {
     );
 }
 
+export function NavLink3() {
+
+    return (
+
+    <div className="flex justify-center space-x-4">
+
+        {
+            links.slice(0,2).map((link) => {
+                return (
+                    <Link
+                        key={link.name}
+                        href={link.href}
+                        className="sm:text-xs md:text-sm text-primary">
+                            {link.name}
+                        </Link>
+                )
+            })
+        }
+    
+    </div>
+
+    );
+}
+
+export function NavLink4() {
+
+    return (
+
+    <div className="flex justify-center space-x-4">
+
+        {
+            links.slice(2,5).map((link) => {
+                return (
+                    <Link
+                        key={link.name}
+                        href={link.href}
+                        className="sm:text-xs md:text-sm text-primary">
+                            {link.name}
+                        </Link>
+                )
+            })
+        }
+    
+    </div>
+
+    );
+}

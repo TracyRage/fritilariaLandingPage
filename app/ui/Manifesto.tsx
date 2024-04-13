@@ -3,10 +3,10 @@ import { sourceSerif } from "./fonts"
 
 export default function Manifesto() {
     return (
-        <div className="hidden lg:block text-onBackground lg:container lg:bg-background lg:shadow-xl lg:px-8 lg:py-5 px-6 py-4 lg:rounded-[25px] ">
+        <div className="hidden lg:block text-onBackground lg:container lg:bg-background  md:shadow-xl shadow-2xl lg:px-8 lg:py-5 px-6 py-4 lg:rounded-[25px] ">
             <div>
-                <h1 className={`${sourceSerif.className} text-xl px-2 lg:text-3xl pb-4`}>
-                    <p>Skidetic <span className="tracking-wide">/σχέδιο/</span> manifesto</p>
+                <h1 className={`${sourceSerif.className} text-xl px-2 lg:text-3xl pb-5`}>
+                    <p>Skidetics. What&apos;s that?</p>
                 </h1>
             </div>
             <div className="px-6 pt-2 lg:text-base lg:leading-relaxed md:tracking-wide">
