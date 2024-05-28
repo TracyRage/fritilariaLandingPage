@@ -13,6 +13,11 @@ import Footer from "./footer";
 
 export default function Guide() {
 
+    const [companyButtons, setCompanyButtons] = useState([
+        { id: "abnb", label: "ABNB", state: false },
+        { id: "msft", label: "MSFT", state: true },
+        { id: "tsla", label: 'TSLA', state: false }
+    ])
 
     const [buttons, setButtons] = useState([
         { id: "low", label: "Low", state: false },
@@ -27,9 +32,9 @@ export default function Guide() {
     ])
 
     const [probabilityButtons, setProbabilityButtons] = useState([
-        { id: "unlikely_low", label: "Low", state: false, icon: <ArrowTrendingDownIcon className="w-1/4 sm:w-[24px] lg:w-[32px]" /> },
+        { id: "unlikely_low", label: "Low", state: false, icon: <ArrowTrendingDownIcon className="w-1/4 sm:w-[24px] lg:w-[28px]" /> },
         { id: "fair", label: "Fair value", state: true },
-        { id: "unlikely_high", label: 'High', state: false, icon: <ArrowTrendingUpIcon className="w-1/4 sm:w-[24px] lg:w-[32px]" /> },
+        { id: "unlikely_high", label: 'High', state: false, icon: <ArrowTrendingUpIcon className="w-1/4 sm:w-[24px] lg:w-[28px]" /> },
     ])
 
     const [pathName, setPathName] = useState(financialParams[0].path);
@@ -55,6 +60,16 @@ export default function Guide() {
 
 
         setPatternButtons(prevButtons =>
+            prevButtons.map(button =>
+                button.id === buttonId ? { ...button, state: true } : { ...button, state: false }))
+
+
+    }
+
+    const handleCompanyButton = (buttonId: string) => {
+
+
+        setCompanyButtons(prevButtons =>
             prevButtons.map(button =>
                 button.id === buttonId ? { ...button, state: true } : { ...button, state: false }))
 
@@ -204,22 +219,12 @@ export default function Guide() {
 
     return (
 
-        <div className="text-onBackground lg:container bg-background md:shadow-xl shadow-2xl lg:px-8 lg:py-6 px-4 py-4 rounded-[25px]">
+        <div className="text-onBackground lg:container bg-background md:shadow-2xl shadow-2xl lg:px-8 xl:pt-3 xl:pb-6 px-4 py-4 rounded-[25px]">
 
             <div className={`${sourceSerif.className} text-lg md:text-3xl pt-2 pb-4 lg:px-2`}>
-                <div className="flex flex-row justify-between items-center lg:pb-4">
+                <div className="flex flex-row justify-between items-center lg:pb-4 tracking-tight">
                     <div className="flex">
-                        <p>Crash course | <span>Skidetics</span> + <span>Fritilaria</span> </p>
-                    </div>
-                    <div className="flex">
-                    <div className="w-4 h-4 block md:hidden">
-                        <RenderDensityGraph pathname='./animation/green_dot.json' loop={true} />
-                    </div>
-                    <div className="flex">
-                    <div className="w-8 h-8 hidden md:block">
-                        <RenderDensityGraph pathname='./animation/green_dot.json' loop={true} />
-                    </div>
-                    </div>
+                        <h1>Fundamental analysis | <span>Skidetics</span> + <span>Fritilaria</span> </h1>
                     </div>
 
                 </div>
@@ -227,32 +232,40 @@ export default function Guide() {
 
             <div className="lg:px-8 px-5 pt-4 lg:pt-0 text-sm tracking-wide lg:leading-relaxed md:tracking-wide">
                 <ul className="list-decimal">
-                    <div className="flex flex-col pb-8 space-y-4">
-                        <li className="lg:text-lg">Select a company. Let&apos;s choose something historical.</li>
+                    <div className="flex flex-col pb-8 space-y-6">
+                        <li className="lg:text-base">Select a company</li>
+                                <div className="flex flex-row space-x-4 justify-center">
 
-                        <div className="flex justify-center pt-2">
-                            <div className="flex w-fit  text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-3 rounded-xl justify-center">
-                                <h1 className="text-sm tracking-wide lg:text-base">Société des Moulins du Bazacle <i>(est. 1070)</i></h1>
-                            </div>
+                                    {companyButtons.map((button) => (
+                                        <button type="submit" onClick={() => {
+                                            handleCompanyButton(button.id);
 
-                        </div>
+                                        }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[32px] rounded-xl items-center justify-center',
+                                            {
+                                                'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
+                                                'bg-primaryContainer opacity-95 text-onBackground': button.state === true
+                                            })}>
+                                            {button.label}
+                                        </button>
+                                    ))}
+
+                                </div>
+
                     </div>
-                    <li className="pb-4 lg:text-lg">Use the equalizer to select the expected growth magnitude (%) and growth pattern.</li>
+                    <li className="pb-4 lg:text-base">Use the equalizer to select the expected growth rate (%) and growth pattern for the next five years</li>
                     <div className="pb-6 lg:text-base space-y-[10px]">
-                        <p><span className="text-primary">Thesis</span>: I think, revenue growth will reach 20% in three years. Afterwards, the growth will gradually decrease.</p>
-                        <p><span className="text-primary">Context</span>: This is the moment when you translate your subjective opinion / intuition into a model.</p>
                         <div className="flex justify-center pt-6 lg:pt-6">
                             <div className="flex flex-col space-y-10">
-                                <div className="flex flex-row space-x-4">
+                                <div className="flex flex-row justify-center space-x-4">
 
                                     {buttons.map((button) => (
                                         <button type="submit" onClick={() => {
                                             handleGrowthButton(button.id);
 
-                                        }} key={button.id} className={clsx('flex w-3/6 h-[36px] rounded-xl items-center justify-center',
+                                        }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[36px] rounded-xl items-center justify-center',
                                             {
-                                                'bg-elevated text-onBackground': button.state === false,
-                                                'bg-elevated2 text-onBackground shadow-2xl': button.state === true
+                                                'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
+                                                'bg-primaryContainer text-onBackground opacity-95': button.state === true
                                             })}>
                                             {button.label}
                                         </button>
@@ -265,15 +278,15 @@ export default function Guide() {
                                 <div className="w-[340px] min-h-[106px] hidden md:block">
                                     <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
                                 </div>
-                                <div className="flex flex-row space-x-4">
+                                <div className="flex flex-row justify-center space-x-4">
 
                                     {patternButtons.map((button) => (
                                         <button type="submit" onClick={() => {
                                             handlePatternButton(button.id);
-                                        }} key={button.id} className={clsx('flex w-3/6 h-[36px] rounded-xl items-center justify-center',
+                                        }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[34px] rounded-xl items-center justify-center',
                                             {
-                                                'bg-elevated text-onBackground': button.state === false,
-                                                'bg-elevated2 text-onBackground shadow-2xl': button.state === true
+                                                'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
+                                                'bg-primaryContainer text-onBackground opacity-95': button.state === true
                                             })}>
 
                                             <Image
@@ -292,13 +305,11 @@ export default function Guide() {
                         </div>
 
                     </div>
-                    <li className="pt-6 pb-4 lg:text-lg">Check if the expected revenue is reasonable and aligns with your beliefs.</li>
+                    <li className="pt-6 pb-4 lg:text-base">Check if the expected year five revenue is reasonable and aligns with your beliefs</li>
                     <div className="flex flex-col pb-6 lg:text-base space-y-1 justify-center">
                         <div className="flex flex-col space-y-[10px]">
-                            <p><span className="text-primary">Thesis</span>: I think, company revenues won&apos;t exceed {revenue}M€ in year five.</p>
-                            <p><span className="text-primary pb-6 lg:pb-4">Context</span>: This is the moment when you validate your opinion.</p>
                         </div>
-                        <div className="flex justify-center lg:pt-6 pt-4">
+                        <div className="flex justify-center lg:pt-4 pt-4">
                             <div className="flex w-2/4 justify-center text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-2 rounded-xl">
                                 <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M€</h1>
                             </div>
@@ -306,19 +317,17 @@ export default function Guide() {
 
 
                     </div>
-                    <li className="pt-4 pb-4  lg:text-lg">Given your opinion, estimate the fair value of the selected company.</li>
+                    <li className="pt-4 pb-4  lg:text-base">Estimate the fair value of the selected company</li>
                     <div className="pb-12 lg:text-base space-y-[10px]">
-                        <p><span className="text-primary leading-relaxed ">Thesis</span>: Current stock price is 500$/share. I think, the fair value of this company is {probabilityValue}$/share. Therefore, the selected company is undervalued.</p>
-                        <p><span className="text-primary">Context</span>: This is the moment when your opinion becomes a probability distribution.</p>
 
                     </div>
                     <div className="flex justify-center">
                         <div className="block lg:hidden space-y-4">
-                            <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
+                            <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={false} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>
                         <div className="space-y-4 hidden lg:block w-[340px]">
-                            <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={true} />
+                            <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={false} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>
                         <div>
@@ -326,16 +335,16 @@ export default function Guide() {
                     </div>
                     <div className="flex justify-center">
                         <div className="flex flex-col pt-8 space-y-8">
-                            <div className="flex flex-row space-x-4">
+                            <div className="flex flex-row justify-center space-x-4">
 
                                 {probabilityButtons.map((button) => (
                                     <button type="submit" onClick={() => {
                                         handleProbabilityButton(button.id);
 
-                                    }} key={button.id} className={clsx('flex w-2/6 lg:w-[126px] sm:w-[120px] h-[38px] rounded-xl items-center lg:text-base text-sm justify-center',
+                                    }} key={button.id} className={clsx('flex md:w-[120px] w-[80px] h-[32px] rounded-xl items-center lg:text-base text-sm justify-center',
                                         {
-                                            'bg-elevated text-onBackground': button.state === false,
-                                            'bg-elevated2 text-onBackground shadow-2xl': button.state === true
+                                                'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
+                                                'bg-primaryContainer text-onBackground opacity-95': button.state === true
                                         })}>
                                         <div className="flex flex-row justify-center">
 
@@ -349,9 +358,9 @@ export default function Guide() {
                             <div className="container w-4/4  text-onBackground shadow-2xl bg-elevated  px-4 py-4 rounded-xl">
                                 <div className="flex text-center justify-center lg:text-base text-sm">
 
-                                    {probabilityType === 'median' && (<p>Fair value is {probabilityValue} (€).</p>)}
-                                    {probabilityType === 'ci5' && (<p>There&apos;s 5% that fair value is less than {probabilityValue} (€).</p>)}
-                                    {probabilityType === 'ci95' && (<p>There&apos;s 5% that fair value is more than {probabilityValue} (€).</p>)}
+                                    {probabilityType === 'median' && (<p> SMB fair value is {probabilityValue} (€).</p>)}
+                                    {probabilityType === 'ci5' && (<p>There&apos;s 5% probability that SMB <br/> fair value is less than {probabilityValue} (€).</p>)}
+                                    {probabilityType === 'ci95' && (<p>There&apos;s 5% probability that SMB <br/> fair value is more than {probabilityValue} (€).</p>)}
 
                                 </div>
 

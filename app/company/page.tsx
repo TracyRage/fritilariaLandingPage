@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { sourceSerif } from "../ui/fonts";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import RenderTermsListItem, { RenderFAQListItem } from "../ui/TermsListItem";
 import Image from "next/image";
 import Footer from "../ui/footer";
 
@@ -21,7 +20,7 @@ export default function Company() {
     const LinkIcon = ArrowLeftIcon;
     return (
 
-        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary bg-background text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-2xl md:shadow-xl">
+        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] border-primary bg-background text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-2xl md:shadow-xl">
             <div className="flex flex-col">
                 <div className="flex flex-row lg:space-x-4 items-baseline">
                     <div className="flex">
@@ -30,14 +29,14 @@ export default function Company() {
                         </Link>
                     </div>
                     <div className="flex">
-                        <h1 className={`${sourceSerif.className} text-xl md:text-3xl md:tracking-tight pb-6`}>
+                        <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-6`}>
                             About us
                         </h1>
                     </div>
                 </div>
 
 
-                <div className="lg:pb-6 pb-6 lg:leading-relaxed lg:tracking-wide text-pretty indent-8">
+                <div className="lg:pb-12 pb-6 lg:leading-relaxed lg:tracking-wide text-justify indent-8">
                     <p>We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </p>
                 </div>
 

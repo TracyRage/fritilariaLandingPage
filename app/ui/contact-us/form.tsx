@@ -2,9 +2,6 @@
 import { withFormik, FormikProps, FormikErrors, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import toast, { Toaster } from 'react-hot-toast';
-import getTicketNumber from '@/app/utils/generateTicket';
-import FritilariaUserFarewellEmail from '@/components/farewell-template';
-import { ReactNode } from 'react';
 
 
 interface FormValues {
@@ -58,10 +55,6 @@ const InnerForm = (props: FormikProps<FormValues>) => {
                 <label className="flex lg:text-md">Technical</label>
               </div>
               <div className="flex flex-row space-x-2 items-center">
-                <Field className="h-[24px] w-[24px] text-primaryContainer" type="radio" name="picked" value={"delete"} />
-                <label className="flex lg:text-md">Delete account</label>
-              </div>
-              <div className="flex flex-row space-x-2 items-center">
                 <Field className="h-[24px] w-[24px] text-primaryContainer" type="radio" name="picked" value={"business"} />
                 <label className="flex lg:text-md">Business</label>
               </div>
@@ -82,12 +75,6 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden sm:block bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner " />
           <Field as='textarea' id="message" name="message" rows={10} cols={28} className="block sm:hidden bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner" />
         </div>
-        {values.picked === 'delete' && <div className="flex flex-row pt-6 lg:pt-8 space-x-4 lg:space-x-4 items-center">
-          <Field type="checkbox" name="checked" className="rounded-full shadow w-6 h-6 text-primaryContainer" />
-          <p className='text-sm lg:text-base'>I agree to delete my Fritilaria account and associated data.</p>
-          {errors.checked && <div className="lg:py-2 text-onPrimaryContainer text-sm lg:text-base">{errors.checked}</div>}
-
-        </div>}
       </div>
       </div>
 

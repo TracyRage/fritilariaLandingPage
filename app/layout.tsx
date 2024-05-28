@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { roboto } from '@/app/ui/fonts';
 import { onest } from '@/app/ui/fonts';
 import './globals.css';
 import { Summary } from './ui/Summary';

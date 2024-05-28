@@ -34,7 +34,6 @@ export default async function ContactUs() {
     const timestamp = generateTimastamp();
 
 
-
     if (type == 'delete') {
       await resend.emails.send({
         from: 'noreply@fritilaria.com',
@@ -78,7 +77,7 @@ export default async function ContactUs() {
 
   return (
 
-    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] border-primary text-onBackground bg-background py-5 px-5 lg:py-5 lg:px-8 md:shadow-xl shadow-2xl">
+    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] border-primary text-onBackground bg-background py-5 px-5 lg:py-5 lg:px-8 md:shadow-xl shadow-2xl">
       <div className="flex flex-col">
         <div className="flex flex-row lg:space-x-4 items-baseline">
           <div className="flex">
@@ -87,7 +86,7 @@ export default async function ContactUs() {
             </Link>
           </div>
           <div className="flex">
-            <h1 className={`${sourceSerif.className} text-xl md:text-3xl md:tracking-tight`}>
+            <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight`}>
               Contact us
             </h1>
           </div>

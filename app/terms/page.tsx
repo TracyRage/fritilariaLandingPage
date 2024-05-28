@@ -20,7 +20,7 @@ export default function Terms() {
   const LinkIcon = ArrowLeftIcon;
   return (
 
-    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[950px] bg-background  text-onBackground py-5 px-5 lg:py-5 lg:px-8 md:shadow-xl shadow-2xl">
+    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-background  text-onBackground py-5 px-5 lg:py-5 lg:px-8 md:shadow-xl shadow-2xl">
       <div className="flex flex-col">
         <div className="flex flex-row items-baseline lg:space-x-4">
           <div className="flex">
@@ -29,7 +29,7 @@ export default function Terms() {
             </Link>
           </div>
           <div className="flex">
-            <h1 className={`${sourceSerif.className} text-xl md:text-3xl pb-6`}>
+            <h1 className={`${sourceSerif.className} text-xl md:text-3xl  tracking-tight pb-6`}>
               Terms & Conditions
             </h1>
           </div>
@@ -41,7 +41,7 @@ export default function Terms() {
         <RenderTermsListItem name="Limitation of Liability" content="Aremti Statistica is not liable for any direct, indirect, incidental, consequential, or special damages arising out of or in any way connected with the use of the app." />
         <RenderTermsListItem name="Acceptance of Terms" content="By using Fritilaria, you agree to comply with and be bound by these terms and conditions. If you do not agree, please refrain from using the app." />
 
-        <p className="pt-6 pb-8 text-balance">By using Fritilaria, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you have any questions, please contact Aremti Statistica <Link className="text-primary" href={"/contact-us"}> aremti@company.com</Link>.</p>
+        <p className="pt-6 pb-8">By using Fritilaria, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you have any questions, please contact Aremti Statistica <Link className="text-primary" href={"/contact-us"}> aremti@company.com</Link>.</p>
 
         <Footer/>
 
