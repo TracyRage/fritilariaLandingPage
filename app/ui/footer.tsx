@@ -23,7 +23,7 @@ export default function Footer() {
                 <p className="hidden md:block text-center text-xs text-onBackground opacity-50">Edineț, MD-4601, <span className='text-xl'>*Moldova*</span> </p>
                 <p className="block md:hidden text-center text-xs text-onBackground opacity-50">Edineț, MD-4601, Republic of Moldova</p>
                 </div>
-                <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Skidetica Labs. All rights Reserved.</p>
+                <p className="text-center text-xs text-onBackground opacity-50">@ 2024 Skidetica Labs. All rights Reserved</p>
             </div>
 
         </div>

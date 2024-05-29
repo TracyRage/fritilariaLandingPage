@@ -1,7 +1,11 @@
 'use client';
-import { withFormik, FormikProps, FormikErrors, Form, Field } from 'formik';
+import { withFormik, FormikProps, FormikErrors, Form, Field, Formik } from 'formik';
 import * as Yup from 'yup';
 import toast, { Toaster } from 'react-hot-toast';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { useRef, useState } from 'react';
+
+
 
 
 interface FormValues {
@@ -13,12 +17,49 @@ interface FormValues {
 };
 
 
-
 const InnerForm = (props: FormikProps<FormValues>) => {
+
   const { touched, errors, isSubmitting, values } = props;
+
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [isVerified, setIsVerified] = useState(false);
+
+  async function handleCaptchaSubmission(token: string | null) {
+    try {
+      if (token) {
+        await fetch("/api", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ token }),
+        });
+        setIsVerified(true);
+      }
+    } catch (e) {
+      setIsVerified(false);
+    }
+  }
+
+  const handleChange = (token: string | null) => {
+    handleCaptchaSubmission(token);
+  };
+
+  function handleExpired() {
+    setIsVerified(false);
+  }
+
+  const resetRECAPTCHA = () => {
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+    }
+  }
+
 
   return (
 
+    <main>
     <Form>
       <div className="flex flex-col items-baseline lg:pt-4">
         <div>
@@ -71,16 +112,24 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
         <div>
           <h1 className="lg:text-lg py-4">Message</h1>
-        <div>
-          <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden sm:block bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner " />
-          <Field as='textarea' id="message" name="message" rows={10} cols={28} className="block sm:hidden bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner" />
+          <div>
+            <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden sm:block bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner " />
+            <Field as='textarea' id="message" name="message" rows={10} cols={28} className="block sm:hidden bg-elevated4 rounded-md font-medium text-onBackground tracking-wider p-2 shadow-inner" />
+          </div>
         </div>
       </div>
-      </div>
 
-      <div className="flex flex-col xl:pt-4 justify-center">
+      <div className="flex flex-col xl:pt-4 space-y-8 justify-center">
 
-        <button type="submit" disabled={isSubmitting} className="flex w-[220px] h-[38px] bg-elevated hover:bg-elevated2 active:bg-fritilariaGreen active:text-background text-onBackground shadow-md rounded-xl items-center justify-center">
+        <ReCAPTCHA
+          sitekey={ "6LfSsuspAAAAAHLdNk8X-Ogc8JbKtorni5yuFbuy" || ""}
+          ref={recaptchaRef}
+          onChange={handleChange}
+          onExpired={handleExpired}
+          theme='dark'
+        />
+
+        <button type="submit" disabled={!isVerified || isSubmitting} onClick={() => resetRECAPTCHA()} className="flex w-[220px] h-[38px] bg-elevated hover:bg-elevated2 active:bg-fritilariaGreen active:text-background text-onBackground shadow-md rounded-xl items-center justify-center">
           Submit
         </button>
         {<Toaster toastOptions={{
@@ -98,6 +147,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
         }} />}
       </div>
     </Form>
+    </main>
 
   );
 }
@@ -142,12 +192,15 @@ export const ContactForm = withFormik<MyFormProps, FormValues>({
     }
 
 
+
     return errors;
   },
 
-  handleSubmit: (values, { setSubmitting, props }) => {
+  handleSubmit: (values, { setSubmitting, props, resetForm }) => {
+
 
     setTimeout(() => {
+
 
       if (values.picked == 'delete') {
         props.sendEmail(values.email, `#${values.picked} ${values.subject}`, values.message, "delete");
@@ -155,6 +208,9 @@ export const ContactForm = withFormik<MyFormProps, FormValues>({
       } else if (values.picked == 'technical' || values.picked == 'business') {
         props.sendEmail(values.email, `#${values.picked} ${values.subject}`, values.message, "feedback");
         toast.success('Message has been sent');
+        resetForm();
+
+
       }
 
       setSubmitting(false);
@@ -164,3 +220,5 @@ export const ContactForm = withFormik<MyFormProps, FormValues>({
   },
 
 })(InnerForm);
+
+
