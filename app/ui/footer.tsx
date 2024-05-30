@@ -14,7 +14,7 @@ export default function Footer() {
                 <Image src="threads.svg" width={20} height={10} alt="x" />
                 <Image src="discord.svg" width={25} height={10} alt="x" />
             </div>
-            <div className='flex flex-col space-y-2 tracking-tight md:tracking-normal'>
+            <div className='flex flex-col space-y-2 tracking-tight text-xs md:tracking-normal'>
                 <NavLink3/>
                 <NavLink4/>
             </div>

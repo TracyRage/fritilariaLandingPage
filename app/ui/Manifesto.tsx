@@ -24,7 +24,7 @@ export default function Manifesto() {
             <motion.h2 className={`${sourceSerif.className} text-lg md:text-3xl pt-2 lg:px-2 space-y-4`}>
                 <div className="flex flex-row justify-between items-center tracking-tight">
                     <button className="flex tracking-tight" onClick={() => handleClick()}>
-                        <h1> What is Skidetica, anyway? </h1>
+                        <h1> What is <span className="text-transparent bg-gradient-to-r from-green-100 to-green-200 bg-clip-text">Skidetica</span>, anyway? </h1>
                     </button>
                     <div className="flex">
                         <div className="w-4 h-4 block md:hidden" onClick={() => handleClick()}>

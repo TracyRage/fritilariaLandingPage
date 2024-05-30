@@ -10,7 +10,7 @@ export default function MacroTable() {
 
     return (
         <div
-  className="flex flex-col shadow-2xl rounded-xl bg-elevated px-2 pt-6 pb-4">
+  className="flex flex-col w-3/3 justify-center shadow-2xl rounded-xl bg-elevated px-2 pt-6 pb-4">
   <table className="text-left">
     <caption className="pb-2 text-sm caption-top">
 
@@ -20,21 +20,21 @@ export default function MacroTable() {
     <thead>
       <tr>
         <th className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block font-sans text-sm antialiased font-normal leading-none opacity-70">
+          <p className="block font-sans md:text-sm text-xs antialiased font-normal leading-none opacity-70">
           </p>
         </th>
         <th className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-none text-onBackground opacity-70">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-none text-onBackground opacity-70">
             Median
           </p>
         </th>
         <th className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-none text-onBackground opacity-70">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-none text-onBackground opacity-70">
             Low
           </p>
         </th>
         <th className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-none text-onBackground opacity-70">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-none text-onBackground opacity-70">
             Upper
           </p>
         </th>
@@ -43,110 +43,110 @@ export default function MacroTable() {
     <tbody>
       <tr>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[0].type}
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[0].median}%
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[0].lower}%
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[0].upper}%
             </p>
         </td>
       </tr>
       <tr>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[1].type}
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[1].median}%
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[1].lower}%
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[1].upper}%
             </p>
         </td>
       </tr>
       <tr>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[2].type}
             </p>
             </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[2].median}%
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[2].lower}%
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[2].upper}%
             </p>
         </td>
       </tr>
       <tr>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[3].type}
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[3].median}%
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[3].lower}%
           </p>
         </td>
         <td className="p-4 border-b border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[3].upper}%
             </p>
         </td>
       </tr>
       <tr>
         <td className="p-4 border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].type}
           </p>
         </td>
         <td className="p-4 border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].median}%
           </p>
         </td>
         <td className="p-4 border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].lower}%
           </p>
         </td>
         <td className="p-4 border-opacity-50 border-primary">
-          <p className="block text-sm antialiased font-normal leading-normal text-onBackground">
+          <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].upper}%
             </p>
         </td>
