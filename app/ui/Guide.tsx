@@ -1,14 +1,14 @@
 'use client';
 import { useEffect, useState } from "react";
-import { financialParams } from "../utils/financialParameters";
 import { ArrowTrendingDownIcon, ArrowTrendingUpIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 import RenderAnimation from "./RenderDensityGraph"
 import { sourceSerif } from "./fonts";
 import clsx from "clsx";
 import Image from 'next/image';
 import Link from "next/link";
-import RenderDensityGraph from "./RenderDensityGraph";
 import Footer from "./footer";
+import { equalizerPathnames } from "../utils/equalizerParameters";
+import { financialParams } from "../utils/financialParameters";
 
 
 export default function Guide() {
@@ -37,12 +37,14 @@ export default function Guide() {
         { id: "unlikely_high", label: 'High', state: false, icon: <ArrowTrendingUpIcon className="w-1/4 sm:w-[24px] lg:w-[28px]" /> },
     ])
 
-    const [pathName, setPathName] = useState(financialParams[0].path);
-    const [revenue, setRevenue] = useState(financialParams[0].revenue);
-    const [median, setMedian] = useState(financialParams[0].median);
-    const [ci5, setCI5] = useState(financialParams[0].median);
-    const [ci95, setCI95] = useState(financialParams[0].median);
-    const [probabilityValue, setProbabilityValue] = useState(financialParams[0].median)
+    const [pathName, setPathName] = useState(financialParams[19].path);
+    const [equalizerPathName, setEqualizerPathName] = useState(equalizerPathnames[0].path);
+    const [revenue, setRevenue] = useState(financialParams[19].revenue);
+    const [ ticker, setTicker] = useState("MSFT");
+    const [median, setMedian] = useState(financialParams[19].median);
+    const [ci5, setCI5] = useState(financialParams[19].median);
+    const [ci95, setCI95] = useState(financialParams[19].median);
+    const [probabilityValue, setProbabilityValue] = useState(financialParams[19].median)
     const [probabilityType, setProbabilityType] = useState("median")
 
 
@@ -115,107 +117,313 @@ export default function Guide() {
 
     const handlePathname = () => {
 
+
         const activeButtonId = buttons.find(button => button.state === true)?.id;
         const activeButtonId2 = patternButtons.find(button => button.state === true)?.id;
+        const companyButtonsId = companyButtons.find(button => button.state === true)?.id;
 
-        switch (activeButtonId) {
+        switch (companyButtonsId) {
+            case "abnb":
+                setTicker("ABNB");
+                switch (activeButtonId) {
+                    case "low":
+                        switch (activeButtonId2) {
+                            case "arrowUp":
+                                setPathName(financialParams[0].path);
+                                setEqualizerPathName(equalizerPathnames[0].path);
+                                setRevenue(financialParams[0].revenue);
+                                setMedian(financialParams[0].median);
+                                setCI5(financialParams[0].quantile5);
+                                setCI95(financialParams[0].quantile95);
+                                break;
+                            case "up":
+                                setPathName(financialParams[1].path);
+                                setEqualizerPathName(equalizerPathnames[1].path);
+                                setRevenue(financialParams[1].revenue);
+                                setMedian(financialParams[1].median);
+                                setCI5(financialParams[1].quantile5);
+                                setCI95(financialParams[1].quantile95);
+                                break;
+                            case "down":
+                                setPathName(financialParams[2].path);
+                                setEqualizerPathName(equalizerPathnames[2].path);
+                                setRevenue(financialParams[2].revenue);
+                                setMedian(financialParams[2].median);
+                                setCI5(financialParams[2].quantile5);
+                                setCI95(financialParams[2].quantile95);
+                                break;
+                        };
+                        break;
 
-            case "low":
-                switch (activeButtonId2) {
-                    case "arrowUp":
-                        setPathName(financialParams[0].path);
-                        setRevenue(financialParams[0].revenue);
-                        setMedian(financialParams[0].median);
-                        setCI5(financialParams[0].quantile5);
-                        setCI95(financialParams[0].quantile95);
+                    case "moderate":
+                        switch (activeButtonId2) {
+                            case "arrowUp":
+                                setPathName(financialParams[3].path);
+                                setEqualizerPathName(equalizerPathnames[3].path);
+                                setRevenue(financialParams[3].revenue);
+                                setMedian(financialParams[3].median);
+                                setCI5(financialParams[3].quantile5);
+                                setCI95(financialParams[3].quantile95);
+                                break;
+                            case "up":
+                                setPathName(financialParams[4].path);
+                                setEqualizerPathName(equalizerPathnames[4].path);
+                                setRevenue(financialParams[4].revenue);
+                                setMedian(financialParams[4].median);
+                                setCI5(financialParams[4].quantile5);
+                                setCI95(financialParams[4].quantile95);
+                                break;
+                            case "down":
+                                setPathName(financialParams[5].path);
+                                setEqualizerPathName(equalizerPathnames[5].path);
+                                setRevenue(financialParams[5].revenue);
+                                setMedian(financialParams[5].median);
+                                setCI5(financialParams[5].quantile5);
+                                setCI95(financialParams[5].quantile95);
+                                break;
+                        };
                         break;
-                    case "up":
-                        setPathName(financialParams[1].path);
-                        setRevenue(financialParams[1].revenue);
-                        setMedian(financialParams[1].median);
-                        setCI5(financialParams[1].quantile5);
-                        setCI95(financialParams[1].quantile95);
+
+                    case "high":
+                        switch (activeButtonId2) {
+                            case "arrowUp":
+                                setPathName(financialParams[6].path);
+                                setEqualizerPathName(equalizerPathnames[6].path);
+                                setRevenue(financialParams[6].revenue);
+                                setMedian(financialParams[6].median);
+                                setCI5(financialParams[6].quantile5);
+                                setCI95(financialParams[6].quantile95);
+                                break;
+                            case "up":
+                                setPathName(financialParams[7].path);
+                                setEqualizerPathName(equalizerPathnames[7].path);
+                                setRevenue(financialParams[7].revenue);
+                                setMedian(financialParams[7].median);
+                                setCI5(financialParams[7].quantile5);
+                                setCI95(financialParams[7].quantile95);
+                                break;
+                            case "down":
+                                setPathName(financialParams[8].path);
+                                setEqualizerPathName(equalizerPathnames[8].path);
+                                setRevenue(financialParams[8].revenue);
+                                setMedian(financialParams[8].median);
+                                setCI5(financialParams[8].quantile5);
+                                setCI95(financialParams[8].quantile95);
+                                break;
+                        }
                         break;
-                    case "down":
-                        setPathName(financialParams[2].path);
-                        setRevenue(financialParams[2].revenue);
-                        setMedian(financialParams[2].median);
-                        setCI5(financialParams[2].quantile5);
-                        setCI95(financialParams[2].quantile95);
-                        break;
+
                 };
-                break
 
-            case "moderate":
-                switch (activeButtonId2) {
-                    case "arrowUp":
-                        setPathName(financialParams[3].path);
-                        setRevenue(financialParams[3].revenue);
-                        setMedian(financialParams[3].median);
-                        setCI5(financialParams[3].quantile5);
-                        setCI95(financialParams[3].quantile95);
+                break;
+
+            case "tsla":
+                setTicker("TSLA");
+                switch (activeButtonId) {
+
+                    case "low":
+                        switch (activeButtonId2) {
+                            case "arrowUp":
+                                setPathName(financialParams[9].path);
+                                setEqualizerPathName(equalizerPathnames[0].path);
+                                setRevenue(financialParams[9].revenue);
+                                setMedian(financialParams[9].median);
+                                setCI5(financialParams[9].quantile5);
+                                setCI95(financialParams[9].quantile95);
+                                break;
+                            case "up":
+                                setPathName(financialParams[10].path);
+                                setEqualizerPathName(equalizerPathnames[1].path);
+                                setRevenue(financialParams[10].revenue);
+                                setMedian(financialParams[10].median);
+                                setCI5(financialParams[10].quantile5);
+                                setCI95(financialParams[10].quantile95);
+                                break;
+                            case "down":
+                                setPathName(financialParams[11].path);
+                                setEqualizerPathName(equalizerPathnames[2].path);
+                                setRevenue(financialParams[11].revenue);
+                                setMedian(financialParams[11].median);
+                                setCI5(financialParams[11].quantile5);
+                                setCI95(financialParams[11].quantile95);
+                                break;
+                        };
                         break;
-                    case "up":
-                        setPathName(financialParams[4].path);
-                        setRevenue(financialParams[4].revenue);
-                        setMedian(financialParams[4].median);
-                        setCI5(financialParams[4].quantile5);
-                        setCI95(financialParams[4].quantile95);
+
+                    case "moderate":
+                        switch (activeButtonId2) {
+                            case "arrowUp":
+                                setPathName(financialParams[12].path);
+                                setEqualizerPathName(equalizerPathnames[3].path);
+                                setRevenue(financialParams[12].revenue);
+                                setMedian(financialParams[12].median);
+                                setCI5(financialParams[12].quantile5);
+                                setCI95(financialParams[12].quantile95);
+                                break;
+                            case "up":
+                                setPathName(financialParams[13].path);
+                                setEqualizerPathName(equalizerPathnames[4].path);
+                                setRevenue(financialParams[13].revenue);
+                                setMedian(financialParams[13].median);
+                                setCI5(financialParams[13].quantile5);
+                                setCI95(financialParams[13].quantile95);
+                                break;
+                            case "down":
+                                setPathName(financialParams[14].path);
+                                setEqualizerPathName(equalizerPathnames[5].path);
+                                setRevenue(financialParams[14].revenue);
+                                setMedian(financialParams[14].median);
+                                setCI5(financialParams[14].quantile5);
+                                setCI95(financialParams[14].quantile95);
+                                break;
+                        };
                         break;
-                    case "down":
-                        setPathName(financialParams[5].path);
-                        setRevenue(financialParams[5].revenue);
-                        setMedian(financialParams[5].median);
-                        setCI5(financialParams[5].quantile5);
-                        setCI95(financialParams[5].quantile95);
+
+                    case "high":
+                        switch (activeButtonId2) {
+                            case "arrowUp":
+                                setPathName(financialParams[15].path);
+                                setEqualizerPathName(equalizerPathnames[6].path);
+                                setRevenue(financialParams[15].revenue);
+                                setMedian(financialParams[15].median);
+                                setCI5(financialParams[15].quantile5);
+                                setCI95(financialParams[15].quantile95);
+                                break;
+
+                            case "up":
+                                setPathName(financialParams[16].path);
+                                setEqualizerPathName(equalizerPathnames[7].path);
+                                setRevenue(financialParams[16].revenue);
+                                setMedian(financialParams[16].median);
+                                setCI5(financialParams[16].quantile5);
+                                setCI95(financialParams[16].quantile95);
+                                break;
+
+                            case "down":
+                                setPathName(financialParams[17].path);
+                                setEqualizerPathName(equalizerPathnames[8].path);
+                                setRevenue(financialParams[17].revenue);
+                                setMedian(financialParams[17].median);
+                                setCI5(financialParams[17].quantile5);
+                                setCI95(financialParams[17].quantile95);
+                                break;
+                        }
                         break;
+
+
                 };
+
                 break;
 
-            case "high":
-                switch (activeButtonId2) {
-                    case "arrowUp":
-                        setPathName(financialParams[6].path);
-                        setRevenue(financialParams[6].revenue);
-                        setMedian(financialParams[6].median);
-                        setCI5(financialParams[6].quantile5);
-                        setCI95(financialParams[6].quantile95);
+            case "msft":
+                setTicker("MSFT");
+                switch (activeButtonId) {
+
+                    case "low":
+                        switch (activeButtonId2) {
+                            case "arrowUp":
+                                setPathName(financialParams[18].path);
+                                setEqualizerPathName(equalizerPathnames[0].path)
+                                setRevenue(financialParams[18].revenue);
+                                setMedian(financialParams[18].median);
+                                setCI5(financialParams[18].quantile5);
+                                setCI95(financialParams[18].quantile95);
+                                break;
+                            case "up":
+                                setPathName(financialParams[19].path);
+                                setEqualizerPathName(equalizerPathnames[1].path)
+                                setRevenue(financialParams[19].revenue);
+                                setMedian(financialParams[19].median);
+                                setCI5(financialParams[19].quantile5);
+                                setCI95(financialParams[19].quantile95);
+                                break;
+                            case "down":
+                                setPathName(financialParams[20].path);
+                                setEqualizerPathName(equalizerPathnames[2].path)
+                                setRevenue(financialParams[20].revenue);
+                                setMedian(financialParams[20].median);
+                                setCI5(financialParams[20].quantile5);
+                                setCI95(financialParams[20].quantile95);
+                                break;
+                        };
                         break;
-                    case "up":
-                        setPathName(financialParams[7].path);
-                        setRevenue(financialParams[7].revenue);
-                        setMedian(financialParams[7].median);
-                        setCI5(financialParams[7].quantile5);
-                        setCI95(financialParams[7].quantile95);
+
+                    case "moderate":
+                        switch (activeButtonId2) {
+                            case "arrowUp":
+                                setPathName(financialParams[21].path);
+                                setEqualizerPathName(equalizerPathnames[3].path)
+                                setRevenue(financialParams[21].revenue);
+                                setMedian(financialParams[21].median);
+                                setCI5(financialParams[21].quantile5);
+                                setCI95(financialParams[21].quantile95);
+                                break;
+                            case "up":
+                                setPathName(financialParams[22].path);
+                                setEqualizerPathName(equalizerPathnames[4].path)
+                                setRevenue(financialParams[22].revenue);
+                                setMedian(financialParams[22].median);
+                                setCI5(financialParams[22].quantile5);
+                                setCI95(financialParams[22].quantile95);
+                                break;
+                            case "down":
+                                setPathName(financialParams[23].path);
+                                setEqualizerPathName(equalizerPathnames[5].path)
+                                setRevenue(financialParams[23].revenue);
+                                setMedian(financialParams[23].median);
+                                setCI5(financialParams[23].quantile5);
+                                setCI95(financialParams[23].quantile95);
+                                break;
+                        };
                         break;
-                    case "down":
-                        setPathName(financialParams[8].path);
-                        setRevenue(financialParams[8].revenue);
-                        setMedian(financialParams[8].median);
-                        setCI5(financialParams[8].quantile5);
-                        setCI95(financialParams[8].quantile95);
+
+                    case "high":
+                        switch (activeButtonId2) {
+                            case "arrowUp":
+                                setPathName(financialParams[24].path);
+                                setEqualizerPathName(equalizerPathnames[6].path)
+                                setRevenue(financialParams[24].revenue);
+                                setMedian(financialParams[24].median);
+                                setCI5(financialParams[24].quantile5);
+                                setCI95(financialParams[24].quantile95);
+                                break;
+                            case "up":
+                                setPathName(financialParams[25].path);
+                                setEqualizerPathName(equalizerPathnames[7].path)
+                                setRevenue(financialParams[25].revenue);
+                                setMedian(financialParams[25].median);
+                                setCI5(financialParams[25].quantile5);
+                                setCI95(financialParams[25].quantile95);
+                                break;
+                            case "down":
+                                setPathName(financialParams[26].path);
+                                setEqualizerPathName(equalizerPathnames[8].path)
+                                setRevenue(financialParams[26].revenue);
+                                setMedian(financialParams[26].median);
+                                setCI5(financialParams[26].quantile5);
+                                setCI95(financialParams[26].quantile95);
+                                break;
+                        }
                         break;
-                }
+
+                };
+
                 break;
 
-            default:
-                break;
+        default:
+            break;
 
-
-        }
-
+        };
 
     }
 
 
     useEffect(() => {
         handlePathname();
-        console.log(pathName);
         handleProbabilityValue();
     }
 
     );
-
 
     return (
 
@@ -234,22 +442,22 @@ export default function Guide() {
                 <ul className="list-decimal">
                     <div className="flex flex-col pb-8 space-y-6">
                         <li className="lg:text-base">Select a company</li>
-                                <div className="flex flex-row space-x-4 justify-center">
+                        <div className="flex flex-row space-x-4 justify-center">
 
-                                    {companyButtons.map((button) => (
-                                        <button type="submit" onClick={() => {
-                                            handleCompanyButton(button.id);
+                            {companyButtons.map((button) => (
+                                <button type="submit" onClick={() => {
+                                    handleCompanyButton(button.id);
 
-                                        }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[32px] rounded-xl items-center justify-center',
-                                            {
-                                                'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
-                                                'bg-primaryContainer opacity-95 text-onBackground': button.state === true
-                                            })}>
-                                            {button.label}
-                                        </button>
-                                    ))}
+                                }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[32px] rounded-xl items-center justify-center',
+                                    {
+                                        'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
+                                        'bg-primaryContainer opacity-95 text-onBackground': button.state === true
+                                    })}>
+                                    {button.label}
+                                </button>
+                            ))}
 
-                                </div>
+                        </div>
 
                     </div>
                     <li className="pb-4 lg:text-base">Use the equalizer to select the expected growth rate (%) and growth pattern for the next five years</li>
@@ -273,10 +481,10 @@ export default function Guide() {
 
                                 </div>
                                 <div className="w-[273px] min-h-[106px] block md:hidden">
-                                    <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
+                                    <RenderAnimation pathname={`./animation/equalizer/${equalizerPathName}.json`} loop={true} />
                                 </div>
                                 <div className="w-[340px] min-h-[106px] hidden md:block">
-                                    <RenderAnimation pathname={`./animation/equalizer/equalizer_${pathName}.json`} loop={true} />
+                                    <RenderAnimation pathname={`./animation/equalizer/${equalizerPathName}.json`} loop={true} />
                                 </div>
                                 <div className="flex flex-row justify-center space-x-4">
 
@@ -323,11 +531,11 @@ export default function Guide() {
                     </div>
                     <div className="flex justify-center">
                         <div className="block lg:hidden space-y-4">
-                            <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={false} />
+                            <RenderAnimation pathname={`./animation/density/${pathName}.json`} loop={false} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>
                         <div className="space-y-4 hidden lg:block w-[340px]">
-                            <RenderAnimation pathname={`./animation/density/density_${pathName}.json`} loop={false} />
+                            <RenderAnimation pathname={`./animation/density/${pathName}.json`} loop={false} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>
                         <div>
@@ -343,8 +551,8 @@ export default function Guide() {
 
                                     }} key={button.id} className={clsx('flex md:w-[120px] w-[80px] h-[32px] rounded-xl items-center lg:text-base text-sm justify-center',
                                         {
-                                                'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
-                                                'bg-primaryContainer text-onBackground opacity-95': button.state === true
+                                            'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
+                                            'bg-primaryContainer text-onBackground opacity-95': button.state === true
                                         })}>
                                         <div className="flex flex-row justify-center">
 
@@ -358,9 +566,9 @@ export default function Guide() {
                             <div className="container w-4/4  text-onBackground shadow-2xl bg-elevated  px-4 py-4 rounded-xl">
                                 <div className="flex text-center justify-center lg:text-base text-sm">
 
-                                    {probabilityType === 'median' && (<p> SMB fair value is {probabilityValue} (€).</p>)}
-                                    {probabilityType === 'ci5' && (<p>There&apos;s 5% probability that SMB <br/> fair value is less than {probabilityValue} (€).</p>)}
-                                    {probabilityType === 'ci95' && (<p>There&apos;s 5% probability that SMB <br/> fair value is more than {probabilityValue} (€).</p>)}
+                                    {probabilityType === 'median' && (<p> {ticker} fair value is {probabilityValue} (€).</p>)}
+                                    {probabilityType === 'ci5' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is less than {probabilityValue} (€).</p>)}
+                                    {probabilityType === 'ci95' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is more than {probabilityValue} (€).</p>)}
 
                                 </div>
 
@@ -396,7 +604,7 @@ export default function Guide() {
                         </div>
                     </div>
 
-                    <Footer/>
+                    <Footer />
 
 
                 </ul>
