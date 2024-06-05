@@ -10,7 +10,6 @@ import { Onest } from "next/font/google";
 
 const BarsIcon = Bars3Icon;
 
-
 export function Summary({
     title,
 }: {
@@ -55,9 +54,10 @@ export function Summary({
                         </button>
                         {
                             isMenuOpen &&
-                            <div className={`${sourceSerif.className} z-10 w-10/12 h-fit p-4 absolute right-[20px] bg-background rounded-2xl shadow-sm shadow-black`}>
+                            <div className={`${sourceSerif.className} z-10 w-10/12 h-fit p-4 absolute right-[20px] text-primary bg-background rounded-2xl shadow-sm shadow-black`}>
                                 <div className="flex flex-col space-y-4 p-4 items-center text-xl">
-                                    <Link key={'Guide'} href={'/'} onClick={() => setMenuOpen(!isMenuOpen)}>Guide</Link>
+                                    <Link key={'Guide'} href={'/'} onClick={() => setMenuOpen(!isMenuOpen)}>Home</Link>
+                                    <Link key={'Manifesto'} href={'/manifesto'} onClick={() => setMenuOpen(!isMenuOpen)}>Manifesto</Link>
                                     <Link key={'FAQ'} href={'/faq'} onClick={() => setMenuOpen(!isMenuOpen)}>FAQ</Link>
                                     <Link key={'Contact us'} href={'/contact-us'} onClick={() => setMenuOpen(!isMenuOpen)}>Contact us</Link>
                                     <Link key={'About us'} href={'/company'} onClick={() => setMenuOpen(!isMenuOpen)}>About us</Link>

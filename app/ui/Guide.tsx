@@ -434,7 +434,6 @@ export default function Guide() {
                     <div className="flex">
                         <h1>Fundamental analysis | <span>Skidetics</span> + <span>Fritilaria</span> </h1>
                     </div>
-
                 </div>
             </div>
 
@@ -530,11 +529,11 @@ export default function Guide() {
 
                     </div>
                     <div className="flex justify-center">
-                        <div className="block lg:hidden space-y-4">
+                        <div className="block lg:hidden space-y-4 w-[240px]">
                             <RenderAnimation pathname={`./animation/density/${pathName}.json`} loop={false} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>
-                        <div className="space-y-4 hidden lg:block w-[340px]">
+                        <div className="space-y-4 hidden lg:block w-[300px]">
                             <RenderAnimation pathname={`./animation/density/${pathName}.json`} loop={false} />
                             <label className="flex justify-center">Value / Share (€)</label>
                         </div>

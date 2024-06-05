@@ -2,7 +2,6 @@ import Link from "next/link";
 import RenderTermsListItem from "../ui/TermsListItem";
 import { sourceSerif } from "../ui/fonts";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import Footer from "../ui/footer";
 
 
@@ -41,7 +40,7 @@ export default function Terms() {
         <RenderTermsListItem name="Limitation of Liability" content="Aremti Statistica is not liable for any direct, indirect, incidental, consequential, or special damages arising out of or in any way connected with the use of the app." />
         <RenderTermsListItem name="Acceptance of Terms" content="By using Fritilaria, you agree to comply with and be bound by these terms and conditions. If you do not agree, please refrain from using the app." />
 
-        <p className="pt-6 pb-8">By using Fritilaria, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you have any questions, please contact Aremti Statistica <Link className="text-primary" href={"/contact-us"}> aremti@company.com</Link>.</p>
+        <p className="pt-6 pb-8 text-sm lg:text-base ">By using Fritilaria, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you have any questions, please contact Aremti Statistica <Link className="text-primary" href={"/contact-us"}> aremti@company.com</Link>.</p>
 
         <Footer/>
 

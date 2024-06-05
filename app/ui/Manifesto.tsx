@@ -24,7 +24,7 @@ export default function Manifesto() {
             <motion.h2 className={`${sourceSerif.className} text-lg md:text-3xl pt-2 lg:px-2 space-y-4`}>
                 <div className="flex flex-row justify-between items-center tracking-tight">
                     <button className="flex tracking-tight" onClick={() => handleClick()}>
-                        <h1> What is <span className="text-transparent bg-gradient-to-r from-green-100 to-green-200 bg-clip-text">Skidetica</span>, anyway? </h1>
+                        <h1> What is <span className="text-green-100">Skidetica</span>, anyway? </h1>
                     </button>
                     <div className="flex">
                         <div className="w-4 h-4 block md:hidden" onClick={() => handleClick()}>
@@ -41,10 +41,10 @@ export default function Manifesto() {
 
             {!isOpen &&
                 <motion.div className={`${roboto.className} text-base lg:px-2 lg:pt-6 leading-relaxed tracking-wide`}>
-                    Forget about uncertainty. Leverage the cutting-edge statistics to calculate <br /> fundamental value of your favorite stock.
+                    Forget about uncertainty. Leverage the cutting-edge statistics to calculate <br /> the fair value of your favorite stock.
                     <div className="flex flex-row justify-end">
                         <button onClick={() => handleClick()}>
-                            <span className="text-primary">More</span>
+                            <span className="text-primary">Learn more</span>
                         </button>
 
                     </div>

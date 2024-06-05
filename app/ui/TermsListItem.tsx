@@ -10,10 +10,10 @@ import { sourceSerif } from "./fonts";
 export default function RenderTermsListItem({ name, content }: { name: string, content: string }) {
   return (
     <div className="pb-4">
-      <li className="pb-2 lg:text-lg tracking-tight text-primary">
+      <li className="pb-2 tracking-tight text-primary text-sm lg:text-base">
         {name}
       </li>
-      <p className="lg:leading-relaxed indent-6 text-pretty lg:text-wrap">{content}</p>
+      <p className="lg:leading-relaxed indent-6 text-sm lg:text-base text-pretty lg:text-wrap">{content}</p>
 
     </div>
   )

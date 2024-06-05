@@ -35,11 +35,9 @@ export default function Company() {
                     </div>
                 </div>
 
-
-                <div className="lg:pb-12 pb-6 lg:leading-relaxed lg:tracking-wide text-justify indent-8">
+                <div className="lg:pb-12 pb-6 text-sm lg:text-base lg:leading-relaxed lg:tracking-wide text-justify indent-8">
                     <p>We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </p>
                 </div>
-
 
                 <div className="flex flex-col justify-center">
                     <div className={`${sourceSerif.className} flex lg:pb-14 pb-8 lg:text-2xl leading-relaxed text-pretty justify-center`}>

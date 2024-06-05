@@ -1,7 +1,8 @@
 
 export const financialParams = [
-    { revenue: 125, median: 115, quantile5: 111, quantile95: 128, path: 'abnb_arrowup_low'},
-    { revenue: 153, median: 228, quantile5: 221, quantile95: 238, path: 'abnb_ascendant_low' },
+
+    { revenue: 125, median: 125, quantile5: 223, quantile95: 230, path: 'abnb_arrowup_low'},
+    { revenue: 153, median: 227, quantile5: 226, quantile95: 231, path: 'abnb_ascendant_low' },
     { revenue: 75, median: 49, quantile5: 43, quantile95: 58, path: 'abnb_descendant_low' },
     { revenue: 150, median: 118, quantile5: 105, quantile95: 152, path: 'abnb_arrowup_moderate' },
     { revenue: 186, median: 224, quantile5: 185, quantile95: 290, path: 'abnb_ascendant_moderate' },
@@ -9,8 +10,9 @@ export const financialParams = [
     { revenue: 200, median: 156, quantile5: 130, quantile95: 195, path: 'abnb_arrowup_high'},
     { revenue: 246, median: 340, quantile5: 339, quantile95: 349, path: 'abnb_ascendant_high'},
     { revenue: 178, median: 72, quantile5: 69, quantile95: 95, path: 'abnb_descendant_high'},
-    { revenue: 125, median: 115, quantile5: 111, quantile95: 128, path: 'tsla_arrowup_low'},
-    { revenue: 153, median: 228, quantile5: 221, quantile95: 238, path: 'tsla_ascendant_low' },
+
+    { revenue: 125, median: 88, quantile5: 86, quantile95: 95, path: 'tsla_arrowup_low'},
+    { revenue: 153, median: 120, quantile5: 221, quantile95: 238, path: 'tsla_ascendant_low' },
     { revenue: 75, median: 49, quantile5: 43, quantile95: 58, path: 'tsla_descendant_low' },
     { revenue: 150, median: 118, quantile5: 105, quantile95: 152, path: 'tsla_arrowup_moderate' },
     { revenue: 186, median: 224, quantile5: 185, quantile95: 290, path: 'tsla_ascendant_moderate' },
@@ -18,6 +20,7 @@ export const financialParams = [
     { revenue: 200, median: 156, quantile5: 130, quantile95: 195, path: 'tsla_arrowup_high'},
     { revenue: 246, median: 340, quantile5: 339, quantile95: 349, path: 'tsla_ascendant_high'},
     { revenue: 178, median: 72, quantile5: 69, quantile95: 95, path: 'tsla_descendant_high'},
+
     { revenue: 125, median: 115, quantile5: 111, quantile95: 128, path: 'msft_arrowup_low'},
     { revenue: 153, median: 228, quantile5: 221, quantile95: 238, path: 'msft_ascendant_low' },
     { revenue: 75, median: 49, quantile5: 43, quantile95: 58, path: 'msft_descendant_low' },
