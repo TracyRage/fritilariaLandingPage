@@ -10,20 +10,22 @@ import FritilariaFeedbackEmail from "@/components/feedback-template";
 import generateTimastamp from "../utils/generateTimestamp";
 import Image from "next/image";
 import Footer from "../ui/footer";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 
 export const metadata = {
-    title: 'Contact us',
-    description: 'Contact us and provide some feedback',
-    keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'contact us', 'feedback', 'delete data', 'business', 'delete account'],
-    alternates: {
-        canonical: '/contact-us'
-    }
+  title: 'Contact us',
+  description: 'Contact us and provide some feedback',
+  keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'contact us', 'feedback', 'delete data', 'business', 'delete account'],
+  alternates: {
+    canonical: '/contact-us'
+  }
 }
 
 export default async function ContactUs() {
 
   const LinkIcon = ArrowLeftIcon;
+
 
   async function sendEmail(to: string, subject: string, message: string, type: string) {
 
@@ -77,6 +79,8 @@ export default async function ContactUs() {
 
   return (
 
+    <section>
+
     <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] border-primary text-onBackground bg-background py-5 px-5 lg:py-5 lg:px-8 md:shadow-xl shadow-2xl">
       <div className="flex flex-col">
         <div className="flex flex-row lg:space-x-4 items-baseline">
@@ -91,11 +95,11 @@ export default async function ContactUs() {
             </h1>
           </div>
         </div>
-        <div className="pb-4">
-          <ContactForm sendEmail={sendEmail} />
+        <div className="pb-20">
+            <ContactForm sendEmail={sendEmail} />
         </div>
-        <Footer/>
       </div>
     </div>
+    </section>
   );
 }

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { ArrowTrendingDownIcon, ArrowTrendingUpIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 import RenderAnimation from "./RenderDensityGraph"
-import { sourceSerif } from "./fonts";
+import { roboto, sourceSerif } from "./fonts";
 import clsx from "clsx";
 import Image from 'next/image';
 import Link from "next/link";
@@ -426,13 +426,15 @@ export default function Guide() {
     );
 
     return (
+        <section>
 
         <div className="text-onBackground lg:container bg-background md:shadow-2xl shadow-2xl lg:px-8 xl:pt-3 xl:pb-6 px-4 py-4 rounded-[25px]">
 
-            <div className={`${sourceSerif.className} text-lg md:text-3xl pt-2 pb-4 lg:px-2`}>
+            <div className={`${sourceSerif.className} text-lg md:text-2xl pt-2 pb-4 lg:px-2`}>
                 <div className="flex flex-row justify-between items-center lg:pb-4 tracking-tight">
-                    <div className="flex">
-                        <h1>Fundamental analysis | <span>Skidetics</span> + <span>Fritilaria</span> </h1>
+                    <div className="flex flex-col space-y-2">
+                        <h1>Next-generation fundamental analysis</h1>
+                        <h2 className={`${roboto.className} md:text-base text-sm tracking-tight md:tracking-wide`}>or how I learned to stop worrying about uncertainty and just use Skidetica models</h2>
                     </div>
                 </div>
             </div>
@@ -444,7 +446,7 @@ export default function Guide() {
                         <div className="flex flex-row space-x-4 justify-center">
 
                             {companyButtons.map((button) => (
-                                <button type="submit" onClick={() => {
+                                <button id="companyButton" type="submit" onClick={() => {
                                     handleCompanyButton(button.id);
 
                                 }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[32px] rounded-xl items-center justify-center',
@@ -466,7 +468,7 @@ export default function Guide() {
                                 <div className="flex flex-row justify-center space-x-4">
 
                                     {buttons.map((button) => (
-                                        <button type="submit" onClick={() => {
+                                        <button id="growthButton" type="submit" onClick={() => {
                                             handleGrowthButton(button.id);
 
                                         }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[36px] rounded-xl items-center justify-center',
@@ -488,7 +490,7 @@ export default function Guide() {
                                 <div className="flex flex-row justify-center space-x-4">
 
                                     {patternButtons.map((button) => (
-                                        <button type="submit" onClick={() => {
+                                        <button type="submit" id="growthPattern" onClick={() => {
                                             handlePatternButton(button.id);
                                         }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[34px] rounded-xl items-center justify-center',
                                             {
@@ -524,7 +526,7 @@ export default function Guide() {
 
 
                     </div>
-                    <li className="pt-4 pb-4  lg:text-base">Estimate the fair value of the selected company</li>
+                    <li className="pt-4 pb-4  lg:text-base">Calculate the fair value of the selected company</li>
                     <div className="pb-12 lg:text-base space-y-[10px]">
 
                     </div>
@@ -545,7 +547,7 @@ export default function Guide() {
                             <div className="flex flex-row justify-center space-x-4">
 
                                 {probabilityButtons.map((button) => (
-                                    <button type="submit" onClick={() => {
+                                    <button type="submit" id="probabilityButton" onClick={() => {
                                         handleProbabilityButton(button.id);
 
                                     }} key={button.id} className={clsx('flex md:w-[120px] w-[80px] h-[32px] rounded-xl items-center lg:text-base text-sm justify-center',
@@ -594,7 +596,7 @@ export default function Guide() {
                                     alt="Fritilaria"
                                     className="block md:hidden"
                                 />
-                                <div className="flex flex-col justify-center leading-7 text-center text-sm">
+                                <div className="flex flex-col justify-center leading-7 text-center text-sm pb-8">
                                     <p>Do you have any other questions?</p>
                                     <p>Check the  <Link className="text-primary font-bold" href={"/faq"}><span> FAQ</span>
                                     </Link>.</p>
@@ -603,12 +605,12 @@ export default function Guide() {
                         </div>
                     </div>
 
-                    <Footer />
 
 
                 </ul>
             </div>
         </div>
+        </section>
     );
 }
 

@@ -19,8 +19,9 @@ export default function Terms() {
   const LinkIcon = ArrowLeftIcon;
   return (
 
+    <section>
     <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-background  text-onBackground py-5 px-5 lg:py-5 lg:px-8 md:shadow-xl shadow-2xl">
-      <div className="flex flex-col">
+      <div className="flex flex-col pb-8">
         <div className="flex flex-row items-baseline lg:space-x-4">
           <div className="flex">
             <Link key={"Home"} href={"/"}>
@@ -28,7 +29,7 @@ export default function Terms() {
             </Link>
           </div>
           <div className="flex">
-            <h1 className={`${sourceSerif.className} text-xl md:text-3xl  tracking-tight pb-6`}>
+            <h1 className={`${sourceSerif.className} text-xl md:text-3xl  tracking-tight pb-8`}>
               Terms & Conditions
             </h1>
           </div>
@@ -42,9 +43,9 @@ export default function Terms() {
 
         <p className="pt-6 pb-8 text-sm lg:text-base ">By using Fritilaria, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions. If you have any questions, please contact Aremti Statistica <Link className="text-primary" href={"/contact-us"}> aremti@company.com</Link>.</p>
 
-        <Footer/>
 
       </div>
     </div>
+    </section>
   );
 }

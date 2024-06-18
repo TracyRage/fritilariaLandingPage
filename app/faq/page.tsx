@@ -22,8 +22,10 @@ export default function FAQ() {
   const LinkIcon = ArrowLeftIcon;
   return (
 
+    <section>
+
     <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] border-primary text-onBackground bg-background py-5 px-5 lg:py-5 lg:px-8 md:shadow-2xl shadow-2xl">
-      <div className="flex flex-col">
+      <div className="flex flex-col pb-8">
         <div className="flex flex-row lg:space-x-4 items-baseline pb-4">
           <div className="flex">
             <Link key={"Home"} href={"/"}>
@@ -31,7 +33,7 @@ export default function FAQ() {
             </Link>
           </div>
           <div className="flex">
-            <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-6`}>
+            <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-8`}>
               FAQ
             </h1>
           </div>
@@ -53,13 +55,13 @@ export default function FAQ() {
           <RenderFAQListItem name="Does Fritilaria provides ratios such as P/E?" content="No. Fritilaria does not take into account company stock price. Fritilaria is immune to market mood swings, speculative news or any kind short-term volatility." />
         </div>
 
-        <Footer />
 
 
 
       </div>
     </div>
 
+</section>
   );
 
 }

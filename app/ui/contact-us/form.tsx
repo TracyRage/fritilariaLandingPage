@@ -6,8 +6,6 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { useRef, useState } from 'react';
 
 
-
-
 interface FormValues {
   email: string,
   subject: string,

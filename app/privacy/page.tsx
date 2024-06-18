@@ -19,8 +19,10 @@ export default function Privacy() {
   const LinkIcon = ArrowLeftIcon;
   return (
 
+    <section>
+
     <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] border-primary bg-background text-onBackground py-5 px-5 lg:py-5 lg:px-8 md:shadow-xl shadow-2xl">
-      <div className="flex flex-col">
+      <div className="flex flex-col pb-8">
         <div className="flex flex-row items-baseline lg:space-x-4">
           <div className="flex">
             <Link key={"Home"} href={"/"}>
@@ -28,7 +30,7 @@ export default function Privacy() {
             </Link>
           </div>
           <div className="flex">
-            <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-6`}>
+            <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-8`}>
               Privacy policy
             </h1>
           </div>
@@ -40,9 +42,9 @@ export default function Privacy() {
         <RenderTermsListItem name="Limitation of Liability" content="Aremti Statistica is not liable for any direct, indirect, incidental, consequential, or special damages arising out of or in any way connected with the use of the app." />
         <RenderTermsListItem name="Acceptance of Terms" content="By using Fritilaria, you agree to comply with and be bound by these terms and conditions. If you do not agree, please refrain from using the app." />
 
-      <Footer/>
 
       </div>
     </div>
+    </section>
   );
 }

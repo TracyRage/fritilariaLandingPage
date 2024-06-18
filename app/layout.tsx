@@ -3,18 +3,21 @@ import { onest } from '@/app/ui/fonts';
 import './globals.css';
 import { Summary } from './ui/Summary';
 import Image from 'next/image';
+import RenderFritilariaLogoColors from './ui/firitilariaLogoColors';
+import Footer from './ui/footer';
 
 
 export const metadata: Metadata = {
   /// add google code
   title: {
-    default: 'Fritilaria - Skidetic fundamental analysis',
-    template: '%s | Fritilaria - Skidetic fundamental analysis'},
+    default: 'Skidetic fundamental analysis for value investing',
+    template: '%s | Fritilaria'
+  },
   description: 'Transform your opinion into statistically accurate fundamental analysis. Skidetic statistical models for value investing. Fritilaria app.',
-  keywords: 'fritilaria, skidetic, fundamental analysis, fundamental, statistics, analysis, statistical model, fundamental model, value, investing, value investing, app, application, forecast, stocks, company',
+  keywords: 'skidetica, simulation packages, value investing simplified, modern dcf calculator, automatic fundamental analysis, find very cheap high value stock no geek stuff, little talked undervalued stocks, need for math and accounting in stock market, predict unknown market problems, financial modeling for dummies',
   metadataBase: new URL('https://fritilaria.com'),
-  authors: [{name: 'Skidetica Lab', url: 'https://fritilaria.com'},
-          ],
+  authors: [{ name: 'Skidetica Lab', url: 'https://fritilaria.com' },
+  ],
   publisher: 'Skidetica Lab',
   alternates: {
     canonical: 'https://fritilaria.com'
@@ -41,6 +44,7 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+
   },
 }
 
@@ -52,18 +56,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${onest.className} antialiased`}>
-        <div className='flex Parent bg-elevated4'>
-          <div className='flex w-screen min-h-screen px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[70px] flex-col lg:flex-row justify-center'>
-            <Summary title='Fritilaria' />
-            <div>{children}</div>
-            <div className='hidden lg:block'>
-            <div className='flex flex-col w-[32px] h-fit bg-elevated3 md:black space-y-2 shadow-md shadow-elevated2 pt-2'>
-              <Image alt={''} width={45} height={20} src={"fritilaria_white.svg"}/>
-              <Image alt={''} width={45} height={20} src={"fritilaria_pink.svg"}/>
-              <Image alt={''} width={45} height={20} src={"fritilaria_red.svg"}/>
-              <Image alt={''} width={45} height={20} src={"fritilaria_green.svg"}/>
+        <div className='flex Parent bg-stone-900'>
+          <div className='flex w-screen h-fit px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[70px] flex-col lg:flex-row justify-center'>
+            <Summary title='Skidetica' />
+            <div className='flex flex-col space-y-10'>
+            <main>
+              <div>{children}</div>
+            </main>
+            <Footer/>
             </div>
-            </div>
+            <RenderFritilariaLogoColors/>
           </div>
         </div>
       </body>

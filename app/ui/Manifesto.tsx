@@ -21,10 +21,10 @@ export default function Manifesto() {
             onClick={() => handleClick()}
             className="hidden lg:block text-onBackground lg:container lg:bg-background  md:shadow-2xl shadow-2xl lg:px-8 lg:pt-4 lg:pb-6 px-6 py-4 lg:rounded-[25px] ">
 
-            <motion.h2 className={`${sourceSerif.className} text-lg md:text-3xl pt-2 lg:px-2 space-y-4`}>
+            <motion.h2 className={`${sourceSerif.className} text-lg md:text-2xl pt-2 lg:px-2 space-y-4`}>
                 <div className="flex flex-row justify-between items-center tracking-tight">
                     <button className="flex tracking-tight" onClick={() => handleClick()}>
-                        <h1> What is <span className="text-green-100">Skidetica</span>, anyway? </h1>
+                        <h1><span className="text-green-100">Skidetica</span> - making value investing easy</h1>
                     </button>
                     <div className="flex">
                         <div className="w-4 h-4 block md:hidden" onClick={() => handleClick()}>
@@ -40,9 +40,9 @@ export default function Manifesto() {
             </motion.h2>
 
             {!isOpen &&
-                <motion.div className={`${roboto.className} text-base lg:px-2 lg:pt-6 leading-relaxed tracking-wide`}>
-                    Forget about uncertainty. Leverage the cutting-edge statistics to calculate <br /> the fair value of your favorite stock.
-                    <div className="flex flex-row justify-end">
+                <motion.div className={`${roboto.className} text-base lg:px-2 lg:pt-2 leading-relaxed tracking-wide`}>
+                    <h2>Forget about uncertainty. Leverage the cutting-edge statistical models to calculate <br /> the fair value of your favorite stock</h2>
+                    <div className="flex flex-row lg:pt-2 justify-end">
                         <button onClick={() => handleClick()}>
                             <span className="text-primary">Learn more</span>
                         </button>
@@ -65,7 +65,7 @@ export default function Manifesto() {
                                 The majority of retail investors have found it challenging to perform good quality fundamental analyses and usually only pretend to value invest.
                             </li>
                             <li className="pb-4">
-                                However, there is a solution - Skidetica + Fritilaria.
+                                However, there is a solution - Skidetica.
                             </li>
 
                             <li className="pb-4">
@@ -74,7 +74,7 @@ export default function Manifesto() {
                             </li>
 
                             <li>
-                                Fritilaria app employs skidetika and assists you in finding the fair value of your favorite stock.
+                                Skidetica app assists you in finding the fair value of your favorite stock.
                             </li>
                         </ul>
                     </div>
