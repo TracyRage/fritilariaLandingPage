@@ -34,7 +34,25 @@ export default function Home() {
         "@type": "ContactPoint",
         email: "support@skidetica.com"
       }
-    }
+    },
+    siteNavigationElement: [
+      {
+        "@type": "SiteNavigationElement",
+        name: "Home",
+        url: "https://fritilaria.com/"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Contact us",
+        url: "https://fritilaria.com/contact/"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Terms and Conditions",
+        url: "https://fritilaria.com/terms/"
+      },
+
+    ]
 
   }
 
