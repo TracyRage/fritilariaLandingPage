@@ -2,13 +2,11 @@ import Link from "next/link";
 import { sourceSerif } from "../ui/fonts";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import Footer from "../ui/footer";
 
 
 export const metadata = {
     title: 'About us',
-    description: 'We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.',
-    keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'fundamental analysis', 'company', 'about us'],
+    keywords: ['skidetica about us', 'international stock exhange markets'],
     alternates: {
         canonical: '/company'
     }
@@ -20,7 +18,7 @@ export default function Company() {
     const LinkIcon = ArrowLeftIcon;
     return (
 
-        <section>
+        <section id="companyShortPresentation">
         <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] border-primary bg-background text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-2xl md:shadow-xl">
             <div className="flex flex-col pb-8">
                 <div className="flex flex-row lg:space-x-4 items-baseline">
@@ -36,13 +34,13 @@ export default function Company() {
                     </div>
                 </div>
 
-                <div className="lg:pb-12 pb-6 text-sm lg:text-base lg:leading-relaxed lg:tracking-wide text-justify indent-8">
-                    <p>We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </p>
+                <div className="lg:pb-12 pb-6 text-sm lg:text-base lg:leading-relaxed lg:tracking-wide text-pretty indent-8">
+                    <h2>We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </h2>
                 </div>
 
                 <div className="flex flex-col justify-center">
                     <div className={`${sourceSerif.className} flex lg:pb-14 pb-8 lg:text-2xl leading-relaxed text-pretty justify-center`}>
-                        <p>Markets we track</p>
+                        <h3>Markets Skidetica tracks</h3>
                     </div>
 
                     <div className="flex flex-col justify-center">
@@ -53,41 +51,41 @@ export default function Company() {
 
                             <div className="flex flex-row justify-around items-end">
                                 <div className="flex flex-col justify-center space-y-8">
-                                    <Image src="europe.svg" alt={""} width={150} height={150} />
+                                    <Image src="europe.svg" alt={"XFRA, Euronext, XSTO"} width={150} height={150} />
                                     <h1 className={`${sourceSerif.className} text-xl text-center`}>Europe</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-8">
-                                    <Image src="japan.svg" alt={""} width={100} height={100} />
+                                    <Image src="japan.svg" alt={"XJPX"} width={100} height={100} />
                                     <h1 className={`${sourceSerif.className} text-xl text-center`}>Japan</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-8">
-                                    <Image src="india.svg" alt={""} width={150} height={150} />
+                                    <Image src="india.svg" alt={"XBOM, XNSE"} width={150} height={150} />
                                     <h1 className={`${sourceSerif.className} text-xl text-center`}>India</h1>
                                 </div>
                             </div>
 
                             <div className="flex flex-row justify-around items-end">
                                 <div className="flex flex-col justify-center space-y-8">
-                                    <Image src="australia.svg" alt={""} width={150} height={150} />
+                                    <Image src="australia.svg" alt={"ASX"} width={150} height={150} />
                                     <h1 className={`${sourceSerif.className} text-xl text-center`}>Australia</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-8">
-                                    <Image src="nigeria.svg" alt={""} width={150} height={150} />
+                                    <Image src="nigeria.svg" alt={"NSE"} width={150} height={150} />
                                     <h1 className={`${sourceSerif.className} text-xl text-center`}>Nigeria</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-8">
-                                    <Image src="brazil.svg" alt={""} width={150} height={150} />
+                                    <Image src="brazil.svg" alt={"B3"} width={150} height={150} />
                                     <h1 className={`${sourceSerif.className} text-xl text-center`}>Brazil</h1>
                                 </div>
                             </div>
 
                             <div className="flex flex-row justify-around items-end">
                                 <div className="flex flex-col justify-center space-y-8">
-                                    <Image src="canada.svg" alt={""} width={200} height={200} />
+                                    <Image src="canada.svg" alt={"XTSE"} width={200} height={200} />
                                     <h1 className={`${sourceSerif.className} text-xl text-center`}>Canada</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-8">
-                                    <Image src="us.svg" alt={""} width={200} height={200} />
+                                    <Image src="us.svg" alt={"NASDAQ, NYSE"} width={200} height={200} />
                                     <h1 className={`${sourceSerif.className} text-xl text-center`}>US</h1>
                                 </div>
                             </div>
@@ -103,41 +101,41 @@ export default function Company() {
 
                             <div className="flex flex-row justify-around items-end">
                                 <div className="flex flex-col justify-center space-y-4">
-                                    <Image src="europe.svg" alt={""} width={100} height={100} />
+                                    <Image src="europe.svg" alt={"XFRA, Euronext, XSTO"} width={100} height={100} />
                                     <h1 className="text-md text-center">Europe</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-4">
-                                    <Image src="japan.svg" alt={""} width={50} height={50} />
+                                    <Image src="japan.svg" alt={"XJPX"} width={50} height={50} />
                                     <h1 className="text-md text-center">Japan</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-4">
-                                    <Image src="india.svg" alt={""} width={100} height={100} />
+                                    <Image src="india.svg" alt={"XBOM, XNSE"} width={100} height={100} />
                                     <h1 className="text-md text-center">India</h1>
                                 </div>
                             </div>
 
                             <div className="flex flex-row justify-around items-end">
                                 <div className="flex flex-col justify-center space-y-4">
-                                    <Image src="australia.svg" alt={""} width={75} height={75} />
+                                    <Image src="australia.svg" alt={"ASX"} width={75} height={75} />
                                     <h1 className="text-sm text-center">Australia</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-4">
-                                    <Image src="nigeria.svg" alt={""} width={75} height={75} />
+                                    <Image src="nigeria.svg" alt={"NSE"} width={75} height={75} />
                                     <h1 className="text-sm text-center">Nigeria</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-4">
-                                    <Image src="brazil.svg" alt={""} width={75} height={75} />
+                                    <Image src="brazil.svg" alt={"B3"} width={75} height={75} />
                                     <h1 className="text-sm text-center">Brazil</h1>
                                 </div>
                             </div>
 
                             <div className="flex flex-row justify-around items-end">
                                 <div className="flex flex-col justify-center space-y-4">
-                                    <Image src="canada.svg" alt={""} width={100} height={100} />
+                                    <Image src="canada.svg" alt={"XTSE"} width={100} height={100} />
                                     <h1 className="text-sm text-center">Canada</h1>
                                 </div>
                                 <div className="flex flex-col justify-center space-y-4">
-                                    <Image src="us.svg" alt={""} width={100} height={100} />
+                                    <Image src="us.svg" alt={"NASDAQ, NYSE"} width={100} height={100} />
                                     <h1 className="text-md text-center">US</h1>
                                 </div>
                             </div>
@@ -152,14 +150,6 @@ export default function Company() {
                         <p>Whispering certainty. <span className="text-primary">Fritilaria</span>.</p>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
 
             </div>
         </div>

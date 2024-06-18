@@ -8,9 +8,6 @@ import FritilariaDeleteAccountEmail from "@/components/delete-account-template";
 import getTicketNumber from "../utils/generateTicket";
 import FritilariaFeedbackEmail from "@/components/feedback-template";
 import generateTimastamp from "../utils/generateTimestamp";
-import Image from "next/image";
-import Footer from "../ui/footer";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 
 export const metadata = {

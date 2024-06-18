@@ -7,8 +7,7 @@ import Footer from "../ui/footer";
 
 export const metadata = {
     title: 'Privacy policy',
-    description: 'Fritilaria privacy policy',
-    keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'privacy', 'policy', 'privacy policy'],
+    keywords: ['skidetica privacy policy'],
     alternates: {
         canonical: '/privacy'
     }

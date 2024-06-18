@@ -7,19 +7,19 @@ export default function Footer() {
         <div className='text-onBackground lg:container bg-background md:shadow-2xl shadow-2xl lg:px-8 px-4 py-10 rounded-[25px]'>
             <div className='flex flex-col space-y-4'>
                 <div className="flex flex-row space-x-6 pb-3 justify-center">
-                    <Image src="reddit.svg" width={25} height={10} alt="x" />
-                    <Image src="x.svg" width={20} height={10} alt="x" />
-                    <Image src="threads.svg" width={20} height={10} alt="x" />
-                    <Image src="discord.svg" width={25} height={10} alt="x" />
+                    <Image src="reddit.svg" width={25} height={10} alt="Official Skidetica subreddit community" />
+                    <Image src="x.svg" width={20} height={10} alt="Official X (Twitter) page" />
+                    <Image src="threads.svg" width={20} height={10} alt="Official Threads page" />
+                    <Image src="discord.svg" width={25} height={10} alt="Official Discord channel" />
                 </div>
-                <nav id='footNav'>
+                <nav id='footerNav'>
                     <div className='flex flex-col space-y-2 tracking-tight text-xs md:text-base md:tracking-normal'>
                         <NavLink3 />
                         <NavLink4 />
                     </div>
                 </nav>
                 <div className="flex flex-col space-y-2 tracking-tight md:tracking-normal">
-                    <address>
+                    <address id='skideticaCompanyAddress'>
                         <div className='flex flex-row items-baseline justify-center not-italic'>
                             <p className="hidden md:block text-center text-xs md:text-sm text-onBackground">Edineț, MD-4601, <span className='text-xl'>*Moldova*</span> </p>
                             <p className="block md:hidden text-center text-xs md:text-base text-onBackground">Edineț, MD-4601, Republic of Moldova</p>

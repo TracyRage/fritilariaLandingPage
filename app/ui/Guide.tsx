@@ -426,14 +426,15 @@ export default function Guide() {
     );
 
     return (
-        <section>
+
+        <section id="mainPageGuideSection">
 
         <div className="text-onBackground lg:container bg-background md:shadow-2xl shadow-2xl lg:px-8 xl:pt-3 xl:pb-6 px-4 py-4 rounded-[25px]">
 
-            <div className={`${sourceSerif.className} text-lg md:text-2xl pt-2 pb-4 lg:px-2`}>
+            <div className="text-lg md:text-2xl pt-2 pb-4 lg:px-2">
                 <div className="flex flex-row justify-between items-center lg:pb-4 tracking-tight">
-                    <div className="flex flex-col space-y-2">
-                        <h1>Next-generation fundamental analysis</h1>
+                    <div className="flex flex-col space-y-3">
+                        <h1 className={`${sourceSerif.className}`}>Next-generation fundamental analysis</h1>
                         <h2 className={`${roboto.className} md:text-base text-sm tracking-tight md:tracking-wide`}>or how I learned to stop worrying about uncertainty and just use Skidetica models</h2>
                     </div>
                 </div>
@@ -502,7 +503,7 @@ export default function Guide() {
                                                 src={button.icon}
                                                 width={26}
                                                 height={26}
-                                                alt="ahaha"
+                                                alt="Skidetica pattern buttons"
                                                 className="invert" />
 
                                         </button>
@@ -520,7 +521,7 @@ export default function Guide() {
                         </div>
                         <div className="flex justify-center lg:pt-4 pt-4">
                             <div className="flex w-2/4 justify-center text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-2 rounded-xl">
-                                <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M€</h1>
+                                <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M$</h1>
                             </div>
                         </div>
 
@@ -533,11 +534,11 @@ export default function Guide() {
                     <div className="flex justify-center">
                         <div className="block lg:hidden space-y-4 w-[240px]">
                             <RenderAnimation pathname={`./animation/density/${pathName}.json`} loop={false} />
-                            <label className="flex justify-center">Value / Share (€)</label>
+                            <label className="flex justify-center">Value / Share ($)</label>
                         </div>
                         <div className="space-y-4 hidden lg:block w-[300px]">
                             <RenderAnimation pathname={`./animation/density/${pathName}.json`} loop={false} />
-                            <label className="flex justify-center">Value / Share (€)</label>
+                            <label className="flex justify-center">Value / Share ($)</label>
                         </div>
                         <div>
                         </div>
@@ -550,7 +551,7 @@ export default function Guide() {
                                     <button type="submit" id="probabilityButton" onClick={() => {
                                         handleProbabilityButton(button.id);
 
-                                    }} key={button.id} className={clsx('flex md:w-[120px] w-[80px] h-[32px] rounded-xl items-center lg:text-base text-sm justify-center',
+                                    }} key={button.id} className={clsx('flex md:w-[120px] w-[84px] h-[38px] rounded-xl items-center lg:text-base text-sm justify-center',
                                         {
                                             'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
                                             'bg-primaryContainer text-onBackground opacity-95': button.state === true
@@ -567,25 +568,22 @@ export default function Guide() {
                             <div className="container w-4/4  text-onBackground shadow-2xl bg-elevated  px-4 py-4 rounded-xl">
                                 <div className="flex text-center justify-center lg:text-base text-sm">
 
-                                    {probabilityType === 'median' && (<p> {ticker} fair value is {probabilityValue} (€).</p>)}
-                                    {probabilityType === 'ci5' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is less than {probabilityValue} (€).</p>)}
-                                    {probabilityType === 'ci95' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is more than {probabilityValue} (€).</p>)}
+                                    {probabilityType === 'median' && (<p> {ticker} fair value is {probabilityValue} ($)</p>)}
+                                    {probabilityType === 'ci5' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is less than {probabilityValue} ($)</p>)}
+                                    {probabilityType === 'ci95' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is more than {probabilityValue} ($)</p>)}
 
                                 </div>
 
                             </div>
 
-                            <div>
-                                <hr className="opacity-10" />
-                            </div>
 
                             <div className="flex flex-col pt-4 space-y-6 text-lg md:text-xl justify-center items-center">
-                                <h1 className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</h1>
+                                <p className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</p>
                                 <Image
                                     src="google.svg"
                                     width={160}
                                     height={120}
-                                    alt="Fritilaria"
+                                    alt="Download Skidetica app from Google Play"
                                     className="hidden md:block "
                                 />
 
@@ -593,20 +591,16 @@ export default function Guide() {
                                     src="google.svg"
                                     width={130}
                                     height={90}
-                                    alt="Fritilaria"
+                                    alt="Download Skidetica app from Google Play"
                                     className="block md:hidden"
                                 />
                                 <div className="flex flex-col justify-center leading-7 text-center text-sm pb-8">
                                     <p>Do you have any other questions?</p>
-                                    <p>Check the  <Link className="text-primary font-bold" href={"/faq"}><span> FAQ</span>
-                                    </Link>.</p>
+                                    <p>Check the  <Link className="text-primary font-bold" href={"/faq"}><span> FAQ</span></Link>.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
                 </ul>
             </div>
         </div>

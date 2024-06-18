@@ -98,8 +98,6 @@ const InnerForm = (props: FormikProps<FormValues>) => {
                 <label className="flex lg:text-md">Business</label>
               </div>
             </div>
-
-
           </div>
         </div>
 

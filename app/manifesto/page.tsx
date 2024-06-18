@@ -5,14 +5,13 @@ import Image from "next/image";
 import Footer from "../ui/footer";
 
 
-// export const metadata = {
-//     title: 'Manifesto',
-//     description: 'We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.',
-//     keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'fundamental analysis', 'company', 'about us'],
-//     alternates: {
-//         canonical: '/company'
-//     }
-// }
+export const metadata = {
+    title: 'Manifesto',
+    keywords: ['skidetica manifesto'],
+    alternates: {
+        canonical: '/manifesto'
+    }
+}
 
 
 
@@ -32,13 +31,13 @@ export default function Manifesto() {
                     </div>
                     <div className="flex">
                         <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-4 md:pb-2`}>
-                            Skidetic manifesto
+                            Skidetica manifesto
                         </h1>
                     </div>
                 </div>
 
 
-                <div className="text-base space-y-4 pb-2 md:pb-6">
+                <div id="reasonsSkideticaIsGood" className="text-base space-y-4 pb-2 md:pb-6">
                     <div className="px-4 lg:pt-6 text-sm lg:text-base lg:leading-relaxed md:tracking-wide">
                         <ul className="list-disc">
                             <li className="pb-4">
@@ -78,7 +77,7 @@ export default function Manifesto() {
                         src="google.svg"
                         width={160}
                         height={120}
-                        alt="Fritilaria"
+                        alt="Download Skidetica from Google Play"
                         className="hidden md:block "
                     />
 
@@ -86,7 +85,7 @@ export default function Manifesto() {
                         src="google.svg"
                         width={130}
                         height={90}
-                        alt="Fritilaria"
+                        alt="Download Skidetica from Google Play (mobile)"
                         className="block md:hidden"
                     />
                     <div className="flex flex-col justify-center leading-7 text-center text-sm">

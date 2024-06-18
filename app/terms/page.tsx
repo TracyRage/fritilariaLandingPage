@@ -7,8 +7,7 @@ import Footer from "../ui/footer";
 
 export const metadata = {
     title: 'Terms & Conditions',
-    description: 'Fritilaria terms and conditions',
-    keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'terms', 'conditions', 'terms & conditions'],
+    keywords: ['skidetica terms and conditions'],
     alternates: {
         canonical: '/terms'
     }
