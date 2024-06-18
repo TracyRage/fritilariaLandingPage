@@ -16,6 +16,47 @@ export const metadata = {
 
 export default function FAQ() {
   const LinkIcon = ArrowLeftIcon;
+
+  const jsonLd = {
+
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+
+      {
+        '@type': "Question",
+        name: "What is Skidetica?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Skidetica /σχέδιο/ represents a new technology which implies the process of converting subjective opinions into Bayesian statistical models"
+        }
+
+      },
+
+      {
+        '@type': "Question",
+        name: "How can Skidetica improve my fundamental analysis?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Skidetica listens to your personal opinion and uses it to create a statistically accurate fundamental analysis"
+        }
+
+      },
+
+      {
+        '@type': "Question",
+        name: "What I am going to get after a skidetic fundamental analysis?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The final output of Skidetica represents a log-normal distribution of Value/Share parameter"
+        }
+
+      },
+
+    ]
+
+  }
+
   return (
 
     <section>
