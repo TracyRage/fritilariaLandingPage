@@ -10,7 +10,6 @@ export default function Home() {
     name: 'Skidetica',
     image: 'https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/friti_logo_dark_cropped.png',
     description: "Transform your opinion into statistically accurate fundamental analysis",
-    publisher: 'Skidetica Labs',
     applicationCategory: 'Business',
     downloadURL: 'https://fritilaria.com',
     operatingSystem: 'Android',
@@ -26,6 +25,15 @@ export default function Home() {
       '@type': "AggregateRating",
       ratingValue: "4.8",
       ratingCount: "10000"
+    },
+    author: {
+      '@type': "Organization",
+      name: "Skidetica Labs",
+      url: "https://fritilaria.com/company",
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: "support@skidetica.com"
+      }
     }
 
   }
