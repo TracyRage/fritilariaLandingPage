@@ -21,7 +21,7 @@ export default function Manifesto() {
 
         <section>
 
-        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] border-primary bg-background text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-2xl md:shadow-xl">
+        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_dark_surface_lowest text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-2xl md:shadow-xl">
             <div className="flex flex-col">
                 <div className="flex flex-row lg:space-x-4 items-baseline">
                     <div className="flex">

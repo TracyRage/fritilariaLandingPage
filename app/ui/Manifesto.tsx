@@ -21,14 +21,16 @@ export default function Manifesto() {
 
             <motion.div
                 onClick={() => handleClick()}
-                className="hidden lg:block text-onBackground lg:container lg:bg-background  md:shadow-2xl shadow-2xl lg:px-8 lg:pt-4 lg:pb-6 px-6 py-4 lg:rounded-[25px] ">
+                className="hidden lg:block text-md_theme_dark_onSurface lg:container lg:bg-md_theme_dark_surface_lowest  md:shadow-xl shadow-xl shadow-md_theme_dark_scrim lg:px-8 lg:pt-4 lg:pb-6 px-6 py-4 lg:rounded-[25px] ">
 
                 <motion.h1 className={`${sourceSerif.className} text-lg md:text-2xl pt-2 lg:px-2 space-y-4`}>
                     <div className="flex flex-row justify-between items-center tracking-tight">
                         <button className="flex tracking-tight" onClick={() => handleClick()}>
-                            <h1><span className="text-green-100">Skidetica</span> - making value investing easy</h1>
+                            <div className="flex-col space-y-4">
+                            <h1>Skidetica - making value investing easy</h1>
+                            </div>
                         </button>
-                        <div className="flex">
+                        {/* <div className="flex">
                             <div className="w-4 h-4 block md:hidden" onClick={() => handleClick()}>
                                 <RenderDensityGraph pathname='./animation/green_dot.json' loop={true} />
                             </div>
@@ -37,7 +39,7 @@ export default function Manifesto() {
                                     <RenderDensityGraph pathname='./animation/green_dot.json' loop={true} />
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </motion.h1>
 
@@ -46,7 +48,7 @@ export default function Manifesto() {
                         <h2>Forget about uncertainty. Leverage the cutting-edge statistical models to calculate <br /> the fair value of your favorite stock</h2>
                         <div className="flex flex-row lg:pt-2 justify-end">
                             <button onClick={() => handleClick()}>
-                                <span className="text-primary">Learn more</span>
+                                <span className="text-md_theme_dark_primary">More</span>
                             </button>
 
                         </div>
@@ -82,7 +84,7 @@ export default function Manifesto() {
                         </div>
                         <div className="flex flex-row justify-end">
                             <button onClick={() => handleClick()}>
-                                <span className="text-primary">Less</span>
+                                <span className="text-md_theme_dark_primary">Less</span>
                             </button>
                         </div>
                     </motion.div>

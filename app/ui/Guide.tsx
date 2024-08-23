@@ -429,7 +429,7 @@ export default function Guide() {
 
         <section id="mainPageGuideSection">
 
-        <div className="text-onBackground lg:container bg-background md:shadow-2xl shadow-2xl lg:px-8 xl:pt-3 xl:pb-6 px-4 py-4 rounded-[25px]">
+        <div className="text-md_theme_dark_onSurface lg:container bg-md_theme_dark_surface_lowest md:shadow-xl shadow-xl shadow-md_theme_dark_scrim lg:px-8 xl:pt-3 xl:pb-6 px-4 py-4 rounded-[25px]">
 
             <div className="text-lg md:text-2xl pt-2 pb-4 lg:px-2">
                 <div className="flex flex-row justify-between items-center lg:pb-4 tracking-tight">
@@ -452,8 +452,8 @@ export default function Guide() {
 
                                 }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[32px] rounded-xl items-center justify-center',
                                     {
-                                        'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
-                                        'bg-primaryContainer opacity-95 text-onBackground': button.state === true
+                                        'bg-md_theme_dark_surface_low text-md_theme_dark_onSurface hover:bg-md_theme_dark_surface_container border-2 border-md_theme_dark_outline': button.state === false,
+                                        'bg-md_theme_dark_secondaryContainer text-md_theme_dark_onSecondaryContainer': button.state === true
                                     })}>
                                     {button.label}
                                 </button>
@@ -474,8 +474,8 @@ export default function Guide() {
 
                                         }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[36px] rounded-xl items-center justify-center',
                                             {
-                                                'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
-                                                'bg-primaryContainer text-onBackground opacity-95': button.state === true
+                                                'bg-md_theme_dark_surface_low text-md_theme_dark_onSurface hover:bg-md_theme_dark_surface_container border-2 border-md_theme_dark_outline': button.state === false,
+                                                'bg-md_theme_dark_secondaryContainer text-md_theme_dark_onSecondaryContainer': button.state === true
                                             })}>
                                             {button.label}
                                         </button>
@@ -495,8 +495,8 @@ export default function Guide() {
                                             handlePatternButton(button.id);
                                         }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[34px] rounded-xl items-center justify-center',
                                             {
-                                                'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
-                                                'bg-primaryContainer text-onBackground opacity-95': button.state === true
+                                                'bg-md_theme_dark_surface_low text-md_theme_dark_onSurface hover:bg-md_theme_dark_surface_container border-2 border-md_theme_dark_outline': button.state === false,
+                                                'bg-md_theme_dark_secondaryContainer text-md_theme_dark_onSecondaryContainer': button.state === true
                                             })}>
 
                                             <Image
@@ -520,7 +520,8 @@ export default function Guide() {
                         <div className="flex flex-col space-y-[10px]">
                         </div>
                         <div className="flex justify-center lg:pt-4 pt-4">
-                            <div className="flex w-2/4 justify-center text-onBackground shadow-3xl bg-elevated shadow-elevated4 text-base px-4 py-2 rounded-xl">
+                            <div className="flex w-2/4 justify-center text-md_theme_dark_onScreen shadow-3xl bg-md_theme_dark_surface_container shadow-elevated4 text-base px-4 py-2 rounded-xl">
+                
                                 <h1 className="text-base tracking-wide lg:text-3xl">{revenue}M$</h1>
                             </div>
                         </div>
@@ -553,8 +554,8 @@ export default function Guide() {
 
                                     }} key={button.id} className={clsx('flex md:w-[120px] w-[84px] h-[38px] rounded-xl items-center lg:text-base text-sm justify-center',
                                         {
-                                            'bg-elevated text-onBackground hover:bg-elevated2': button.state === false,
-                                            'bg-primaryContainer text-onBackground opacity-95': button.state === true
+                                            'bg-md_theme_dark_surface_low text-md_theme_dark_onSurface hover:bg-md_theme_dark_surface_container border-2 border-md_theme_dark_outline': button.state === false,
+                                            'bg-md_theme_dark_secondaryContainer text-md_theme_dark_onSecondaryContainer': button.state === true
                                         })}>
                                         <div className="flex flex-row justify-center">
 
@@ -565,7 +566,7 @@ export default function Guide() {
                                 ))}
 
                             </div>
-                            <div className="container w-4/4  text-onBackground shadow-2xl bg-elevated  px-4 py-4 rounded-xl">
+                            <div className="container w-4/4 bg-md_theme_dark_surface_container shadow-2xl text-md_theme_dark_onSurface px-4 py-4 rounded-xl">
                                 <div className="flex text-center justify-center lg:text-base text-sm">
 
                                     {probabilityType === 'median' && (<p> {ticker} fair value is {probabilityValue} ($)</p>)}
@@ -578,7 +579,7 @@ export default function Guide() {
 
 
                             <div className="flex flex-col pt-4 space-y-6 text-lg md:text-xl justify-center items-center">
-                                <p className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="text-primary">Fritilaria</span>.</p>
+                                <p className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="text-md_theme_dark_primary">Skidetica</span>.</p>
                                 <Image
                                     src="google.svg"
                                     width={160}
@@ -596,7 +597,7 @@ export default function Guide() {
                                 />
                                 <div className="flex flex-col justify-center leading-7 text-center text-sm pb-8">
                                     <p>Do you have any other questions?</p>
-                                    <p>Check the  <Link className="text-primary font-bold" href={"/faq"}><span> FAQ</span></Link>.</p>
+                                    <p>Check the  <Link className="text-md_theme_dark_primary font-bold" href={"/faq"}><span> FAQ</span></Link>.</p>
                                 </div>
                             </div>
                         </div>

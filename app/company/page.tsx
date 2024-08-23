@@ -19,7 +19,7 @@ export default function Company() {
     return (
 
         <section id="companyShortPresentation">
-        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] border-primary bg-background text-onBackground py-5 px-5 lg:py-5 lg:px-8 shadow-2xl md:shadow-xl">
+        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_dark_surface_lowest text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-xl">
             <div className="flex flex-col pb-8">
                 <div className="flex flex-row lg:space-x-4 items-baseline">
                     <div className="flex">
@@ -147,7 +147,7 @@ export default function Company() {
 
 
                     <div className={`${sourceSerif.className} flex lg:pt-14 pt-8 lg:text-xl text-base leading-relaxed text-pretty justify-center`}>
-                        <p>Whispering certainty. <span className="text-primary">Fritilaria</span>.</p>
+                        <p>Noi calculăm. <span className="text-md_theme_dark_primary">Skidetica</span>.</p>
                     </div>
                 </div>
 

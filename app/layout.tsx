@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${onest.className} antialiased`}>
-        <div className='flex Parent bg-stone-900'>
+        <div className='flex Parent bg-md_theme_dark_surface'>
           <div className='flex w-screen h-fit px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[70px] flex-col lg:flex-row justify-center'>
             <Summary title='Skidetica' />
             <div className='flex flex-col space-y-10'>

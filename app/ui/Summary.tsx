@@ -24,15 +24,14 @@ export function Summary({
 
         <section id="skideticaAppSummary">
 
-            <div role="banner" className='flex flex-col h-fit min-w-screen rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary md:py-6 pb-2 pt-4 shadow-2xl bg-background'>
-
+            <div role="banner" className='flex flex-col h-fit min-w-screen rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary md:py-6 pb-2 pt-4 shadow-xl shadow-md_theme_dark_scrim bg-md_theme_dark_surface_lowest'>
 
                 <div className="flex flex-col px-5 lg:px-6 pb-2">
 
                     <div className="flex flex-row justify-between items-center">
 
                         <div className="flex flex-row space-x-4 items-center">
-                            <div className="text-onBackground text-2xl md:text-3xl pb-6 tracking-tight">
+                            <div className="text-md_theme_dark_onSurface text-2xl md:text-3xl pb-6 tracking-tight">
                                 <Link href={"/"}>
                                     <h1 className={`${sourceSerif.className}`}>
                                         {title}
@@ -49,12 +48,12 @@ export function Summary({
                         </div>
                         <div className="block md:hidden">
                             <button id="mobileMenu" className="flex pb-6" onClick={() => setMenuOpen(!isMenuOpen)}>
-                                {!isMenuOpen ? <Bars3Icon className="w-[32px] text-primary" /> : <MarkIcon className="w-[32px] text-primary" />}
+                                {!isMenuOpen ? <Bars3Icon className="w-[32px] text-md_theme_dark_primary" /> : <MarkIcon className="w-[32px] text-md_theme_dark_primary" />}
                             </button>
                             {
                                 isMenuOpen &&
                                 <nav id="mobileNavBar">
-                                    <div className={`${sourceSerif.className} z-10 w-10/12 h-fit p-4 absolute right-[20px] text-primary bg-background rounded-2xl shadow-sm shadow-black`}>
+                                    <div className={`${sourceSerif.className} z-10 w-10/12 h-fit p-4 absolute right-[20px] text-md_theme_dark_onSurface bg-md_theme_dark_surface_container rounded-2xl shadow-xl shadow-md_theme_dark_scrim`}>
                                         <div className="flex flex-col space-y-4 p-4 items-center text-xl">
                                             <Link key={'Guide'} href={'/'} onClick={() => setMenuOpen(!isMenuOpen)}>Home</Link>
                                             <Link key={'Manifesto'} href={'/manifesto'} onClick={() => setMenuOpen(!isMenuOpen)}>Manifesto</Link>
