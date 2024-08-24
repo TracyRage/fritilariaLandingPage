@@ -42,11 +42,11 @@
     "@types/react-dom": "^18",
     "@types/react-google-recaptcha": "^2.1.9",
     "@types/react-lottie": "^1.2.10",
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
     "typescript": "5.1.6"
   }
 }

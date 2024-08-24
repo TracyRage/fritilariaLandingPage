@@ -10,10 +10,9 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: "selector",
   theme: {
     colors: {
-
-
       md_theme_light_primary: '#9B4052',
       md_theme_light_onPrimary: '#FFFFFF',
       md_theme_light_primaryContainer: '#FFD9DD',
@@ -49,7 +48,6 @@ const config: Config = {
       md_theme_light_surfaceTint: '#9B4052',
       md_theme_light_outlineVariant: '#D7C1C3',
       md_theme_light_scrim: '#000000',
-
       md_theme_dark_primary: '#FFB2BC',
       md_theme_dark_onPrimary: '#5F1125',
       md_theme_dark_primaryContainer: '#7D293B',
@@ -87,28 +85,11 @@ const config: Config = {
       md_theme_dark_scrim: '#000000',
       fritilariaGreen: '#B2FFCF',
 
-
-      background: '#201a1b',
-      elevated: '#282022',
-      elevated2: '#3D3033',
-      elevated4: '#1E1A1B',
-      elevated3: '#32272A',
-      onBackground: '#ece0e0',
-      primary: '#ffb2bc',
-      primaryContainer: '#7d293b',
-      onPrimaryContainer: '#ffd9dd',
-      onPrimary: '#5f1125',
-
     },
     extend: {
       colors: {
         ...colors,
         transparent: colors.transparent
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },

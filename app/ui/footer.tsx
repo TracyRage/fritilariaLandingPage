@@ -1,15 +1,21 @@
+'use client';
 import Image from 'next/image';
 import { NavLink3, NavLink4 } from './nav-links';
+import { useTheme } from './ThemeToggle';
+
 
 export default function Footer() {
+
+    const { isDarkTheme, toggleTheme } = useTheme();
+
     return (
 
-        <div className='text-md_theme_dark_onSurface lg:container bg-md_theme_dark_surface_lowest shadow-xl lg:px-8 px-4 py-10 rounded-[25px]'>
+        <div className='dark:text-md_theme_dark_onSurface text-md_theme_light_onSurface lg:container dark:bg-md_theme_dark_surface_lowest bg-md_theme_light_surface_lowest shadow-sm dark:shadow-sm shadow-md_theme_light_scrim lg:px-8 px-4 py-10 rounded-[25px]'>
             <div className='flex flex-col space-y-4'>
                 <div className="flex flex-row space-x-6 pb-3 justify-center">
                     <Image src="reddit.svg" width={25} height={10} alt="Official Skidetica subreddit community" />
-                    <Image src="x.svg" width={20} height={10} alt="Official X (Twitter) page" />
-                    <Image src="threads.svg" width={20} height={10} alt="Official Threads page" />
+                    <Image src={isDarkTheme ? "x_dark.svg" : "x_light.svg"} width={20} height={10} alt="Official X (Twitter) page" />
+                    <Image src={isDarkTheme ? "threads_dark.svg" : "threads_light.svg"} width={20} height={10} alt="Official Threads page" />
                     <Image src="discord.svg" width={25} height={10} alt="Official Discord channel" />
                 </div>
                 <nav id='footerNav'>

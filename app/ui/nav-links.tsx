@@ -17,7 +17,7 @@ export function NavLink() {
 
     return (
 
-    <div className="flex justify-center space-x-4">
+    <div className="flex justify-center space-x-4 dark:font-normal font-medium text-md_theme_light_primary dark:text-md_theme_dark_primary">
 
         {
             links.slice(0,2).map((link) => {
@@ -41,7 +41,7 @@ export function NavLink2() {
 
     return (
 
-    <div className="flex justify-center space-x-4">
+    <div className="flex justify-center space-x-4 dark:font-normal font-medium text-md_theme_light_primary dark:text-md_theme_dark_primary">
 
         {
             links.slice(2,5).map((link) => {
@@ -65,7 +65,7 @@ export function NavLink3() {
 
     return (
 
-    <div className="flex justify-center space-x-4">
+    <div className="flex justify-center space-x-4 dark:font-normal font-medium text-md_theme_light_primary dark:text-md_theme_dark_primary">
 
         {
             links.slice(0,2).map((link) => {
@@ -89,7 +89,7 @@ export function NavLink4() {
 
     return (
 
-    <div className="flex justify-center space-x-4">
+    <div className="flex justify-center space-x-4 dark:font-normal font-medium text-md_theme_light_primary dark:text-md_theme_dark_primary">
 
         {
             links.slice(2,5).map((link) => {
