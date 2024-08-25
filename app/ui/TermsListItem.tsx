@@ -14,7 +14,6 @@ export default function RenderTermsListItem({ name, content }: { name: string, c
         {name}
       </li>
       <p className="lg:leading-relaxed indent-6 text-sm lg:text-base text-pretty lg:text-wrap">{content}</p>
-
     </div>
   )
 

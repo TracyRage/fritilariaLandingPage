@@ -87,6 +87,22 @@ const config: Config = {
 
     },
     extend: {
+
+      animation: {
+
+        "loop-scroll": "loop-scroll 90s linear infinite",
+
+      },
+
+      keyframes: {
+
+        "loop-scroll": {
+          from: {transform: "translateX(0)"},
+          to: {transform: "translateX(-100%)"},
+        }
+
+      },
+
       colors: {
         ...colors,
         transparent: colors.transparent
@@ -97,4 +113,5 @@ const config: Config = {
     require('@tailwindcss/forms'),
   ],
 }
+
 export default config

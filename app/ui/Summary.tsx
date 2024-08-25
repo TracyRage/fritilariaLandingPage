@@ -49,7 +49,6 @@ export function Summary({
                                     <RenderDensityGraph pathname={isDarkTheme ? './animation/logo/fritilaria_logo_dark.json' : './animation/logo/fritilaria_logo_light.json'} loop={true} />
                                 </Link>
                             </div>
-
                         </div>
 
                         <div className="flex pb-6">
