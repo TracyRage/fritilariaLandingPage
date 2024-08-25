@@ -19,7 +19,7 @@ export default function Company() {
     return (
 
         <section id="companyShortPresentation">
-        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_dark_surface_lowest text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-xl">
+        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_light_surface_lowest dark:bg-md_theme_dark_surface_lowest text-md_theme_light_onSurface  dark:text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-sm shadow-md_theme_light_scrim">
             <div className="flex flex-col pb-8">
                 <div className="flex flex-row lg:space-x-4 items-baseline">
                     <div className="flex">
@@ -147,7 +147,7 @@ export default function Company() {
 
 
                     <div className={`${sourceSerif.className} flex lg:pt-14 pt-8 lg:text-xl text-base leading-relaxed text-pretty justify-center`}>
-                        <p>Noi calculăm. <span className="text-md_theme_dark_primary">Skidetica</span>.</p>
+                        <p>Noi calculăm. <span className="dark:text-md_theme_dark_primary text-md_theme_light_primary">Skidetica</span>.</p>
                     </div>
                 </div>
 

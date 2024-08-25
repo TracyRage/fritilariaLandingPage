@@ -29,7 +29,7 @@ export function Summary({
 
         <section id="skideticaAppSummary">
 
-            <div role="banner" className='flex flex-col h-fit min-w-screen rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary md:py-6 pb-2 pt-4 shadow-lg dark:shadow-xl shadow-md_theme_dark_scrim bg-md_theme_light_surface_lowest dark:bg-md_theme_dark_surface_lowest'>
+            <div role="banner" className='flex flex-col h-fit min-w-screen rounded-[25px] lg:w-[300px] xl:w-[380px] border-primary md:py-6 pb-2 pt-4 shadow-md dark:shadow-lg shadow-md_theme_dark_scrim bg-md_theme_light_surface_lowest dark:bg-md_theme_dark_surface_lowest'>
 
                 <div className="flex flex-col px-5 lg:px-6 pb-2">
 

@@ -78,7 +78,7 @@ export default async function ContactUs() {
 
     <section>
 
-    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] text-md_theme_dark_onSurface bg-md_theme_dark_surface_lowest py-5 px-5 lg:py-5 lg:px-8 shadow-xl">
+    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] dark:text-md_theme_dark_onSurface text-md_theme_light_onSurface bg-md_theme_light_surface_lowest dark:bg-md_theme_dark_surface_lowest py-5 px-5 lg:py-5 lg:px-8 shadow-sm shadow-md_theme_light_scrim">
       <div className="flex flex-col">
         <div className="flex flex-row lg:space-x-4 items-baseline">
           <div className="flex">

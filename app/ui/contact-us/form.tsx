@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import toast, { Toaster } from 'react-hot-toast';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useRef, useState } from 'react';
+import { useTheme } from '../ThemeToggle';
 
 
 interface FormValues {
@@ -16,6 +17,10 @@ interface FormValues {
 
 
 const InnerForm = (props: FormikProps<FormValues>) => {
+
+
+
+  const { isDarkTheme, toggleTheme } = useTheme();
 
   const { touched, errors, isSubmitting, values } = props;
 
@@ -64,8 +69,8 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           <h1 className="lg:text-lg py-4">Email</h1>
         </div>
         <Field type="email" name="email"
-          className="flex lg:w-[270px] h-[38px] border-1 border-md_theme_dark_outline bg-md_theme_dark_surface text-md_theme_dark_onSurface rounded-md font-medium tracking-wider px-2 shadow-inner" />
-        {touched.email && errors.email && <div className="py-2 font text-md_theme_dark_error">{errors.email}</div>}
+          className="flex lg:w-[270px] h-[38px] border-2 border-md_theme_light_outline dark:border-md_theme_dark_outline dark:bg-md_theme_dark_surface bg-md_theme_light_surface dark:text-md_theme_dark_onSurface text-md_theme_light_onSurface rounded-md font-medium tracking-wider px-2 shadow-inner" />
+        {touched.email && errors.email && <div className="py-2 font dark:text-md_theme_dark_error text-md_theme_light_error">{errors.email}</div>}
       </div>
 
       <div className="flex flex-col xl:flex-row xl:space-x-[52px]">
@@ -75,8 +80,8 @@ const InnerForm = (props: FormikProps<FormValues>) => {
             <h1 className="lg:text-lg py-4">Subject</h1>
           </div>
           <Field id="subject" name="subject"
-            className="flex lg:w-[270px] h-[38px] border-1 border-md_theme_dark_outline bg-md_theme_dark_surface text-md_theme_dark_onSurface rounded-md font-medium tracking-wider px-2 shadow-inner" />
-          {touched.subject && errors.subject && <div className="py-2 text-md_theme_dark_error">{errors.subject}</div>}
+            className="flex lg:w-[270px] h-[38px] border-2 border-md_theme_light_outline dark:border-md_theme_dark_outline bg-md_theme_light_surface dark:bg-md_theme_dark_surface text-md_theme_light_onSurface dark:text-md_theme_dark_onSurface rounded-md font-medium tracking-wider px-2 shadow-inner" />
+          {touched.subject && errors.subject && <div className="py-2 dark:text-md_theme_dark_error text-md_theme_light_error">{errors.subject}</div>}
 
         </div>
 
@@ -90,11 +95,11 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
             <div className="flex xl:flex-row xl:space-x-4 flex-col  xl:space-y-0 space-y-4 h-[38px]">
               <div className="flex flex-row space-x-2 items-center">
-                <Field className="h-[24px] w-[24px] text-md_theme_dark_primary" type="radio" name="picked" value={"technical"} />
+                <Field className="h-[24px] w-[24px] dark:text-md_theme_dark_primary text-md_theme_light_primary" type="radio" name="picked" value={"technical"} />
                 <label className="flex lg:text-md">Technical</label>
               </div>
               <div className="flex flex-row space-x-2 items-center">
-                <Field className="h-[24px] w-[24px] text-md_theme_dark_primary" type="radio" name="picked" value={"business"} />
+                <Field className="h-[24px] w-[24px] dark:text-md_theme_dark_primary text-md_theme_light_primary" type="radio" name="picked" value={"business"} />
                 <label className="flex lg:text-md">Business</label>
               </div>
             </div>
@@ -109,8 +114,8 @@ const InnerForm = (props: FormikProps<FormValues>) => {
         <div>
           <h1 className="lg:text-lg py-4">Message</h1>
           <div>
-            <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden sm:block bg-md_theme_dark_surface border-1 border-md_theme_dark_primary rounded-md font-medium text-md_theme_dark_onSurface tracking-wider p-2 shadow-inner " />
-            <Field as='textarea' id="message" name="message" rows={10} cols={28} className="block sm:hidden  bg-md_theme_dark_surface rounded-md border-1 border-md_theme_dark_primary font-medium text-md_theme_dark_onSurface tracking-wider p-2 shadow-inner" />
+            <Field as='textarea' id="message" name="message" rows={10} cols={44} className="hidden sm:block bg-md_theme_light_surface dark:bg-md_theme_dark_surface border-2 border-md_theme_light_primary dark:border-md_theme_dark_primary rounded-md font-medium text-md_theme_light_onSurface dark:text-md_theme_dark_onSurface tracking-wider p-2 shadow-inner " />
+            <Field as='textarea' id="message" name="message" rows={10} cols={28} className="block sm:hidden bg-md_theme_light_surface  dark:bg-md_theme_dark_surface rounded-md border-2 border-md_theme_light_primary dark:border-md_theme_dark_primary font-medium text-md_theme_light_onSurface dark:text-md_theme_dark_onSurface tracking-wider p-2 shadow-inner" />
           </div>
         </div>
       </div>
@@ -125,15 +130,15 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           theme='dark'
         />
 
-        <button type="submit" disabled={!isVerified || isSubmitting} onClick={() => resetRECAPTCHA()} className="flex w-[220px] h-[38px] bg-md_theme_dark_primary text-md_theme_dark_onPrimary hover:bg-md_theme_dark_secondary hover:text-md_theme_dark_onSecondary active:bg-fritilariaGreen rounded-xl items-center justify-center">
+        <button type="submit" disabled={!isVerified || isSubmitting} onClick={() => resetRECAPTCHA()} className="flex w-[220px] h-[38px] bg-md_theme_light_primary dark:bg-md_theme_dark_primary text-md_theme_light_onPrimary dark:text-md_theme_dark_onPrimary hover:bg-md_theme_light_secondary dark:hover:bg-md_theme_dark_secondary hover:text-md_theme_light_onSecondary dark:hover:text-md_theme_dark_onSecondary active:bg-fritilariaGreen active:text-md_theme_dark_scrim dark:active:bg-fritilariaGreen rounded-xl items-center justify-center">
           Submit
         </button>
         {<Toaster toastOptions={{
           success: {
             style: {
-              background: '#201a1b',
-              border: '2px solid #ece0e0',
-              color: '#ece0e0',
+              background: isDarkTheme ? '#201A1B' : '#FFFBFF',
+              border: isDarkTheme ? '2px solid #9F8C8E' : '2px solid #847374 ',
+              color: isDarkTheme ? '#ECE0E0' : '#201A1B',
             },
             iconTheme: {
               primary: '#b2ffcf',

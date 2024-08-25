@@ -10,7 +10,7 @@ import { sourceSerif } from "./fonts";
 export default function RenderTermsListItem({ name, content }: { name: string, content: string }) {
   return (
     <div className="pb-4">
-      <li className="pb-2 tracking-tight text-primary text-sm lg:text-base">
+      <li className="pb-2 tracking-tight dark:text-md_theme_dark_primary text-md_theme_light_primary text-sm lg:text-base">
         {name}
       </li>
       <p className="lg:leading-relaxed indent-6 text-sm lg:text-base text-pretty lg:text-wrap">{content}</p>
@@ -53,6 +53,7 @@ export function RenderFAQListItem({ name, content }: { name: string, content: st
             !isOpen ? <ChevronDown className="md:w-[34px] w-[24px]" /> : <ChevronUp className="md:w-[34px] w-[24px]" />
 
           }
+
         </div>
         {isOpen &&
           <motion.div className="w-3/3 md:w-3/4 text-sm md:text-base tracking-wide">
@@ -60,7 +61,7 @@ export function RenderFAQListItem({ name, content }: { name: string, content: st
           </motion.div>}
         {
 
-          !isOpen ? <hr className="opacity-15 w-3/3 md:w-3/4" /> : <hr className="opacity-15 w-3/3 md:w-3/4 bg-fritilariaGreen" />
+          !isOpen ? <hr className="dark:opacity-25 bg-md_theme_light_inverseSurface dark:bg-md_theme_dark_inverseSurface w-3/3 md:w-3/4" /> : <hr className=" w-3/3 md:w-3/4 dark:opacity-25 bg-md_theme_light_inverseSurface dark:bg-md_theme_dark_inverseSurface" />
 
         }
       </div>

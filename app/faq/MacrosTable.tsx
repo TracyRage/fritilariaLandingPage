@@ -10,7 +10,7 @@ export default function MacroTable() {
 
     return (
         <div
-  className="flex flex-col w-3/3 justify-center shadow-md shadow-md_theme_dark_scrim rounded-xl bg-md_theme_dark_surface_low px-2 pt-6 pb-4">
+  className="flex flex-col w-3/3 justify-center shadow-md dark:shadow-md_theme_dark_scrim rounded-xl dark:bg-md_theme_dark_surface_low bg-md_theme_light_surface_low px-2 pt-6 pb-4">
   <table className="text-left">
     <caption className="pb-2 text-sm caption-top">
 
@@ -19,21 +19,21 @@ export default function MacroTable() {
     </caption>
     <thead>
       <tr>
-        <th className="p-4 border-b border-opacity-50 border-primary">
+        <th className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block font-sans md:text-sm text-xs antialiased font-normal leading-none opacity-70">
           </p>
         </th>
-        <th className="p-4 border-b border-opacity-50 border-primary">
+        <th className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-none text-onBackground opacity-70">
             Median
           </p>
         </th>
-        <th className="p-4 border-b border-opacity-50 border-primary">
+        <th className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-none text-onBackground opacity-70">
             Low
           </p>
         </th>
-        <th className="p-4 border-b border-opacity-50 border-primary">
+        <th className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-none text-onBackground opacity-70">
             Upper
           </p>
@@ -42,110 +42,110 @@ export default function MacroTable() {
     </thead>
     <tbody>
       <tr>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[0].type}
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[0].median}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[0].lower}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[0].upper}%
             </p>
         </td>
       </tr>
       <tr>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[1].type}
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[1].median}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[1].lower}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[1].upper}%
             </p>
         </td>
       </tr>
       <tr>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[2].type}
             </p>
             </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[2].median}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[2].lower}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[2].upper}%
             </p>
         </td>
       </tr>
       <tr>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[3].type}
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[3].median}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[3].lower}%
           </p>
         </td>
-        <td className="p-4 border-b border-opacity-50 border-primary">
+        <td className="p-4 border-b border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[3].upper}%
             </p>
         </td>
       </tr>
       <tr>
-        <td className="p-4 border-opacity-50 border-primary">
+        <td className="p-4 border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].type}
           </p>
         </td>
-        <td className="p-4 border-opacity-50 border-primary">
+        <td className="p-4 border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].median}%
           </p>
         </td>
-        <td className="p-4 border-opacity-50 border-primary">
+        <td className="p-4 border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].lower}%
           </p>
         </td>
-        <td className="p-4 border-opacity-50 border-primary">
+        <td className="p-4 border-opacity-50 dark:border-md_theme_dark_inverseSurface border-md_theme_light_inverseSurface">
           <p className="block md:text-sm text-xs antialiased font-normal leading-normal text-onBackground">
             {macroParams[4].upper}%
             </p>

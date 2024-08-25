@@ -524,7 +524,7 @@ export default function Guide() {
                         <div className="flex flex-col space-y-[10px]">
                         </div>
                         <div className="flex justify-center lg:pt-4 pt-4">
-                            <div className="flex w-2/4 justify-center text-md_theme_light_onSurface dark:text-md_theme_dark_onSurface shadow-sm dark:bg-md_theme_dark_surface_container bg-md_theme_light_surface_container shadow-md_theme_dark_scrim text-base px-4 py-2 rounded-xl">
+                            <div className="flex w-2/4 justify-center text-md_theme_light_onSurface dark:text-md_theme_dark_onSurface shadow-sm dark:bg-md_theme_dark_surface_low bg-md_theme_light_surface_low text-base px-4 py-2 rounded-xl">
                 
                                 <p className="text-base tracking-wide lg:text-3xl">{revenue}M$</p>
                             </div>
@@ -570,7 +570,7 @@ export default function Guide() {
                                 ))}
 
                             </div>
-                            <div className="container w-4/4 dark:bg-md_theme_dark_surface_container bg-md_theme_light_surface_container shadow-sm dark:text-md_theme_dark_onSurface text-md_theme_light_onSurface shadow-md_theme_light_scrim px-4 py-4 rounded-xl">
+                            <div className="container w-4/4 dark:bg-md_theme_dark_surface_low bg-md_theme_light_surface_low shadow-sm dark:text-md_theme_dark_onSurface text-md_theme_light_onSurface px-4 py-4 rounded-xl">
                                 <div className="flex text-center justify-center lg:text-base text-sm">
 
                                     {probabilityType === 'median' && (<p> {ticker} fair value is {probabilityValue} ($)</p>)}

@@ -19,7 +19,7 @@ export default function Terms() {
   return (
 
     <section>
-    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_dark_surface_lowest  text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-xl">
+    <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_light_surface_lowest dark:bg-md_theme_dark_surface_lowest text-md_theme_light_onSurface  dark:text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-sm shadow-md_theme_light_scrim">
       <div className="flex flex-col pb-8">
         <div className="flex flex-row items-baseline lg:space-x-4">
           <div className="flex">
