@@ -21,7 +21,7 @@ export default function Manifesto() {
 
         <section>
 
-        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_dark_surface_lowest text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-2xl md:shadow-xl">
+        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-surface dark:bg-md_theme_dark_surface_lowest bg-md_theme_light_surface_lowest dark:text-md_theme_dark_onSurface text-md_theme_light_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-md shadow-md_theme_light_scrim">
             <div className="flex flex-col">
                 <div className="flex flex-row lg:space-x-4 items-baseline">
                     <div className="flex">
@@ -72,7 +72,7 @@ export default function Manifesto() {
                 </div>
 
                 <div className="flex flex-col pt-4 space-y-6 text-lg md:text-xl justify-center items-center">
-                    <h1 className="tracking-tight">Intrigued? Try <span className="text-primary">Fritilaria</span>.</h1>
+                    <h1 className="tracking-tight">Intrigued? Try <span className="text-md_theme_light_primary dark:text-md_theme_dark_primary">Skidetica</span>.</h1>
                     <Image
                         src="google.svg"
                         width={160}

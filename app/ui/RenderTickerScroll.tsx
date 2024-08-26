@@ -1,7 +1,10 @@
 'use client';
 import RenderCompanyElement from "./RenderCompanyElement";
+import { useTheme } from "./ThemeToggle";
 
 export default function RenderTickerScroll() {
+
+
     return (
         <div className="flex overflow-hidden space-x-2">
 
@@ -15,35 +18,45 @@ export default function RenderTickerScroll() {
 
               <RenderCompanyElement
                 magnitude="O"
-                pattern="arrowUp.svg"
+                pattern="linearDown.svg"
                 companyTicker="GOOG"
                 fairValue={200}
                 upperLimit={414} />
 
               <RenderCompanyElement
                 magnitude="H"
-                pattern="arrowUp.svg"
+                pattern="constant.svg"
                 companyTicker="QCOM"
                 fairValue={20}
                 upperLimit={99} />
 
               <RenderCompanyElement
                 magnitude="M"
-                pattern="arrowUp.svg"
+                pattern="linearUp.svg"
                 companyTicker="AMGN"
                 fairValue={20}
                 upperLimit={199} />
 
               <RenderCompanyElement
-                magnitude="L"
-                pattern="arrowUp.svg"
+                magnitude="M"
+                pattern="lastYearPump.svg"
                 companyTicker="NET"
                 fairValue={200}
                 upperLimit={999} />
 
+
+              <RenderCompanyElement
+                magnitude="O"
+                pattern="trapezoidUp.svg"
+                companyTicker="TSMC"
+                fairValue={400}
+                upperLimit={600} />
+
+
             </div>
 
             <div className="flex animate-loop-scroll space-x-2" aria-hidden="true">
+
               <RenderCompanyElement
                 magnitude="VL"
                 pattern="arrowUp.svg"
@@ -53,31 +66,40 @@ export default function RenderTickerScroll() {
 
               <RenderCompanyElement
                 magnitude="O"
-                pattern="arrowUp.svg"
+                pattern="linearDown.svg"
                 companyTicker="GOOG"
                 fairValue={200}
                 upperLimit={414} />
 
               <RenderCompanyElement
                 magnitude="H"
-                pattern="arrowUp.svg"
+                pattern="constant.svg"
                 companyTicker="QCOM"
                 fairValue={20}
                 upperLimit={99} />
 
               <RenderCompanyElement
                 magnitude="M"
-                pattern="arrowUp.svg"
+                pattern="linearUp.svg"
                 companyTicker="AMGN"
                 fairValue={20}
                 upperLimit={199} />
 
               <RenderCompanyElement
                 magnitude="L"
-                pattern="arrowUp.svg"
+                pattern="lastYearPump.svg"
                 companyTicker="NET"
                 fairValue={200}
                 upperLimit={999} />
+
+
+              <RenderCompanyElement
+                magnitude="L"
+                pattern="trapezoidUp.svg"
+                companyTicker="TSMC"
+                fairValue={400}
+                upperLimit={600} />
+
 
             </div>
           </div>

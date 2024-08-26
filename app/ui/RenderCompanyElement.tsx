@@ -13,14 +13,14 @@ export default function RenderCompanyElement({
 
     return (
         <div className="flex flex-col w-[140px] h-[58px] px-2 py-4 space-y-2">
-            <div className="flex flex-row space-x-2">
+            <div className="flex flex-row space-x-2 place-content-center">
                 <div className="flex flex-col w-[60px] place-items-center overflow-x-hidden text-ellipsis">
-                    <div className="flex flex-row space-x-2">
+                    <div className="flex flex-row space-x-2 items-baseline">
                         <p>{magnitude}</p>
                         <Image
                             src={pattern}
-                            width={26}
-                            height={26}
+                            width={20}
+                            height={20}
                             alt="Skidetica pattern buttons"
                             className={isDarkTheme ? "invert" : ""} />
                     </div>
