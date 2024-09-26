@@ -44,7 +44,7 @@ export function Summary({
                                 </Link>
                             </div>
 
-                            <div className="w-[44px] pb-6 block md:hidden">
+                            <div id="Main page" className="w-[44px] pb-6 block md:hidden">
                                 <Link href={"/"}>
                                     <RenderDensityGraph pathname={isDarkTheme ? './animation/logo/fritilaria_logo_dark.json' : './animation/logo/fritilaria_logo_light.json'} loop={true} />
                                 </Link>
@@ -53,6 +53,7 @@ export function Summary({
 
                         <div className="flex pb-6">
                                 <button
+                                id="Theme switch"
                                     onClick={toggleTheme}>
                                     {isDarkTheme ? <SunIcon className="w-[32px] dark:text-md_theme_dark_onSurface" /> : <MoonIcon className="w-[32px] text-md_theme_light_onSurface" />}
                                 </button>
@@ -100,19 +101,16 @@ export function Summary({
                     <h1 className={' text-onBackground text-pretty tracking-wide'}>
                         <div className="flex flex-col space-y-4">
                             <div>
-                                Transform your opinion into statistically accurate fundamental analysis
+                                Calculate the fair value of your favorite stock with Skidetica
                             </div>
                             <div>
-                                Skidetic statistical models for value investing
+                                Perform accurate fundamental analysis by combining advanced statistics and your subjective opinion
                             </div>
                         </div>
                     </h1>
                 </div>
 
-
-
                 <div>
-
                     <div id="downloadGooglePlayDesktop" className="flex justify-center">
                         <Link href={'/'}>
                             <Image
@@ -137,7 +135,6 @@ export function Summary({
                         </Link>
                     </div>
                 </div>
-
 
 
                 <nav id="summaryNav">

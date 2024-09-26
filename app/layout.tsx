@@ -60,7 +60,7 @@ export default function RootLayout({
     <html lang="en" className='dark'>
       <body className={`${onest.className} antialiased`}>
         <div className='flex Parent bg-md_theme_light_surface text-md_theme_light_onSurface dark:bg-md_theme_dark_surface dark:text-md_theme_dark_onSurface'>
-          <div className='flex w-screen h-fit px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[70px] flex-col lg:flex-row justify-center'>
+          <div className='flex w-screen min-h-screen px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[70px] flex-col lg:flex-row justify-center'>
             <ThemeProvider>
             <Summary title='Skidetica' />
             <div className='flex flex-col space-y-10'>

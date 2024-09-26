@@ -19,17 +19,6 @@ export default function RenderTermsListItem({ name, content }: { name: string, c
 
 }
 
-// export function RenderFAQListItem({name, content}: {name: string, content: string}) {
-//     return (
-//         <div className="pb-4">
-//         <li className="pb-2 text-base lg:text-lg tracking-tight text-primary">
-//           {name}
-//         </li>
-//         <p className="leading-relaxed tracking-wide lg:leading-relaxed text-pretty lg:text-wrap">{content}</p>
-//       </div>
-//     )
-
-// }
 
 export function RenderFAQListItem({ name, content }: { name: string, content: string }) {
 
@@ -46,10 +35,16 @@ export function RenderFAQListItem({ name, content }: { name: string, content: st
     <motion.div onClick={() => handleClick()}>
       <div className="flex flex-col space-y-4">
         <div className="flex flex-row w-3/3 md:w-3/4 justify-between items-center">
-          <h1 className={`${sourceSerif.className} text-primary text-sm md:text-lg`}>{name}</h1>
+        {
+
+          !isOpen ?  
+          <h1 className={`${sourceSerif.className} text-primary text-sm md:text-lg`}>{name}</h1> : 
+          <h1 className={`${sourceSerif.className} dark:text-md_theme_dark_primary text-md_theme_light_primary text-sm md:text-lg`}>{name}</h1>
+
+        }
           {
 
-            !isOpen ? <ChevronDown className="md:w-[34px] w-[24px]" /> : <ChevronUp className="md:w-[34px] w-[24px]" />
+            !isOpen ? <ChevronDown className="md:w-[34px] w-[24px]" /> : <ChevronUp className="md:w-[34px] w-[24px] text-md_theme_light_primary dark:text-md_theme_dark_primary" />
 
           }
 
@@ -60,7 +55,7 @@ export function RenderFAQListItem({ name, content }: { name: string, content: st
           </motion.div>}
         {
 
-          !isOpen ? <hr className="dark:opacity-25 bg-md_theme_light_inverseSurface dark:bg-md_theme_dark_inverseSurface w-3/3 md:w-3/4" /> : <hr className=" w-3/3 md:w-3/4 dark:opacity-25 bg-md_theme_light_inverseSurface dark:bg-md_theme_dark_inverseSurface" />
+          !isOpen ? <hr className="w-3/3 md:w-3/4 border-md_theme_light_onBackground opacity-25 dark:opacity-15 dark:border-md_theme_dark_onPrimaryContainer" /> : <hr className="w-3/3 md:w-3/4 opacity-50 border-md_theme_light_primary dark:border-md_theme_dark_primary" />
 
         }
       </div>
@@ -86,12 +81,21 @@ export function RenderFAQListItem2({ name, content }: { name: string, content: s
     <motion.div onClick={() => handleClick()}>
       <div className="flex flex-col space-y-4">
         <div className="flex flex-row w-3/3 md:w-3/4 justify-between items-center">
-          <h1 onClick={() => handleClick()} className={`${sourceSerif.className} text-primary text-sm md:text-lg`}>{name}</h1>
+
+        {
+
+          !isOpen ?  
+          <h1 className={`${sourceSerif.className} text-primary text-sm md:text-lg`}>{name}</h1> : 
+          <h1 className={`${sourceSerif.className} dark:text-md_theme_dark_primary text-md_theme_light_primary text-sm md:text-lg`}>{name}</h1>
+
+        }
+
           {
 
-            !isOpen ? <ChevronDown onClick={() => handleClick()} className="md:w-[34px] w-[24px]" /> : <ChevronUp onClick={() => handleClick} className="md:w-[34px] w-[24px]" />
+            !isOpen ? <ChevronDown onClick={() => handleClick()} className="md:w-[34px] w-[24px]" /> : <ChevronUp onClick={() => handleClick} className="md:w-[34px] w-[24px] dark:text-md_theme_dark_primary text-md_theme_light_primary" />
 
           }
+
         </div>
         {isOpen &&
           <motion.div className="flex flex-row text-sm md:text-base tracking-wide md:w-3/4 justify-center space-y-4">
@@ -106,7 +110,7 @@ export function RenderFAQListItem2({ name, content }: { name: string, content: s
           </motion.div>}
         {
 
-          !isOpen ? <hr className="opacity-15 w-3/3 md:w-3/4" /> : <hr className="opacity-15 w-3/3 md:w-3/4 bg-fritilariaGreen" />
+          !isOpen ? <hr className="w-3/3 md:w-3/4 border-md_theme_light_onBackground opacity-25 dark:opacity-15 dark:border-md_theme_dark_onPrimaryContainer" /> : <hr className="w-3/3 md:w-3/4 opacity-50 border-md_theme_light_primary dark:border-md_theme_dark_primary" />
 
         }
       </div>

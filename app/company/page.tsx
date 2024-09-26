@@ -1,44 +1,56 @@
+'use client';
 import Link from "next/link";
 import { sourceSerif } from "../ui/fonts";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { useTheme } from "../ui/ThemeToggle";
 
 
-export const metadata = {
-    title: 'About us',
-    keywords: ['skidetica about us', 'international stock exhange markets'],
-    alternates: {
-        canonical: '/company'
-    }
-}
+// export const metadata = {
+//     title: 'About us',
+//     keywords: ['skidetica about us', 'international stock exhange markets'],
+//     alternates: {
+//         canonical: '/company'
+//     }
+// }
 
 
 
 export default function Company() {
+
+    const { isDarkTheme, toggleTheme } = useTheme();
+
     const LinkIcon = ArrowLeftIcon;
+
+
     return (
-
         <section id="companyShortPresentation">
-        <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_light_surface_lowest dark:bg-md_theme_dark_surface_lowest text-md_theme_light_onSurface  dark:text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-sm shadow-md_theme_light_scrim">
-            <div className="flex flex-col pb-8">
-                <div className="flex flex-row lg:space-x-4 items-baseline">
-                    <div className="flex">
-                        <Link key={"Home"} href={"/"}>
-                            <LinkIcon className="w-[20px] font-extrabold lg:block hidden" />
-                        </Link>
+            <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_light_surface_lowest dark:bg-md_theme_dark_surface_lowest text-md_theme_light_onSurface  dark:text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-sm shadow-md_theme_light_scrim">
+                <div className="flex flex-col pb-8">
+                    <div className="flex flex-row lg:space-x-4 items-baseline">
+                        <div className="flex">
+                            <Link key={"Home"} href={"/"}>
+                                <LinkIcon className="w-[20px] font-extrabold lg:block hidden" />
+                            </Link>
+                        </div>
+                        <div className="flex">
+                            <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-6`}>
+                                About us
+                            </h1>
+                        </div>
                     </div>
-                    <div className="flex">
-                        <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-6`}>
-                            About us
-                        </h1>
+
+
+                    <div className="lg:pb-12 pb-6 text-sm lg:text-base lg:leading-relaxed lg:tracking-wide text-pretty indent-8">
+                        <h2>We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </h2>
                     </div>
-                </div>
 
-                <div className="lg:pb-12 pb-6 text-sm lg:text-base lg:leading-relaxed lg:tracking-wide text-pretty indent-8">
-                    <h2>We are Skidetica Lab. We do statistics. Our main goal is simple. We try to help retail investors to decypher stock markets. We track markets and analyze publicly traded companies all around the world and generate skidetic models which you can use for your fundamental analysis.  </h2>
-                </div>
+                    <div className="flex flex-row justify-center space-y-4">
+                        <Image src={isDarkTheme ? "skidetica_logo_dark_full.svg" : "skidetica_logo_light_full.svg"} alt={"Skidetica Labs"} width={285} height={285} />
+                    </div>
 
-                <div className="flex flex-col justify-center">
+
+                    {/* <div className="flex flex-col justify-center">
                     <div className={`${sourceSerif.className} flex lg:pb-14 pb-8 lg:text-2xl leading-relaxed text-pretty justify-center`}>
                         <h3>Markets Skidetica tracks</h3>
                     </div>
@@ -149,10 +161,11 @@ export default function Company() {
                     <div className={`${sourceSerif.className} flex lg:pt-14 pt-8 lg:text-xl text-base leading-relaxed text-pretty justify-center`}>
                         <p>Noi calculăm. <span className="dark:text-md_theme_dark_primary text-md_theme_light_primary">Skidetica</span>.</p>
                     </div>
+                </div> */}
+
                 </div>
 
             </div>
-        </div>
         </section>
 
     );

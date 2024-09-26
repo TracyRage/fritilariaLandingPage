@@ -14,6 +14,11 @@ import { useTheme } from "./ThemeToggle";
 
 export default function Guide() {
 
+    const { isDarkTheme, toggleTheme } = useTheme();
+
+    const illustrationType = isDarkTheme ? "dark" : "light"
+
+
     const [companyButtons, setCompanyButtons] = useState([
         { id: "abnb", label: "ABNB", state: false },
         { id: "msft", label: "MSFT", state: true },
@@ -41,7 +46,7 @@ export default function Guide() {
     const [pathName, setPathName] = useState(financialParams[19].path);
     const [equalizerPathName, setEqualizerPathName] = useState(equalizerPathnames[0].path);
     const [revenue, setRevenue] = useState(financialParams[19].revenue);
-    const [ ticker, setTicker] = useState("MSFT");
+    const [ticker, setTicker] = useState("MSFT");
     const [median, setMedian] = useState(financialParams[19].median);
     const [ci5, setCI5] = useState(financialParams[19].median);
     const [ci95, setCI95] = useState(financialParams[19].median);
@@ -411,8 +416,8 @@ export default function Guide() {
 
                 break;
 
-        default:
-            break;
+            default:
+                break;
 
         };
 
@@ -426,189 +431,195 @@ export default function Guide() {
 
     );
 
-    const { isDarkTheme, toggleTheme } = useTheme();
-    
+
 
     return (
 
         <section id="mainPageGuideSection">
 
-        <div className="lg:container dark:bg-md_theme_dark_surface_lowest bg-md_theme_light_surface_lowest  dark:shadow-sm shadow-sm shadow-md_theme_dark_scrim lg:px-8 xl:pt-3 xl:pb-6 px-4 py-4 rounded-[25px]">
+            <div className="lg:container dark:bg-md_theme_dark_surface_lowest bg-md_theme_light_surface_lowest  dark:shadow-sm shadow-sm shadow-md_theme_dark_scrim lg:px-8 xl:pt-3 xl:pb-6 px-4 py-4 rounded-[25px]">
 
-            <div className="text-lg md:text-2xl pt-2 pb-4 lg:px-2">
-                <div className="flex flex-row justify-between items-center lg:pb-4 tracking-tight">
-                    <div className="flex flex-col space-y-3">
-                        <h1 className={`${sourceSerif.className}`}>Next-generation fundamental analysis</h1>
-                        <h2 className={`${roboto.className} md:text-base text-sm tracking-tight md:tracking-wide`}>or how I learned to stop worrying about uncertainty and just use Skidetica models</h2>
+                <div className="text-lg md:text-2xl pt-2 pb-4 lg:px-2">
+                    <div className="flex flex-row justify-between items-center lg:pb-4 tracking-tight">
+                        <div className="flex flex-col space-y-3">
+                            <h1 className={`${sourceSerif.className}`}>Next-generation fundamental analysis</h1>
+                            <h2 className={`${roboto.className} md:text-base text-sm tracking-tight md:tracking-wide`}>or how I learned to stop worrying about uncertainty and just use Skidetica models</h2>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="lg:px-8 px-5 pt-4 lg:pt-0 text-sm tracking-wide lg:leading-relaxed md:tracking-wide">
-                <ul className="list-decimal">
-                    <div className="flex flex-col pb-8 space-y-6">
-                        <li className="lg:text-base">Select a company</li>
-                        <div className="flex flex-row space-x-4 justify-center">
+                <div className="lg:px-8 px-5 pt-4 lg:pt-0 text-sm tracking-wide lg:leading-relaxed md:tracking-wide">
+                    <ul className="list-decimal">
+                        <div className="flex flex-col pb-8 space-y-6">
+                            <li className="lg:text-base">Select a company*</li>
+                            <div className="flex flex-row space-x-4 justify-center">
 
-                            {companyButtons.map((button) => (
-                                <button id="companyButton" type="submit" onClick={() => {
-                                    handleCompanyButton(button.id);
+                                {companyButtons.map((button) => (
+                                    <button id="companyButton" type="submit" onClick={() => {
+                                        handleCompanyButton(button.id);
 
-                                }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[32px] rounded-xl items-center justify-center',
-                                    {
-                                        'dark:bg-md_theme_dark_surface_low dark:text-md_theme_dark_onSurface dark:hover:bg-md_theme_dark_surface_container border-2 dark:border-md_theme_dark_outline bg-md_theme_light_surface_low text-md_theme_light_onSurface hover:bg-md_theme_light_surface_container border-md_theme_light_outline': button.state === false,
-                                        'bg-md_theme_light_secondaryContainer text-md_theme_light_onSecondaryContainer dark:bg-md_theme_dark_secondaryContainer dark:text-md_theme_dark_onSecondaryContainer': button.state === true
-                                    })}>
-                                    {button.label}
-                                </button>
-                            ))}
-
-                        </div>
-
-                    </div>
-                    <li className="pb-4 lg:text-base">Use the equalizer to select the expected growth rate (%) and growth pattern for the next five years</li>
-                    <div className="pb-6 lg:text-base space-y-[10px]">
-                        <div className="flex justify-center pt-6 lg:pt-6">
-                            <div className="flex flex-col space-y-10">
-                                <div className="flex flex-row justify-center space-x-4">
-
-                                    {buttons.map((button) => (
-                                        <button id="growthButton" type="submit" onClick={() => {
-                                            handleGrowthButton(button.id);
-
-                                        }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[36px] rounded-xl items-center justify-center',
-                                            {
-                                                'dark:bg-md_theme_dark_surface_low dark:text-md_theme_dark_onSurface dark:hover:bg-md_theme_dark_surface_container border-2 dark:border-md_theme_dark_outline bg-md_theme_light_surface_low text-md_theme_light_onSurface hover:bg-md_theme_light_surface_container border-md_theme_light_outline': button.state === false,
-                                                'bg-md_theme_light_secondaryContainer text-md_theme_light_onSecondaryContainer dark:bg-md_theme_dark_secondaryContainer dark:text-md_theme_dark_onSecondaryContainer': button.state === true
-                                            })}>
-                                            {button.label}
-                                        </button>
-                                    ))}
-
-                                </div>
-                                <div className="w-[273px] min-h-[106px] block md:hidden">
-                                    <RenderAnimation pathname={`./animation/equalizer/${equalizerPathName}.json`} loop={true} />
-                                </div>
-                                <div className="w-[340px] min-h-[106px] hidden md:block">
-                                    <RenderAnimation pathname={`./animation/equalizer/${equalizerPathName}.json`} loop={true} />
-                                </div>
-                                <div className="flex flex-row justify-center space-x-4">
-
-                                    {patternButtons.map((button) => (
-                                        <button type="submit" id="growthPattern" onClick={() => {
-                                            handlePatternButton(button.id);
-                                        }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[34px] rounded-xl items-center justify-center',
-                                            {
-                                                'dark:bg-md_theme_dark_surface_low dark:text-md_theme_dark_onSurface dark:hover:bg-md_theme_dark_surface_container border-2 dark:border-md_theme_dark_outline bg-md_theme_light_surface_low text-md_theme_light_onSurface hover:bg-md_theme_light_surface_container border-md_theme_light_outline': button.state === false,
-                                                'bg-md_theme_light_secondaryContainer text-md_theme_light_onSecondaryContainer dark:bg-md_theme_dark_secondaryContainer dark:text-md_theme_dark_onSecondaryContainer': button.state === true
-                                            })}>
-
-                                            <Image
-                                                src={button.icon}
-                                                width={26}
-                                                height={26}
-                                                alt="Skidetica pattern buttons"
-                                                className={isDarkTheme ? "invert" : ""} />
-
-                                        </button>
-                                    ))}
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <li className="pt-6 pb-4 lg:text-base">Check if the expected year five revenue is reasonable and aligns with your beliefs</li>
-                    <div className="flex flex-col pb-6 lg:text-base space-y-1 justify-center">
-                        <div className="flex flex-col space-y-[10px]">
-                        </div>
-                        <div className="flex justify-center lg:pt-4 pt-4">
-                            <div className="flex w-2/4 justify-center text-md_theme_light_onSurface dark:text-md_theme_dark_onSurface shadow-sm dark:bg-md_theme_dark_surface_low bg-md_theme_light_surface_low text-base px-4 py-2 rounded-xl">
-                
-                                <p className="text-base tracking-wide lg:text-3xl">{revenue}M$</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <li className="pt-4 pb-4  lg:text-base">Calculate the fair value of the selected company</li>
-                    <div className="pb-12 lg:text-base space-y-[10px]">
-
-                    </div>
-                    <div className="flex justify-center">
-                        <div className="block lg:hidden space-y-4 w-[240px]">
-                            <RenderAnimation pathname={`./animation/density/${pathName}.json`} loop={false} />
-                            <label className="flex justify-center">Value / Share ($)</label>
-                        </div>
-                        <div className="space-y-4 hidden lg:block w-[300px]">
-                            <RenderAnimation pathname={`./animation/density/${pathName}.json`} loop={false} />
-                            <label className="flex justify-center">Value / Share ($)</label>
-                        </div>
-                        <div>
-                        </div>
-                    </div>
-                    <div className="flex justify-center">
-                        <div className="flex flex-col pt-8 space-y-8">
-                            <div className="flex flex-row justify-center space-x-4">
-
-                                {probabilityButtons.map((button) => (
-                                    <button type="submit" id="probabilityButton" onClick={() => {
-                                        handleProbabilityButton(button.id);
-
-                                    }} key={button.id} className={clsx('flex md:w-[120px] w-[84px] h-[38px] rounded-xl items-center lg:text-base text-sm justify-center',
+                                    }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[32px] rounded-xl items-center justify-center',
                                         {
                                             'dark:bg-md_theme_dark_surface_low dark:text-md_theme_dark_onSurface dark:hover:bg-md_theme_dark_surface_container border-2 dark:border-md_theme_dark_outline bg-md_theme_light_surface_low text-md_theme_light_onSurface hover:bg-md_theme_light_surface_container border-md_theme_light_outline': button.state === false,
                                             'bg-md_theme_light_secondaryContainer text-md_theme_light_onSecondaryContainer dark:bg-md_theme_dark_secondaryContainer dark:text-md_theme_dark_onSecondaryContainer': button.state === true
                                         })}>
-                                        <div className="flex flex-row justify-center">
-
-                                            {button.id == 'fair' ? button.label : button.icon}
-
-                                        </div>
+                                        {button.label}
                                     </button>
                                 ))}
 
                             </div>
-                            <div className="container w-4/4 dark:bg-md_theme_dark_surface_low bg-md_theme_light_surface_low shadow-sm dark:text-md_theme_dark_onSurface text-md_theme_light_onSurface px-4 py-4 rounded-xl">
-                                <div className="flex text-center justify-center lg:text-base text-sm">
 
-                                    {probabilityType === 'median' && (<p> {ticker} fair value is {probabilityValue} ($)</p>)}
-                                    {probabilityType === 'ci5' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is less than {probabilityValue} ($)</p>)}
-                                    {probabilityType === 'ci95' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is more than {probabilityValue} ($)</p>)}
+                        </div>
+                        <li className="pb-4 lg:text-base">Use the equalizer to select the expected growth rate (%) and growth pattern for the next five years</li>
+                        <div className="pb-6 lg:text-base space-y-[10px]">
+                            <div className="flex justify-center pt-6 lg:pt-6">
+                                <div className="flex flex-col space-y-10">
+                                    <div className="flex flex-row justify-center space-x-4">
+
+                                        {buttons.map((button) => (
+                                            <button id="growthButton" type="submit" onClick={() => {
+                                                handleGrowthButton(button.id);
+
+                                            }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[36px] rounded-xl items-center justify-center',
+                                                {
+                                                    'dark:bg-md_theme_dark_surface_low dark:text-md_theme_dark_onSurface dark:hover:bg-md_theme_dark_surface_container border-2 dark:border-md_theme_dark_outline bg-md_theme_light_surface_low text-md_theme_light_onSurface hover:bg-md_theme_light_surface_container border-md_theme_light_outline': button.state === false,
+                                                    'bg-md_theme_light_secondaryContainer text-md_theme_light_onSecondaryContainer dark:bg-md_theme_dark_secondaryContainer dark:text-md_theme_dark_onSecondaryContainer': button.state === true
+                                                })}>
+                                                {button.label}
+                                            </button>
+                                        ))}
+
+                                    </div>
+                                    <div className="w-[273px] min-h-[106px] block md:hidden">
+                                        <RenderAnimation pathname={`./animation/equalizer/${illustrationType}_${equalizerPathName}.json`} loop={true} />
+                                    </div>
+                                    <div className="w-[340px] min-h-[106px] hidden md:block">
+                                        <RenderAnimation pathname={`./animation/equalizer/${illustrationType}_${equalizerPathName}.json`} loop={true} />
+                                    </div>
+                                    <div className="flex flex-row justify-center space-x-4">
+
+                                        {patternButtons.map((button) => (
+                                            <button type="submit" id="growthPattern" onClick={() => {
+                                                handlePatternButton(button.id);
+                                            }} key={button.id} className={clsx('flex md:w-[100px] w-[80px] h-[34px] rounded-xl items-center justify-center',
+                                                {
+                                                    'dark:bg-md_theme_dark_surface_low dark:text-md_theme_dark_onSurface dark:hover:bg-md_theme_dark_surface_container border-2 dark:border-md_theme_dark_outline bg-md_theme_light_surface_low text-md_theme_light_onSurface hover:bg-md_theme_light_surface_container border-md_theme_light_outline': button.state === false,
+                                                    'bg-md_theme_light_secondaryContainer text-md_theme_light_onSecondaryContainer dark:bg-md_theme_dark_secondaryContainer dark:text-md_theme_dark_onSecondaryContainer': button.state === true
+                                                })}>
+
+                                                <Image
+                                                    src={button.icon}
+                                                    width={26}
+                                                    height={26}
+                                                    alt="Skidetica pattern buttons"
+                                                    className={isDarkTheme ? "invert" : ""} />
+
+                                            </button>
+                                        ))}
+
+                                    </div>
 
                                 </div>
+                            </div>
 
+                        </div>
+                        <li className="pt-6 pb-4 lg:text-base">Check if the expected year five revenue is reasonable and aligns with your beliefs</li>
+                        <div className="flex flex-col pb-6 lg:text-base space-y-1 justify-center">
+                            <div className="flex flex-col space-y-[10px]">
+                            </div>
+                            <div className="flex justify-center lg:pt-4 pt-4">
+                                <div className="flex w-2/4 justify-center text-md_theme_light_onSurface dark:text-md_theme_dark_onSurface shadow-sm dark:bg-md_theme_dark_surface_low bg-md_theme_light_surface_low text-base px-4 py-2 rounded-xl">
+
+                                    <p className="text-base tracking-wide lg:text-3xl">{revenue}M$</p>
+                                </div>
                             </div>
 
 
-                            <div className="flex flex-col pt-4 space-y-6 text-lg md:text-xl justify-center items-center">
-                                <p className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="dark:text-md_theme_dark_primary text-md_theme_light_primary">Skidetica</span>.</p>
-                                <Image
-                                    src="google.svg"
-                                    width={160}
-                                    height={120}
-                                    alt="Download Skidetica app from Google Play"
-                                    className="hidden md:block "
-                                />
+                        </div>
+                        <li className="pt-4 pb-4  lg:text-base">Calculate the fair value of the selected company</li>
+                        <div className="pb-12 lg:text-base space-y-[10px]">
 
-                                <Image
-                                    src="google.svg"
-                                    width={130}
-                                    height={90}
-                                    alt="Download Skidetica app from Google Play"
-                                    className="block md:hidden"
-                                />
-                                <div className="flex flex-col justify-center leading-7 text-center text-sm pb-8">
-                                    <p>Do you have any other questions?</p>
-                                    <p>Check the  <Link className="dark:text-md_theme_dark_primary text-md_theme_light_primary font-bold" href={"/faq"}><span> FAQ</span></Link>.</p>
+                        </div>
+                        <div className="flex justify-center">
+                            <div className="block lg:hidden space-y-4 w-[240px]">
+                                <RenderAnimation pathname={`./animation/density/${illustrationType}_${pathName}.json`} loop={false} />
+                                <label className="flex justify-center">Value / Share ($)</label>
+                            </div>
+                            <div className="space-y-4 hidden lg:block w-[300px]">
+                                <RenderAnimation pathname={`./animation/density/${illustrationType}_${pathName}.json`} loop={false} />
+                                <label className="flex justify-center">Value / Share ($)</label>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <div className="flex justify-center">
+                            <div className="flex flex-col pt-8 space-y-8">
+                                <div className="flex flex-row justify-center space-x-4">
+
+                                    {probabilityButtons.map((button) => (
+                                        <button type="submit" id="probabilityButton" onClick={() => {
+                                            handleProbabilityButton(button.id);
+
+                                        }} key={button.id} className={clsx('flex md:w-[120px] w-[84px] h-[38px] rounded-xl items-center lg:text-base text-sm justify-center',
+                                            {
+                                                'dark:bg-md_theme_dark_surface_low dark:text-md_theme_dark_onSurface dark:hover:bg-md_theme_dark_surface_container border-2 dark:border-md_theme_dark_outline bg-md_theme_light_surface_low text-md_theme_light_onSurface hover:bg-md_theme_light_surface_container border-md_theme_light_outline': button.state === false,
+                                                'bg-md_theme_light_secondaryContainer text-md_theme_light_onSecondaryContainer dark:bg-md_theme_dark_secondaryContainer dark:text-md_theme_dark_onSecondaryContainer': button.state === true
+                                            })}>
+                                            <div className="flex flex-row justify-center">
+
+                                                {button.id == 'fair' ? button.label : button.icon}
+
+                                            </div>
+                                        </button>
+                                    ))}
+
+                                </div>
+                                <div className="container w-4/4 dark:bg-md_theme_dark_surface_low bg-md_theme_light_surface_low shadow-sm dark:text-md_theme_dark_onSurface text-md_theme_light_onSurface px-4 py-4 rounded-xl">
+                                    <div className="flex text-center justify-center lg:text-base text-sm">
+
+                                        {probabilityType === 'median' && (<p> {ticker} fair value is {probabilityValue} ($)</p>)}
+                                        {probabilityType === 'ci5' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is less than {probabilityValue} ($) or no value at all</p>)}
+                                        {probabilityType === 'ci95' && (<p>There&apos;s 5% probability that {ticker} <br /> fair value is more than {probabilityValue} ($)</p>)}
+
+                                    </div>
+
+                                </div>
+
+
+                                <div className="flex flex-col pt-4 space-y-6 text-lg md:text-xl justify-center items-center">
+                                    <p className="tracking-tight">It&apos;s easy, isn&apos;t it? Try <span className="dark:text-md_theme_dark_primary text-md_theme_light_primary">Skidetica</span></p>
+
+                                    <Image
+                                        src="google.svg"
+                                        width={160}
+                                        height={120}
+                                        alt="Download Skidetica app from Google Play"
+                                        className="hidden md:block "
+                                    />
+
+                                    <Image
+                                        src="google.svg"
+                                        width={130}
+                                        height={90}
+                                        alt="Download Skidetica app from Google Play"
+                                        className="block md:hidden"
+                                    />
+                                    <div className="flex flex-col justify-center leading-7 text-center text-sm space-y-2">
+                                        <p>Do you have any other questions?</p>
+                                        <p>Check the  <Link className="dark:text-md_theme_dark_primary text-md_theme_light_primary font-bold" href={"/faq"}><span> FAQ</span></Link>.</p>
+                                        <div className="pt-4 space-y-4">
+                                        <hr className="dark:opacity-15"></hr>
+                                            <div className="flex flex-row justify-center">
+                                                <p className="text-xs">Randomized synthetic data generated for the current presentation *</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
         </section>
     );
 }
