@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
     { name: 'Terms & Conditions', href: '/terms' },
+    { name: 'EULA', href: '/eula' },
     { name: 'Privacy policy', href: '/privacy' },
     { name: 'FAQ', href: '/faq' },
     { name: 'About us', href: '/company' },
@@ -20,7 +21,7 @@ export function NavLink() {
     <div className="flex justify-center space-x-4 dark:font-normal font-medium text-md_theme_light_primary dark:text-md_theme_dark_primary">
 
         {
-            links.slice(0,2).map((link) => {
+            links.slice(0,3).map((link) => {
                 return (
                     <Link
                         key={link.name}
@@ -44,7 +45,7 @@ export function NavLink2() {
     <div className="flex justify-center space-x-4 dark:font-normal font-medium text-md_theme_light_primary dark:text-md_theme_dark_primary">
 
         {
-            links.slice(2,5).map((link) => {
+            links.slice(3,6).map((link) => {
                 return (
                     <Link
                         key={link.name}
@@ -68,7 +69,7 @@ export function NavLink3() {
     <div className="flex justify-center space-x-4 dark:font-normal font-medium text-md_theme_light_primary dark:text-md_theme_dark_primary">
 
         {
-            links.slice(0,2).map((link) => {
+            links.slice(0,3).map((link) => {
                 return (
                     <Link
                         key={link.name}
@@ -92,7 +93,7 @@ export function NavLink4() {
     <div className="flex justify-center space-x-4 dark:font-normal font-medium text-md_theme_light_primary dark:text-md_theme_dark_primary">
 
         {
-            links.slice(2,5).map((link) => {
+            links.slice(3,6).map((link) => {
                 return (
                     <Link
                         key={link.name}

@@ -45,7 +45,7 @@ export function Summary({
                             </div>
 
                             <div id="Main page" className="w-[44px] pb-6 block md:hidden">
-                                <Link href={"/"}>
+                                <Link href={"/"} id="Main page">
                                     <RenderDensityGraph pathname={isDarkTheme ? './animation/logo/fritilaria_logo_dark.json' : './animation/logo/fritilaria_logo_light.json'} loop={true} />
                                 </Link>
                             </div>
@@ -57,8 +57,8 @@ export function Summary({
                                     onClick={toggleTheme}>
                                     {isDarkTheme ? <SunIcon className="w-[32px] dark:text-md_theme_dark_onSurface" /> : <MoonIcon className="w-[32px] text-md_theme_light_onSurface" />}
                                 </button>
-
                         </div>
+
                         <div className="block md:hidden">
                             <button id="mobileMenu" className="flex pb-6" onClick={() => setMenuOpen(!isMenuOpen)}>
                                 {!isMenuOpen ? <Bars3Icon className="w-[32px] dark:text-md_theme_light_onPrimary text-md_theme_dark_onPrimary" /> : <MarkIcon className="w-[32px] dark:text-md_theme_light_onPrimary text-md_theme_dark_onPrimary" />}
@@ -75,6 +75,7 @@ export function Summary({
                                             <Link key={'About us'} href={'/company'} onClick={() => setMenuOpen(!isMenuOpen)}>About us</Link>
                                             <Link key={'Terms & Conditions'} href={'/terms'} onClick={() => setMenuOpen(!isMenuOpen)}>Terms & Conditions</Link>
                                             <Link key={'Privacy policy'} href={'/privacy'} onClick={() => setMenuOpen(!isMenuOpen)}>Privacy policy</Link>
+                                            <Link key={'EULA'} href={'/eula'} onClick={() => setMenuOpen(!isMenuOpen)}>EULA</Link>
                                         </div>
 
                                     </div>
@@ -88,14 +89,12 @@ export function Summary({
 
                     <div className="flex md:justify-center lg:pt-6 lg:pb-4 lg:px-6 md:pe-6">
                         <div className="w-[174px] h-[183px] hidden md:block">
-                            <Link href={'/'}>
+                            <Link href={'/'} id="Main page">
                                     <RenderDensityGraph pathname={isDarkTheme ? './animation/logo/fritilaria_logo_dark.json' : './animation/logo/fritilaria_logo_light.json'} loop={true} />
                             </Link>
                         </div>
                     </div>
-
                 </div>
-
 
                 <div className="flex px-5 lg:px-6 pb-8 text-left lg:pb-6 md:pt-2">
                     <h1 className={' text-onBackground text-pretty tracking-wide'}>

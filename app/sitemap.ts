@@ -9,6 +9,7 @@ export default async function sitemap() {
         {url: `${baseUrl}/privacy`, lastModified: new Date()},
         {url: `${baseUrl}/faq`, lastModified: new Date()},
         {url: `${baseUrl}/contact-us`, lastModified: new Date()},
+        {url: `${baseUrl}/eula`, lastModified: new Date()},
         {url: `${baseUrl}/manifest`, lastModified: new Date()},
 
     ]

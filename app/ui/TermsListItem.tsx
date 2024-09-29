@@ -3,21 +3,22 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import React, { useState } from "react";
 import MacroTable from "../faq/MacrosTable";
 import { sourceSerif } from "./fonts";
 
-export default function RenderTermsListItem({ name, content }: { name: string, content: string }) {
+export default function RenderTermsListItem({ name, content }: { name: string, content: React.ReactNode }) {
   return (
     <div className="pb-4">
       <li className="pb-2 tracking-tight dark:text-md_theme_dark_primary text-md_theme_light_primary text-sm lg:text-base">
         {name}
       </li>
-      <p className="lg:leading-relaxed indent-6 text-sm lg:text-base text-pretty lg:text-wrap">{content}</p>
+      <div className="lg:leading-relaxed indent-6 text-sm lg:text-base text-pretty lg:text-wrap">{content}</div>
     </div>
   )
 
 }
+
 
 
 export function RenderFAQListItem({ name, content }: { name: string, content: string }) {
