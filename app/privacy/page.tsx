@@ -41,11 +41,11 @@ export default function Privacy() {
           </div>
 
           <div className="flex flex-col space-y-8 pb-8">
-            <p className="indent-6">This Privacy Notice for Skidetica Labs SRL ("<span className="dark:text-fritilariaGreen text-green-600">we,</span>" "<span className="dark:text-fritilariaGreen text-green-600">us, </span>" or "<span className="dark:text-fritilariaGreen text-green-600">our</span>"), describes how and why we might access, collect, store, use, and/or share ("<span className="dark:text-fritilariaGreen text-green-600">process</span>") your personal information when you use our services ("<span className="dark:text-fritilariaGreen text-green-600">Services</span>"), including when you:</p>
+            <p className="indent-6">This Privacy Notice for Skidetica Labs SRL (&quot;<span className="dark:text-fritilariaGreen text-green-600">we,</span>&quot; &quot;<span className="dark:text-fritilariaGreen text-green-600">us, </span>&quot; or &quot;<span className="dark:text-fritilariaGreen text-green-600">our</span>&quot;), describes how and why we might access, collect, store, use, and/or share (&quot;<span className="dark:text-fritilariaGreen text-green-600">process</span>&quot;) your personal information when you use our services (&quot;<span className="dark:text-fritilariaGreen text-green-600">Services</span>&quot;), including when you:</p>
             <ul className="list-disc ps-4 space-y-4">
               <li>Visit our website at <a className="dark:text-fritilariaGreen text-green-600" href="https://www.fritilaria.com/privacy">https://www.skidetica.com/privacy</a>, or any website of ours that links to this Privacy Notice</li>
               <li>Download and use our mobile application (Skidetica), or any other application of ours that links to this Privacy Notice</li>
-              <li>Use Skidetic models. Skidetica calculates the fair value of the publicly traded stock. Skidetica performs accurate fundamental analysis by combining advanced statistics and user's subjective opinion</li>
+              <li>Use Skidetic models. Skidetica calculates the fair value of the publicly traded stock. Skidetica performs accurate fundamental analysis by combining advanced statistics and user&apos;s subjective opinion</li>
               <li>Engage with us in other related ways, including any sales, marketing, or events</li>
             </ul>
             <p className="indent-6"><span className="dark:text-fritilariaGreen text-green-600">Questions or concerns?</span> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <span className="dark:text-fritilariaGreen text-green-600">contact@skidetica.com</span>.</p>
@@ -90,7 +90,7 @@ export default function Privacy() {
               />
 
               <RenderTermsListItem name="Social Media Login Data"
-                content={<p>We may provide you with the option to register with us using your existing social media account details, like your Facebook, X, or other social media account. If you choose to register in this way, we will collect certain profile information about you from the social media provider, as described in the section called "HOW DO WE HANDLE YOUR SOCIAL LOGINS?" below.</p>}
+                content={<p>We may provide you with the option to register with us using your existing social media account details, like your Facebook, X, or other social media account. If you choose to register in this way, we will collect certain profile information about you from the social media provider, as described in the section called &quot;HOW DO WE HANDLE YOUR SOCIAL LOGINS?&quot; below.</p>}
               />
 
               <RenderTermsListItem name="Application Data"
@@ -100,7 +100,7 @@ export default function Privacy() {
                     <p>If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:</p>
                     <ul className="list-disc ps-12 space-y-4">
                       <li><span className="italic">Mobile Device Data</span>. We automatically collect device information (such as your mobile device ID, model, and manufacturer), operating system, version information and system configuration information, device and application identification numbers, browser type and version, hardware model Internet service provider and/or mobile carrier, and Internet Protocol (IP) address (or proxy server). If you are using our application(s), we may also collect information about the phone network associated with your mobile device, your mobile device’s operating system or platform, the type of mobile device you use, your mobile device’s unique device ID, and information about the features of our application(s) you accessed.</li>
-                      <li><span className="italic">Push Notifications</span>. We may request to send you push notifications regarding your account or certain features of the application(s). If you wish to opt out from receiving these types of communications, you may turn them off in your device's settings. </li>
+                      <li><span className="italic">Push Notifications</span>. We may request to send you push notifications regarding your account or certain features of the application(s). If you wish to opt out from receiving these types of communications, you may turn them off in your device&apos;s settings. </li>
                     </ul>
                     <p>This information is primarily needed to maintain the security and operation of our application(s), for troubleshooting, and for our internal analytics and reporting purposes.</p>
                     <p>This information is primarily needed to maintain the security and operation of our application(s), for troubleshooting, and for our internal analytics and reporting purposes.</p>
@@ -123,9 +123,9 @@ export default function Privacy() {
 
                 <p className="indent-6">The information we collect includes:</p>
                 <ul className="list-disc ps-12 space-y-4 pb-4">
-                  <li><span className="italic">Load and usage data</span>. Log and usage data is service-related, diagnostic, usage, and performance information our servers automatically collect when you access or use our Services and which we record in log files. Depending on how you interact with us, this log data may include your IP address, device information, browser type, and settings and information about your activity in the Services (such as the date/time stamps associated with your usage, pages and files viewed, searches, and other actions you take such as which features you use), device event information (such as system activity, error reports (sometimes called "crash dumps"), and hardware settings).</li>
+                  <li><span className="italic">Load and usage data</span>. Log and usage data is service-related, diagnostic, usage, and performance information our servers automatically collect when you access or use our Services and which we record in log files. Depending on how you interact with us, this log data may include your IP address, device information, browser type, and settings and information about your activity in the Services (such as the date/time stamps associated with your usage, pages and files viewed, searches, and other actions you take such as which features you use), device event information (such as system activity, error reports (sometimes called &quot;crash dumps&quot;), and hardware settings).</li>
                   <li><span className="italic">Device Data</span>. We collect device data such as information about your computer, phone, tablet, or other device you use to access the Services. Depending on the device used, this device data may include information such as your IP address (or proxy server), device and application identification numbers, location, browser type, hardware model, Internet service provider and/or mobile carrier, operating system, and system configuration information.</li>
-                  <li><span className="italic">Location Data</span>. We collect location data such as information about your device's location, which can be either precise or imprecise. How much information we collect depends on the type and settings of the device you use to access the Services. For example, we may use GPS and other technologies to collect geolocation data that tells us your current location (based on your IP address). You can opt out of allowing us to collect this information either by refusing access to the information or by disabling your Location setting on your device. However, if you choose to opt out, you may not be able to use certain aspects of the Services.</li>
+                  <li><span className="italic">Location Data</span>. We collect location data such as information about your device&apos;s location, which can be either precise or imprecise. How much information we collect depends on the type and settings of the device you use to access the Services. For example, we may use GPS and other technologies to collect geolocation data that tells us your current location (based on your IP address). You can opt out of allowing us to collect this information either by refusing access to the information or by disabling your Location setting on your device. However, if you choose to opt out, you may not be able to use certain aspects of the Services.</li>
                 </ul>
                 <p className="indent-6">All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.</p>
               </div>
@@ -148,12 +148,12 @@ export default function Privacy() {
                   <li><span className="italic">To send administrative information to you</span>. We may process your information to send you details about our products and services, changes to our terms and policies, and other similar information.</li>
                   <li><span className="italic">To fulfill and manage your orders</span>. We may process your information to fulfill and manage your orders, payments, returns, and exchanges made through the Services.</li>
                   <li><span className="italic">To request feedback</span>. We may process your information when necessary to request feedback and to contact you about your use of our Services.</li>
-                  <li><span className="italic">To send you marketing and promotional communications</span>. We may process the personal information you send to us for our marketing purposes, if this is in accordance with your marketing preferences. You can opt out of our marketing emails at any time. For more information, see "WHAT ARE YOUR PRIVACY RIGHTS?" below. </li>
+                  <li><span className="italic">To send you marketing and promotional communications</span>. We may process the personal information you send to us for our marketing purposes, if this is in accordance with your marketing preferences. You can opt out of our marketing emails at any time. For more information, see &quot;WHAT ARE YOUR PRIVACY RIGHTS?&quot; below. </li>
                   <li><span className="italic">To deliver targeted advertising to you</span>. We may process your information to develop and display personalized content and advertising tailored to your interests, location, and more. </li>
                   <li><span className="italic">To protect our Services</span>. We may process your information as part of our efforts to keep our Services safe and secure, including fraud monitoring and prevention.</li>
                   <li><span className="italic">To identify usage trends</span>. We may process information about how you use our Services to better understand how they are being used so we can improve them.</li>
                   <li><span className="italic">To determine the effectiveness of our marketing and promotional campaigns</span>. We may process your information to better understand how to provide marketing and promotional campaigns that are most relevant to you. </li>
-                  <li><span className="italic">To save or protect an individual's vital interest</span>. We may process your information when necessary to save or protect an individual’s vital interest, such as to prevent harm.</li>
+                  <li><span className="italic">To save or protect an individual&apos;s vital interest</span>. We may process your information when necessary to save or protect an individual’s vital interest, such as to prevent harm.</li>
 
                 </ul>
               </div>
@@ -215,7 +215,7 @@ export default function Privacy() {
 
               <p className="indent-6 italic pb-4">In Short: We may share information in specific situations described in this section and/or with the following categories of third parties.</p>
 
-              <p className="indent-6 pb-4"><span className="dark:text-fritilariaGreen text-green-600">Vendors</span>, <span className="dark:text-fritilariaGreen text-green-600">Consultants</span>, and <span className="dark:text-fritilariaGreen text-green-600">Other Third-Party Service Providers</span>. We may share your data with third-party vendors, service providers, contractors, or agents ("<span className="dark:text-fritilariaGreen text-green-600">third parties</span>") who perform services for us or on our behalf and require access to such information to do that work.</p>
+              <p className="indent-6 pb-4"><span className="dark:text-fritilariaGreen text-green-600">Vendors</span>, <span className="dark:text-fritilariaGreen text-green-600">Consultants</span>, and <span className="dark:text-fritilariaGreen text-green-600">Other Third-Party Service Providers</span>. We may share your data with third-party vendors, service providers, contractors, or agents (&quot;<span className="dark:text-fritilariaGreen text-green-600">third parties</span>&quot;) who perform services for us or on our behalf and require access to such information to do that work.</p>
 
               <div className="space-y-4">
 
@@ -245,7 +245,7 @@ export default function Privacy() {
 
               <p className="indent-6 pb-4">We may use cookies and similar tracking technologies (like web beacons and pixels) to gather information when you interact with our Services. Some online tracking technologies help us maintain the security of our Services and your account, prevent crashes, fix bugs, save your preferences, and assist with basic site functions.</p>
               <p className="indent-6 pb-4">We also permit third parties and service providers to use online tracking technologies on our Services for analytics and advertising, including to help manage and display advertisements, to tailor advertisements to your interests, or to send abandoned shopping cart reminders (depending on your communication preferences). The third parties and service providers use their technology to provide advertising about products and services tailored to your interests which may appear either on our Services or on other websites.</p>
-              <p className="indent-6 pb-4">To the extent these online tracking technologies are deemed to be a "sale"/"sharing" (which includes targeted advertising, as defined under the applicable laws) under applicable US state laws, you can opt out of these online tracking technologies by submitting a request as described below under section "DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?"</p>
+              <p className="indent-6 pb-4">To the extent these online tracking technologies are deemed to be a &quot;sale&quot;/&quot;sharing&quot; (which includes targeted advertising, as defined under the applicable laws) under applicable US state laws, you can opt out of these online tracking technologies by submitting a request as described below under section &quot;DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?&quot;</p>
               <p className="indent-6 pb-4">Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice.</p>
 
               <p className="font-bold">Google Analytics</p>
@@ -287,7 +287,7 @@ export default function Privacy() {
 
               <p className="indent-6 italic pb-4">In Short: Depending on your state of residence in the US or in some regions, such as the European Economic Area (EEA), United Kingdom (UK), Switzerland, and Canada, you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time, depending on your country, province, or state of residence.</p>
 
-              <p className="indent-6 pb-4">In some regions (like the EEA, UK, Switzerland, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?" below.</p>
+              <p className="indent-6 pb-4">In some regions (like the EEA, UK, Switzerland, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section &quot;HOW CAN YOU CONTACT US ABOUT THIS NOTICE?&quot; below.</p>
 
               <p className="indent-6 pb-4">We will consider and act upon any request in accordance with applicable data protection laws.</p>
 
@@ -295,11 +295,11 @@ export default function Privacy() {
 
               <p className="indent-6 pb-4">If you are located in Switzerland, you may contact the <a href="https://www.edoeb.admin.ch/edoeb/en/home.html" className="dark:text-fritilariaGreen text-green-600"> Federal Data Protection and Information Commissioner</a>.</p>
 
-              <p className="indent-6 pb-4"><span className="underline">Withdrawing your consent:</span> If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?" below or updating your preferences.</p>
+              <p className="indent-6 pb-4"><span className="underline">Withdrawing your consent:</span> If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section &quot;HOW CAN YOU CONTACT US ABOUT THIS NOTICE?&quot; below or updating your preferences.</p>
 
               <p className="indent-6 pb-4">However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent.</p>
 
-              <p className="indent-6 pb-4"><span className="underline">Opting out of marketing and promotional communications:</span> You can unsubscribe from our marketing and promotional communications at any time by clicking on the unsubscribe link in the emails that we send, or by contacting us using the details provided in the section "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?" below. You will then be removed from the marketing lists. However, we may still communicate with you — for example, to send you service-related messages that are necessary for the administration and use of your account, to respond to service requests, or for other non-marketing purposes. </p>
+              <p className="indent-6 pb-4"><span className="underline">Opting out of marketing and promotional communications:</span> You can unsubscribe from our marketing and promotional communications at any time by clicking on the unsubscribe link in the emails that we send, or by contacting us using the details provided in the section &quot;HOW CAN YOU CONTACT US ABOUT THIS NOTICE?&quot; below. You will then be removed from the marketing lists. However, we may still communicate with you — for example, to send you service-related messages that are necessary for the administration and use of your account, to respond to service requests, or for other non-marketing purposes. </p>
 
               <p className="font-bold">Account information</p>
 
@@ -321,7 +321,7 @@ export default function Privacy() {
 
               <p className="text-xl">11.  CONTROLS FOR DO-NOT-TRACK FEATURES</p>
 
-              <p className="indent-6 pb-4">Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track ("DNT") feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. At this stage, no uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Notice.</p>
+              <p className="indent-6 pb-4">Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track (&quot;DNT&quot;) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. At this stage, no uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Notice.</p>
 
               <p className="indent-6 pb-4">California law requires us to let you know how we respond to web browser DNT signals. Because there currently is not an industry or legal standard for recognizing or honoring DNT signals, we do not respond to them at this time.</p>
 
@@ -363,11 +363,11 @@ export default function Privacy() {
 
               <p className="font-bold">Sources of Personal Information</p>
 
-              <p className="indent-6 pb-4">Learn more about the sources of personal information we collect in "WHAT INFORMATION DO WE COLLECT?"</p>
+              <p className="indent-6 pb-4">Learn more about the sources of personal information we collect in &quot;WHAT INFORMATION DO WE COLLECT?&quot;</p>
 
               <p className="font-bold">How We Use and Share Personal Information</p>
 
-              <p className="indent-6 pb-4">Learn about how we use your personal information in the section, "HOW DO WE PROCESS YOUR INFORMATION?"</p>
+              <p className="indent-6 pb-4">Learn about how we use your personal information in the section, &quot;HOW DO WE PROCESS YOUR INFORMATION?&quot;</p>
 
               <div className="space-y-4 pt-4">
                 <p className="indent-6 pb-4">We collect and share your personal information through:</p>
@@ -379,9 +379,9 @@ export default function Privacy() {
 
               <p className="indent-6 font-bold pb-4">Will your information be shared with anyone else?</p>
 
-              <p className="indent-6 pb-4">We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider. Learn more about how we disclose personal information to in the section, "WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?"</p>
+              <p className="indent-6 pb-4">We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider. Learn more about how we disclose personal information to in the section, &quot;WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?&quot;</p>
 
-              <p className="indent-6 pb-4">We may use your personal information for our own business purposes, such as for undertaking internal research for technological development and demonstration. This is not considered to be "selling" of your personal information.</p>
+              <p className="indent-6 pb-4">We may use your personal information for our own business purposes, such as for undertaking internal research for technological development and demonstration. This is not considered to be &quot;selling&quot; of your personal information.</p>
 
 
               <div className="space-y-4 pt-4">
@@ -400,7 +400,7 @@ export default function Privacy() {
                 </ul>
               </div>
 
-              <p className="indent-6 pb-4">The categories of third parties to whom we disclosed personal information for a business or commercial purpose can be found under "WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?"</p>
+              <p className="indent-6 pb-4">The categories of third parties to whom we disclosed personal information for a business or commercial purpose can be found under &quot;WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?&quot;</p>
 
               <p className="font-bold text-lg">Your rights</p>
 
@@ -414,7 +414,7 @@ export default function Privacy() {
                   <li><span className="font-bold">Right to request</span> the deletion of your personal data</li>
                   <li><span className="font-bold">Right to obtain a copy</span> of the personal data you previously shared with us</li>
                   <li><span className="font-bold">Right to non-discrimination</span> for exercising your rights</li>
-                  <li><span className="font-bold">Right to opt out</span> of the processing of your personal data if it is used for targeted advertising (or sharing as defined under California’s privacy law), the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ("profiling")</li>
+                  <li><span className="font-bold">Right to opt out</span> of the processing of your personal data if it is used for targeted advertising (or sharing as defined under California’s privacy law), the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects (&quot;profiling&quot;)</li>
 
                 </ul>
               </div>
@@ -424,7 +424,7 @@ export default function Privacy() {
 
                 <p className="indent-6">Depending upon the state where you live, you may also have the following rights:</p>
                 <ul className="list-disc ps-12 space-y-4 pb-4">
-                  <li>Right to obtain a list of the categories of third parties to which we have disclosed personal data (as permitted by applicable law, including California's and Delaware's privacy law)</li>
+                  <li>Right to obtain a list of the categories of third parties to which we have disclosed personal data (as permitted by applicable law, including California&apos;s and Delaware&apos;s privacy law)</li>
                   <li>Right to obtain a list of specific third parties to which we have disclosed personal data (as permitted by applicable law, including Oregon’s privacy law)</li>
                   <li>Right to limit use and disclosure of sensitive personal data (as permitted by applicable law, including California’s privacy law)</li>
                   <li>Right to opt out of the collection of sensitive data and personal data collected through the operation of a voice or facial recognition feature (as permitted by applicable law, including Florida’s privacy law)</li>
@@ -449,15 +449,15 @@ export default function Privacy() {
 
               <p className="indent-6 pb-4">Under certain US state data protection laws, if we decline to take action regarding your request, you may appeal our decision by emailing us at <span className="dark:text-fritilariaGreen text-green-600">contact@skidetica.com</span>. We will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If your appeal is denied, you may submit a complaint to your state attorney general.</p>
 
-              <p className="font-bold text-lg">California "Shine The Light" Law</p>
+              <p className="font-bold text-lg">California &quot;Shine The Light&quot; Law</p>
 
-              <p className="indent-6 pb-4">California Civil Code Section 1798.83, also known as the "Shine The Light" law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us by using the contact details provided in the section "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?"</p>
+              <p className="indent-6 pb-4">California Civil Code Section 1798.83, also known as the &quot;Shine The Light&quot; law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us by using the contact details provided in the section &quot;HOW CAN YOU CONTACT US ABOUT THIS NOTICE?&quot;</p>
 
               <p className="text-xl">13. DO WE MAKE UPDATES TO THIS NOTICE?</p>
 
               <p className="indent-6 italic pb-4">In Short: Yes, we will update this notice as necessary to stay compliant with relevant laws.</p>
 
-              <p className="indent-6 pb-4">We may update this Privacy Notice from time to time. The updated version will be indicated by an updated "Revised" date at the top of this Privacy Notice. If we make material changes to this Privacy Notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this Privacy Notice frequently to be informed of how we are protecting your information.</p>
+              <p className="indent-6 pb-4">We may update this Privacy Notice from time to time. The updated version will be indicated by an updated &quot;Revised&quot; date at the top of this Privacy Notice. If we make material changes to this Privacy Notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this Privacy Notice frequently to be informed of how we are protecting your information.</p>
 
               <p className="text-xl">14. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</p>
 
