@@ -20,7 +20,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
 
 
-  const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+  const recaptchaKey = process.env.RECAPTCHA_SITE_KEY
 
 
   const { isDarkTheme, toggleTheme } = useTheme();
