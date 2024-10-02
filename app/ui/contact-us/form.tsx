@@ -20,8 +20,10 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
 
 
-  const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
+
+  console.log('Recaptcha Key:', process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
 
   const { isDarkTheme, toggleTheme } = useTheme();
 
@@ -133,6 +135,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
           theme='dark'
         />
 
+
         <button type="submit" disabled={!isVerified || isSubmitting} onClick={() => resetRECAPTCHA()} className="flex w-[220px] h-[38px] bg-md_theme_light_primary dark:bg-md_theme_dark_primary text-md_theme_light_onPrimary dark:text-md_theme_dark_onPrimary hover:bg-md_theme_light_secondary dark:hover:bg-md_theme_dark_secondary hover:text-md_theme_light_onSecondary dark:hover:text-md_theme_dark_onSecondary active:bg-fritilariaGreen active:text-md_theme_dark_scrim dark:active:bg-fritilariaGreen rounded-xl items-center justify-center">
           Submit
         </button>
@@ -152,6 +155,8 @@ const InnerForm = (props: FormikProps<FormValues>) => {
       </div>
     </Form>
     </main>
+
+
 
   );
 }
