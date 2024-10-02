@@ -20,6 +20,8 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
 
 
+  const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+
 
   const { isDarkTheme, toggleTheme } = useTheme();
 
@@ -124,7 +126,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
       <div className="flex flex-col xl:pt-4 space-y-8 justify-center">
 
         <ReCAPTCHA
-          sitekey={"6Ld_kVUqAAAAAHC_kH84kfvLabQzk4XLBRh_9Ncl" || ""}
+          sitekey={recaptchaKey || ""}
           ref={recaptchaRef}
           onChange={handleChange}
           onExpired={handleExpired}
