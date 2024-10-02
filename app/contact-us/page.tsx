@@ -35,14 +35,14 @@ export default async function ContactUs() {
 
     if (type == 'delete') {
       await resend.emails.send({
-        from: 'noreply@fritilaria.com',
+        from: 'noreply@skidetica.com',
         to: to,
         subject: "Fritilaria Account Deletion",
         react: FritilariaUserFarewellEmail({ email: to, date: timestamp }) as React.ReactElement
       });
 
       await resend.emails.send({
-        from: 'noreply@fritilaria.com',
+        from: 'noreply@skidetica.com',
         to: to,
         subject: `#deletion ${to} #${ticket}`,
         react: FritilariaDeleteAccountEmail({
