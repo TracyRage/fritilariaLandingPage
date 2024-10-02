@@ -123,7 +123,7 @@ const InnerForm = (props: FormikProps<FormValues>) => {
       <div className="flex flex-col xl:pt-4 space-y-8 justify-center">
 
         <ReCAPTCHA
-          sitekey={ "6LfSsuspAAAAAHLdNk8X-Ogc8JbKtorni5yuFbuy" || ""}
+          sitekey={ process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
           ref={recaptchaRef}
           onChange={handleChange}
           onExpired={handleExpired}
