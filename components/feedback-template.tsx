@@ -89,7 +89,7 @@ export const FritilariaFeedbackEmail = ({message, date
               </Row>
               <Row style={{textAlign: 'center'}}>
                         <Text style={footer}>
-                            © 2024 Aremti Statistica. All Rights Reserved. <br />
+                            © 2024 Skidetica Labs. All Rights Reserved. <br />
                             Bușteni 4, Cluj-Napoca, CJ, 470000 - Romania
                         </Text>
 

@@ -31,7 +31,7 @@ export const FritilariaUserFarewellEmail = ({ email, date
     <Html>
         <Head />
         <Preview>
-            Sad to see you go. Fritilaria
+            Sad to see you go. Skidetica
         </Preview>
         <Body style={main}>
             <Container style={container}>
