@@ -442,8 +442,8 @@ export default function Guide() {
                 <div className="text-lg md:text-2xl pt-2 pb-4 lg:px-2">
                     <div className="flex flex-row justify-between items-center lg:pb-4 tracking-tight">
                         <div className="flex flex-col space-y-3">
-                            <h1 id="section1" className={`${sourceSerif.className}`}>Next-generation fundamental analysis</h1>
-                            <h2 className={`${roboto.className} md:text-base text-sm tracking-tight md:tracking-wide`}>or how I learned to stop worrying about uncertainty and just use Skidetica models</h2>
+                            <h1 id="tutorial" className={`${sourceSerif.className}`}>Next-generation fundamental analysis</h1>
+                            <h2 className={`${roboto.className} md:text-base text-sm tracking-tight md:tracking-wide`}>Or how I learned to stop worrying about stock fair value and just use Skidetica models</h2>
                         </div>
                     </div>
                 </div>
