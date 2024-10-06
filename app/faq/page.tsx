@@ -59,7 +59,7 @@ export default function FAQ() {
 
   return (
 
-    <section>
+    <section id="skideticaFAQ">
         <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

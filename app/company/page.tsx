@@ -34,7 +34,7 @@ export default function Company() {
                             </Link>
                         </div>
                         <div className="flex">
-                            <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-6`}>
+                            <h1 id="companySkidetica" className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-6`}>
                                 About us
                             </h1>
                         </div>

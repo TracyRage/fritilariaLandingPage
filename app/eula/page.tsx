@@ -18,7 +18,7 @@ export default function EULA() {
   const LinkIcon = ArrowLeftIcon;
   return (
 
-    <section>
+    <section id="skideticaEula">
       <div className="flex flex-col h-fit rounded-[25px] min-w-screen lg:w-[600px] xl:w-[840px] bg-md_theme_light_surface_lowest dark:bg-md_theme_dark_surface_lowest text-md_theme_light_onSurface  dark:text-md_theme_dark_onSurface py-5 px-5 lg:py-5 lg:px-8 shadow-sm shadow-md_theme_light_scrim">
         <div className="flex flex-col pb-8">
           <div className="flex flex-row items-baseline lg:space-x-4">
@@ -42,7 +42,7 @@ export default function EULA() {
             <div className="flex flex-col space-y-4">
 
               <p className="pb-4">Skidetica is licensed to You (End-User) by Skidetica Labs SRL, located and registered at Independenței 79, Edineț, Raionul Edineț ED-4601, Republica Moldova (&quot;<span className="dark:text-fritilariaGreen text-green-600">Licensor</span>&quot;), for use only under the terms of this License Agreement.</p>
-              <p className="pb-4">By downloading the Licensed Application from Google&apos;s software distribution platform (&quot;<span className="dark:text-fritilariaGreen text-green-600">Play Store</span>&quot;), and any update thereto (as permitted by this License Agreement), You indicate that You agree to be bound by all of the terms and conditions of this License Agreement, and that You accept this License Agreement. Play Store is referred to in this License Agreement as &quot;<span className="dark:text-fritilariaGreen text-green-600">Services</span>.&quot;</p>
+              <p className="pb-4">By downloading the Licensed Application from Google&apos;s software distribution platform (&quot;<span className="dark:text-fritilariaGreen text-green-600">Play Store</span>&quot;), and any update thereto (as permitted by this License Agreement), You indicate that You agree to be bound by all of the terms and conditions of this License Agreement, and that You accept this License Agreement. Play Store is referred to in this License Agreement as &quot;<span className="dark:text-fritilariaGreen text-green-600">Services</span>&quot;.</p>
               <p className="pb-4">The parties of this License Agreement acknowledge that the Services are not a Party to this License Agreement and are not bound by any provisions or obligations with regard to the Licensed Application, such as warranty, liability, maintenance and support thereof. Skidetica Labs SRL, not the Services, is solely responsible for the Licensed Application and the content thereof.</p>
               <p className="pb-4">This License Agreement may not provide for usage rules for the Licensed Application that are in conflict with the latest <a className="dark:text-fritilariaGreen text-green-600" href="https://play.google.com/intl/en_US/about/play-terms/">Google Play Terms of Service</a> (&quot;<span className="dark:text-fritilariaGreen text-green-600">Usage Rules</span>&quot;). Skidetica Labs SRL acknowledges that it had the opportunity to review the Usage Rules and this License Agreement is not conflicting with them.</p>
               <p className="pb-4">Skidetica when purchased or downloaded through the Services, is licensed to You for use only under the terms of this License Agreement. The Licensor reserves all rights not expressly granted to You. Skidetica is to be used on devices that operate with Google&apos;s operating system (&quot;Android&quot;).</p>
