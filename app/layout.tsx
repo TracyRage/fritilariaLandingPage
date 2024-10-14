@@ -12,25 +12,25 @@ export const metadata: Metadata = {
   /// add google code
   title: {
     default: 'Skidetic fundamental analysis for value investing',
-    template: '%s | Fritilaria'
+    template: '%s | Skidetica'
   },
-  description: 'Transform your opinion into statistically accurate fundamental analysis. Skidetic statistical models for value investing. Fritilaria app.',
-  keywords: 'skidetica, simulation packages, value investing simplified, modern dcf calculator, automatic fundamental analysis, find very cheap high value stock no geek stuff, little talked undervalued stocks, need for math and accounting in stock market, predict unknown market problems, financial modeling for dummies',
-  metadataBase: new URL('https://fritilaria.com'),
-  authors: [{ name: 'Skidetica Lab', url: 'https://fritilaria.com' },
+  description: 'Transform your opinion into statistically accurate fundamental analysis. Skidetic statistical models for value investing. Skidetica app.',
+  keywords: 'skidetica, simulation packages, value investing simplified, modern dcf calculator, automatic fundamental analysis',
+  metadataBase: new URL('https://www.skidetica.com'),
+  authors: [{ name: 'Skidetica Lab', url: 'https://www.skidetica.com' },
   ],
   publisher: 'Skidetica Lab',
   alternates: {
-    canonical: 'https://fritilaria.com'
+    canonical: 'https://www.skidetica.com'
   },
   openGraph: {
     type: 'website',
     title: 'Skidetic statistical models for value investing',
     description: 'Transform your opinion into statistically accurate fundamental analysis',
-    url: 'https://fritilaria.com',
+    url: 'https://www.skidetica.com',
     images: [{
       url: 'https://rmhsfgybzskyoimjlpfe.supabase.co/storage/v1/object/public/logo/friti_logo_dark_cropped_og.png',
-      alt: 'Fritilaria logo image'
+      alt: 'Skidetica logo image'
     }]
   },
   robots: {

@@ -13,7 +13,7 @@ import generateTimastamp from "../utils/generateTimestamp";
 export const metadata = {
   title: 'Contact us',
   description: 'Contact us and provide some feedback',
-  keywords: ['fritilaria', 'skidetica labs', 'skidetic', 'contact us', 'feedback', 'delete data', 'business', 'delete account'],
+  keywords: ['skidetica labs', 'skidetica', 'user feedback', 'contact skidetica'],
   alternates: {
     canonical: '/contact-us'
   }
