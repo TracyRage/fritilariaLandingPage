@@ -6,8 +6,8 @@ import RenderFritilariaLogoColors from './ui/firitilariaLogoColors';
 import Footer from './ui/footer';
 import { ThemeProvider } from './ui/ThemeToggle';
 import React, { Suspense } from 'react';
-import { GoogleTagManager } from '@next/third-parties/google';
-import CookieConsent from '@/components/cookie';
+import GoogleAnalytics from '@/components/google-analytics';
+import CookieBanner from '@/components/cookie-banner';
 
 
 export const metadata: Metadata = {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
 }
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID as string;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID as string;
 
 
 export default function RootLayout({
@@ -63,15 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en" className='dark'>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5KFDKZ4V');`,
-          }}
-        />
+        <GoogleAnalytics GA_MEASUREMENT_ID={GA_ID}/>
       </head>
       <body className={`${onest.className} antialiased`}>
         <noscript
@@ -86,7 +78,7 @@ export default function RootLayout({
               <div className='flex flex-col space-y-10'>
                 <main>
                   <div>{children}</div>
-                  <CookieConsent />
+                  <CookieBanner/>
                 </main>
                 <Footer />
               </div>
