@@ -2,10 +2,12 @@ import type { Metadata } from 'next';
 import { onest } from '@/app/ui/fonts';
 import './globals.css';
 import { Summary } from './ui/Summary';
-import Image from 'next/image';
 import RenderFritilariaLogoColors from './ui/firitilariaLogoColors';
 import Footer from './ui/footer';
 import { ThemeProvider } from './ui/ThemeToggle';
+import React, { Suspense } from 'react';
+import GoogleAnalytics from '@/components/google-analytics';
+import CookieBanner from '@/components/cookie-banner';
 
 
 export const metadata: Metadata = {
@@ -73,6 +75,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${onest.className} antialiased`}>
+      <Suspense fallback={null}>
+        <GoogleAnalytics GA_MEASUREMENT_ID='G-ZPPY4BXEPN' />
+      </Suspense>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5KFDKZ4V"
@@ -90,6 +95,7 @@ export default function RootLayout({
                   <div>{children}</div>
                 </main>
                 <Footer />
+                  <CookieBanner/>
               </div>
               <RenderFritilariaLogoColors />
             </ThemeProvider>

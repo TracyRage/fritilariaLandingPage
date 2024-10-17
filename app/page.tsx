@@ -2,7 +2,7 @@ import Guide from "./ui/Guide";
 import HeroTickerScroll from "./ui/HeroTickerScrool";
 import Manifesto from "./ui/Manifesto";
 
-export default function Home() {
+export default async function Home() {
 
   const jsonLd = {
 
