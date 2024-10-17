@@ -6,6 +6,7 @@ import RenderFritilariaLogoColors from './ui/firitilariaLogoColors';
 import Footer from './ui/footer';
 import { ThemeProvider } from './ui/ThemeToggle';
 import React, { Suspense } from 'react';
+import { GoogleTagManager } from '@next/third-parties/google';
 import CookieConsent from '@/components/cookie';
 
 
@@ -50,6 +51,8 @@ export const metadata: Metadata = {
   },
 }
 
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID as string;
+
 
 export default function RootLayout({
   children,
@@ -59,6 +62,17 @@ export default function RootLayout({
 
   return (
     <html lang="en" className='dark'>
+      <head>
+      <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5KFDKZ4V');`,
+          }}
+        />
+      </head>
       <body className={`${onest.className} antialiased`}>
         <div className='flex Parent bg-md_theme_light_surface text-md_theme_light_onSurface dark:bg-md_theme_dark_surface dark:text-md_theme_dark_onSurface'>
           <div className='flex w-screen min-h-screen px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[70px] flex-col lg:flex-row justify-center'>
@@ -67,7 +81,7 @@ export default function RootLayout({
               <div className='flex flex-col space-y-10'>
                 <main>
                   <div>{children}</div>
-                <CookieConsent/>
+                  <CookieConsent/>
                 </main>
                 <Footer />
               </div>
@@ -76,6 +90,7 @@ export default function RootLayout({
           </div>
         </div>
       </body>
+
     </html>
   )
 }
