@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID as string;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID as string;
 
 type CookieState = 'not-answered' | 'accepted' | 'rejected';
 
@@ -47,7 +47,7 @@ const CookieConsent: React.FC = () => {
     }
 
     if (cookieState === 'accepted') {
-        return <GoogleTagManager gtmId={GTM_ID} />;
+        return <GoogleAnalytics gaId={GA_ID} />;
     }
 
 };
