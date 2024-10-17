@@ -6,8 +6,7 @@ import RenderFritilariaLogoColors from './ui/firitilariaLogoColors';
 import Footer from './ui/footer';
 import { ThemeProvider } from './ui/ThemeToggle';
 import React, { Suspense } from 'react';
-import GoogleAnalytics from '@/components/google-analytics';
-import CookieBanner from '@/components/cookie-banner';
+import CookieConsent from '@/components/cookie';
 
 
 export const metadata: Metadata = {
@@ -60,32 +59,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className='dark'>
-      <head>
-        <title>Skidetica</title>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5KFDKZ4V');`,
-          }}
-        />
-      </head>
       <body className={`${onest.className} antialiased`}>
-      <Suspense fallback={null}>
-        <GoogleAnalytics GA_MEASUREMENT_ID='G-ZPPY4BXEPN' />
-      </Suspense>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5KFDKZ4V"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
         <div className='flex Parent bg-md_theme_light_surface text-md_theme_light_onSurface dark:bg-md_theme_dark_surface dark:text-md_theme_dark_onSurface'>
           <div className='flex w-screen min-h-screen px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[70px] flex-col lg:flex-row justify-center'>
             <ThemeProvider>
@@ -93,16 +67,15 @@ export default function RootLayout({
               <div className='flex flex-col space-y-10'>
                 <main>
                   <div>{children}</div>
+                <CookieConsent/>
                 </main>
                 <Footer />
-                  <CookieBanner/>
               </div>
               <RenderFritilariaLogoColors />
             </ThemeProvider>
           </div>
         </div>
       </body>
-
     </html>
   )
 }
