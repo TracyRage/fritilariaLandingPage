@@ -63,7 +63,9 @@ export default function RootLayout({
   return (
     <html lang="en" className='dark'>
       <head>
+        <Suspense>
         <GoogleAnalytics GA_MEASUREMENT_ID={GA_ID}/>
+        </Suspense>
       </head>
       <body className={`${onest.className} antialiased`}>
         <noscript
