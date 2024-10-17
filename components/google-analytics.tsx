@@ -29,11 +29,11 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
 
     // Script is added to the head of the document. To Begin, consent is denied.
     return (
-        <div>
+        <>
             <Script strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
 
-            <Script id='google-analytics' strategy="afterInteractive"
+            <Script id="google-analytics" strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
                 window.dataLayer = window.dataLayer || [];
@@ -50,8 +50,8 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
                 `,
                 }}
             />
-        </div>
-    )
+        </>
+    );
 }
 
 
