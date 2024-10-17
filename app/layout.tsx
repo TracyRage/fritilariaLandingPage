@@ -63,7 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en" className='dark'>
       <head>
-      <script
+        <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -74,6 +74,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`${onest.className} antialiased`}>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KFDKZ4V" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+          }}>
+
+        </noscript>
         <div className='flex Parent bg-md_theme_light_surface text-md_theme_light_onSurface dark:bg-md_theme_dark_surface dark:text-md_theme_dark_onSurface'>
           <div className='flex w-screen min-h-screen px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[70px] flex-col lg:flex-row justify-center'>
             <ThemeProvider>
@@ -81,7 +87,7 @@ export default function RootLayout({
               <div className='flex flex-col space-y-10'>
                 <main>
                   <div>{children}</div>
-                  <CookieConsent/>
+                  <CookieConsent />
                 </main>
                 <Footer />
               </div>
