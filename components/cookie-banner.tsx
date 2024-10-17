@@ -5,6 +5,7 @@ import { getLocalStorage, setLocalStorage } from './storage-helper';
 import { useEffect, useState } from 'react';
 
 export default function CookieBanner() {
+ 
     const [cookieConsent, setCookieConsent] = useState<null|boolean>(null);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -35,7 +36,6 @@ export default function CookieBanner() {
     if (isLoading || cookieConsent !== null) {
         return null;
     }
-
 
     return (
         <div className={`${cookieConsent != null ? "hidden" : "flex"}`}>

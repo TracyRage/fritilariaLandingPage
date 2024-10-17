@@ -33,7 +33,7 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
             <Script strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
 
-            <Script id="google-analytics" strategy="afterInteractive"
+            <Script id='google-analytics' strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
                 window.dataLayer = window.dataLayer || [];
@@ -51,9 +51,5 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
                 }}
             />
         </>
-    );
+    )
 }
-
-
-
-//// G-ZPPY4BXEPN
