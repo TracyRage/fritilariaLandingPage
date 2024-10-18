@@ -52,6 +52,7 @@ export const metadata: Metadata = {
 }
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID as string;
+const GT_ID = process.env.NEXT_PUBLIC_GT_ID as string;
 
 
 export default function RootLayout({
@@ -63,14 +64,14 @@ export default function RootLayout({
   return (
     <html lang="en" className='dark'>
       <head>
-        <Suspense>
-        <GoogleAnalytics GA_MEASUREMENT_ID={GA_ID}/>
+        <Suspense fallback={null}>
+        <GoogleAnalytics GA_MEASUREMENT_ID={GA_ID} GT_CONTAINER_ID={GT_ID}/>
         </Suspense>
       </head>
       <body className={`${onest.className} antialiased`}>
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KFDKZ4V" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GT_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
           }}>
         </noscript>
         <div className='flex Parent bg-md_theme_light_surface text-md_theme_light_onSurface dark:bg-md_theme_dark_surface dark:text-md_theme_dark_onSurface'>

@@ -41,6 +41,7 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
             <Script strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
 
+
             <Script id="google-tag" strategy='afterInteractive'
                 dangerouslySetInnerHTML={{
                     __html:
@@ -52,6 +53,9 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
 
                 }}
             />
+
+
+
         </>
     )
 }
