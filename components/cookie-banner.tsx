@@ -29,6 +29,8 @@ export default function CookieBanner() {
                 personalization_storage: newValue,
                 functionality_storage: newValue,
                 security_storage: newValue,
+                ad_user_data: newValue,
+                ad_personalization: newValue,
             });
         }
     }, [cookieConsent]);
