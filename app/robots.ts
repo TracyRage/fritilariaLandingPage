@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://fritilaria.com/sitemap.xml',
+    sitemap: 'https://www.skidetica.com/sitemap.xml',
   }
 }
