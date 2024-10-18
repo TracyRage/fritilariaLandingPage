@@ -25,6 +25,10 @@ export default function CookieBanner() {
         if (typeof window !== "undefined" && window.gtag) {
             window.gtag("consent", "update", {
                 analytics_storage: newValue,
+                ad_storage: newValue,
+                personalization_storage: newValue,
+                functionality_storage: newValue,
+                security_storage: newValue,
             });
         }
     }, [cookieConsent]);

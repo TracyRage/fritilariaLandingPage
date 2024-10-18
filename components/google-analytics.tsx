@@ -34,7 +34,11 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID, GT_CONTAINER_ID }: 
                 gtag('js', new Date());
 
                 gtag('consent', 'default', {
-                    'analytics_storage': 'denied'
+                    'analytics_storage': 'denied',
+                    'ad_storage': 'denied',
+                    'personalization_storage': 'denied',
+                    'functionality_storage': 'denied',
+                    'security_storage': 'denied',
                 });
                 
                 gtag('config', '${GA_MEASUREMENT_ID}', {
