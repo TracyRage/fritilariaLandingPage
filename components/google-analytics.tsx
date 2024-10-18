@@ -5,7 +5,13 @@ import Script from 'next/script'
 import React, { useEffect } from 'react';
 
 
-export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) {
+interface GoogleAnalyticsProps {
+  GA_MEASUREMENT_ID: string;
+  GT_CONTAINER_ID: string;
+};
+
+
+export default function GoogleAnalytics({ GA_MEASUREMENT_ID, GT_CONTAINER_ID }: GoogleAnalyticsProps) {
 
     const pathname = usePathname()
     // SearchParams is a client side function.
@@ -49,12 +55,10 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5KFDKZ4V');`
+            })(window,document,'script','dataLayer','${GT_CONTAINER_ID}');`
 
                 }}
             />
-
-
 
         </>
     )
