@@ -38,9 +38,9 @@ export default function Guide() {
     ])
 
     const [probabilityButtons, setProbabilityButtons] = useState([
-        { id: "unlikely_low", label: "Low", state: false, icon: <ArrowTrendingDownIcon className="w-1/4 sm:w-[24px] lg:w-[28px]" /> },
-        { id: "fair", label: "Fair value", state: true },
-        { id: "unlikely_high", label: 'High', state: false, icon: <ArrowTrendingUpIcon className="w-1/4 sm:w-[24px] lg:w-[28px]" /> },
+        { id: "unlikely_low", label: "Low prob. <5%", labelSmall: "<5%pb.", state: false, icon: <ArrowTrendingDownIcon className="w-1/4 sm:w-[24px] lg:w-[28px]" /> },
+        { id: "fair", label: "Fair value", state: true, labelSmall: "Fair value"},
+        { id: "unlikely_high", label: 'High prob. >95%', labelSmall: ">95%pb.", state: false, icon: <ArrowTrendingUpIcon className="w-1/4 sm:w-[24px] lg:w-[28px]" /> },
     ])
 
     const [pathName, setPathName] = useState(financialParams[19].path);
@@ -560,14 +560,21 @@ export default function Guide() {
                                         <button type="submit" id="probabilityButton" onClick={() => {
                                             handleProbabilityButton(button.id);
 
-                                        }} key={button.id} className={clsx('flex md:w-[120px] w-[84px] h-[38px] rounded-xl items-center lg:text-base text-sm justify-center',
+                                        }} key={button.id} className={clsx('flex md:w-[140px] w-[82px] h-[38px] rounded-xl items-center lg:text-base text-sm justify-center',
                                             {
                                                 'dark:bg-md_theme_dark_surface_low dark:text-md_theme_dark_onSurface dark:hover:bg-md_theme_dark_surface_container border-2 dark:border-md_theme_dark_outline bg-md_theme_light_surface_low text-md_theme_light_onSurface hover:bg-md_theme_light_surface_container border-md_theme_light_outline': button.state === false,
                                                 'bg-md_theme_light_secondaryContainer text-md_theme_light_onSecondaryContainer dark:bg-md_theme_dark_secondaryContainer dark:text-md_theme_dark_onSecondaryContainer': button.state === true
                                             })}>
-                                            <div className="flex flex-row justify-center">
+                                            <div className="flex-row justify-center text-sm hidden md:block">
 
-                                                {button.id == 'fair' ? button.label : button.icon}
+                                                {/* {button.id == 'fair' ? button.label : button.icon} */}
+                                                {button.label}
+
+                                            </div>
+                                            <div className="flex-row justify-center text-sm block md:hidden">
+
+                                                {button.labelSmall}
+                                                {button.id == 'unlikely_low' ? <sup>+</sup> : ''}
 
                                             </div>
                                         </button>
@@ -609,8 +616,9 @@ export default function Guide() {
                                         <p>Check the  <Link className="dark:text-md_theme_dark_primary text-md_theme_light_primary font-bold" href={"/faq"}><span> FAQ</span></Link>.</p>
                                         <div className="pt-4 space-y-4">
                                         <hr className="dark:opacity-15"></hr>
-                                            <div className="flex flex-row justify-center">
-                                                <p className="text-xs">Randomized synthetic data generated for the current presentation *</p>
+                                            <div className="flex flex-col justify-center space-y-2">
+                                                <p className="text-xs">* Randomized synthetic data generated for the current presentation</p>
+                                                <p className="text-xs"><sup>+</sup> prob | pb - probability</p>
                                             </div>
                                         </div>
                                     </div>

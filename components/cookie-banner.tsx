@@ -45,7 +45,7 @@ export default function CookieBanner() {
                         flex px-3 md:px-4 pt-4 pb-4  md:pt-3 md:pb-4 justify-between items-center flex-col sm:flex-row space-y-3
                          dark:bg-md_theme_dark_secondaryContainer/90 bg-md_theme_light_secondaryContainer/90 md:space-x-4 dark:text-md_theme_dark_onSecondaryContainer text-md_theme_light_onSecondaryContainer rounded-2xl shadow-sm shadow-md_theme_light_scrim dark:shadow-md_theme_dark_scrim">
                 <div className='text-left'>
-                    <p>We use <span className='dark:text-fritilariaGreen text-green-600 font-semibold'>cookies</span>. To improve your experience and analyze site traffic. By continuing, you agree to their use. <a href={"/cookies"}>Learn more about our <span className="dark:text-fritilariaGreen text-green-600 font-semibold">Cookie policy</span>.</a>  </p>
+                    <p>We use <span className='dark:text-fritilariaGreen text-green-600 font-semibold'>cookies</span>. To improve your experience and analyze site traffic. By continuing, you agree to their use. <Link href={"/cookies"}>Learn more about our <span className="dark:text-fritilariaGreen text-green-600 font-semibold">Cookie policy</span>.</Link>  </p>
                 </div>
                 <div className='flex space-x-2'>
                     <button onClick={() => setCookieConsent(false)} className='px-5 py-2 dark:text-md_theme_dark_onPrimaryContainer text-md_theme_light_onPrimaryContainer rounded-md border-[0.5px] dark:border-md_theme_dark_scrim border-md_theme_light_scrim'>Decline</button>
