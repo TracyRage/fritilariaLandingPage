@@ -437,7 +437,7 @@ export default function Guide() {
 
         <section id="mainPageGuideSection">
 
-            <div className="lg:container dark:bg-md_theme_dark_surface_lowest bg-md_theme_light_surface_lowest  dark:shadow-sm shadow-sm shadow-md_theme_dark_scrim lg:px-8 xl:pt-3 xl:pb-6 px-4 py-4 rounded-[25px]">
+            <div className="min-w-screen dark:bg-md_theme_dark_surface_lowest bg-md_theme_light_surface_lowest  dark:shadow-sm shadow-sm shadow-md_theme_dark_scrim lg:px-8 xl:pt-3 xl:pb-6 px-4 py-4 rounded-[25px]">
 
                 <div className="text-lg md:text-2xl pt-2 pb-4 lg:px-2">
                     <div className="flex flex-row justify-between items-center lg:pb-4 tracking-tight">

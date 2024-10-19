@@ -75,10 +75,10 @@ export default function RootLayout({
           }}>
         </noscript>
         <div className='flex Parent bg-md_theme_light_surface text-md_theme_light_onSurface dark:bg-md_theme_dark_surface dark:text-md_theme_dark_onSurface'>
-          <div className='flex w-screen min-h-screen px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[70px] flex-col lg:flex-row justify-center'>
+          <div className='flex w-screen min-h-screen px-3 py-4 lg:py-[40px] space-y-8 lg:space-y-0 lg:space-x-[25px] xl:space-x-[15px] 2xl:space-x-[70px] flex-col lg:flex-row justify-center'>
             <ThemeProvider>
               <Summary title='Skidetica' />
-              <div className='flex flex-col space-y-10'>
+              <div className='flex flex-col space-y-8'>
                 <main>
                   <div>{children}</div>
                   <CookieBanner/>
@@ -90,7 +90,6 @@ export default function RootLayout({
           </div>
         </div>
       </body>
-
     </html>
   )
 }
