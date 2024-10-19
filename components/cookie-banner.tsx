@@ -40,9 +40,9 @@ export default function CookieBanner() {
 
     return (
         <div className={`${cookieConsent != null ? "hidden" : "flex"}`}>
-            <div className="mx-auto w-[280px] md:w-[820px]
+            <div className="mx-auto vvs:right-5 w-[280px] md:w-[720px]
                         fixed bottom-5 right-10 text-sm md:text-sm
-                        flex px-3 md:px-4 pt-4 pb-4  md:pt-3 md:pb-4 justify-between items-center flex-col sm:flex-row space-y-3
+                        flex px-3 md:px-4 pt-4 pb-4  md:pt-3 md:pb-4 justify-between items-center flex-col md:flex-row space-y-3
                          dark:bg-md_theme_dark_secondaryContainer/90 bg-md_theme_light_secondaryContainer/90 md:space-x-4 dark:text-md_theme_dark_onSecondaryContainer text-md_theme_light_onSecondaryContainer rounded-2xl shadow-sm shadow-md_theme_light_scrim dark:shadow-md_theme_dark_scrim">
                 <div className='text-left'>
                     <p>We use <span className='dark:text-fritilariaGreen text-green-600 font-semibold'>cookies</span>. To improve your experience and analyze site traffic. By continuing, you agree to their use. <Link href={"/cookies"}>Learn more about our <span className="dark:text-fritilariaGreen text-green-600 font-semibold">Cookie policy</span>.</Link>  </p>

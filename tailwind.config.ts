@@ -14,6 +14,17 @@ const config = {
   darkMode: "selector",
   theme: {
     extend: {
+      screens: {
+        'vvs': '280px',
+        'vs': '340px',
+        's': '355px',
+        'm': '370px',
+        'm+': '760px',
+        'xm': '810px',
+        'xm+': '840px',
+        'xxm': '900px',
+        'big': '950px',
+      },
       animation: {
         "loop-scroll": "loop-scroll 90s linear infinite",
       },
