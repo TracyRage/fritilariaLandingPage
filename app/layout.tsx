@@ -16,6 +16,13 @@ export const metadata: Metadata = {
     default: 'Skidetic fundamental analysis for value investing',
     template: '%s | Skidetica'
   },
+  icons: {
+    icon: 'favicon.ico',
+    apple: 'apple-touch-icon.png',
+    shortcut: 'favicon-16x16.png'
+
+  },
+  manifest: 'site.webmanifest',
   description: 'Transform your opinion into statistically accurate fundamental analysis. Skidetic statistical models for value investing. Skidetica app.',
   keywords: 'skidetica, simulation packages, value investing simplified, modern dcf calculator, automatic fundamental analysis',
   metadataBase: new URL('https://www.skidetica.com'),

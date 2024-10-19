@@ -9,10 +9,10 @@ export default async function Home() {
     '@context': 'https://schema.org',
     '@type': 'MobileApplication',
     name: 'Skidetica',
-    image: 'https://fortiqrsbyglyzsgzcim.supabase.co/storage/v1/object/public/logo/friti_logo_dark_cropped.png',
+    image: 'https://rmhsfgybzskyoimjlpfe.supabase.co/storage/v1/object/public/logo/friti_logo_dark_cropped_google.png',
     description: "Transform your opinion into statistically accurate fundamental analysis",
     applicationCategory: 'Business',
-    downloadURL: 'https://fritilaria.com',
+    downloadURL: 'https://skidetica.com',
     operatingSystem: 'Android',
     isAccesibleForFree: true,
     offers: {
@@ -21,7 +21,7 @@ export default async function Home() {
       priceCurrency: 'USD'
     },
     softwareVersion: "1.1.0",
-    installURL: 'https://fritilaria.com',
+    installURL: 'https://skidetica.com',
     aggregateRating: {
       '@type': "AggregateRating",
       ratingValue: "4.8",
@@ -30,10 +30,10 @@ export default async function Home() {
     author: {
       '@type': "Organization",
       name: "Skidetica Labs",
-      url: "https://fritilaria.com/company",
+      url: "https://skidetica.com/company",
       contactPoint: {
         "@type": "ContactPoint",
-        email: "support@skidetica.com"
+        email: "contanct@skidetica.com"
       }
     },
 
