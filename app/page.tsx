@@ -4,16 +4,12 @@ import Manifesto from "./ui/Manifesto";
 
 export default async function Home() {
 
-  const jsonLd = {
+  const jsonLd2 = {
 
     '@context': 'https://schema.org',
-    '@type': 'MobileApplication',
-    name: 'Skidetica',
+    '@type': 'FAQPage',
+    name: 'Skidetica | FAQ',
     image: 'https://rmhsfgybzskyoimjlpfe.supabase.co/storage/v1/object/public/logo/friti_logo_dark_cropped_og.png',
-    description: "Transform your opinion into statistically accurate fundamental analysis",
-    applicationCategory: 'Business',
-    downloadURL: 'https://skidetica.com',
-    operatingSystem: 'Android',
     isAccesibleForFree: true,
     offers: {
       '@type': "Offer",
@@ -34,6 +30,31 @@ export default async function Home() {
       contactPoint: {
         "@type": "ContactPoint",
         email: "contanct@skidetica.com"
+      }
+    },
+
+  }
+
+  const jsonLd = {
+
+    '@context': 'https://schema.org',
+    '@type': 'MobileApplication',
+    name: 'Skidetica',
+    image: 'https://rmhsfgybzskyoimjlpfe.supabase.co/storage/v1/object/public/logo/friti_logo_dark_cropped_og.png',
+    description: "Transform your opinion into statistically accurate fundamental analysis",
+    applicationCategory: 'Business',
+    downloadURL: 'https://skidetica.com',
+    operatingSystem: 'Android',
+    isAccesibleForFree: true,
+    softwareVersion: "1.0.0",
+    installURL: 'https://skidetica.com',
+    author: {
+      '@type': "Organization",
+      name: "Skidetica Labs",
+      url: "https://skidetica.com/company",
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: "contact@skidetica.com"
       }
     },
 
