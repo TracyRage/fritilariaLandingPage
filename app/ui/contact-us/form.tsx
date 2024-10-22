@@ -31,23 +31,29 @@ const InnerForm = (props: FormikProps<FormValues>) => {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [isVerified, setIsVerified] = useState(false);
 
-  async function handleCaptchaSubmission(token: string | null) {
+
+  async function handleCaptchaSubmission(token: string | null): Promise<void> {
     try {
       if (token) {
-        await fetch("/api", {
+        const response = await fetch("/api", {
           method: "POST",
           headers: {
-            Accept: "application/json",
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ token }),
         });
-        setIsVerified(true);
+  
+        if (response.ok) {
+          setIsVerified(true);
+        } else {
+          setIsVerified(false);
+        }
       }
-    } catch (e) {
+    } catch (error) {
+      console.error("Error during reCAPTCHA submission:", error);
       setIsVerified(false);
     }
-  }
+  };
 
   const handleChange = (token: string | null) => {
     handleCaptchaSubmission(token);
@@ -55,13 +61,13 @@ const InnerForm = (props: FormikProps<FormValues>) => {
 
   function handleExpired() {
     setIsVerified(false);
-  }
+  };
 
   const resetRECAPTCHA = () => {
     if (recaptchaRef.current) {
       recaptchaRef.current.reset();
     }
-  }
+  };
 
 
   return (

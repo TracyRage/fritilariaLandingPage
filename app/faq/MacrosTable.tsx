@@ -10,11 +10,11 @@ export default function MacroTable() {
 
   return (
     <div
-      className="flex flex-col w-3/3 justify-center shadow-md dark:shadow-md_theme_dark_scrim rounded-xl dark:bg-md_theme_dark_surface_low bg-md_theme_light_surface_low px-2 pt-6 pb-4">
+      className="flex flex-col justify-center shadow-md dark:shadow-md_theme_dark_scrim rounded-xl dark:bg-md_theme_dark_surface_low bg-md_theme_light_surface_low sm:px-2 pt-6 pb-4">
       <table className="text-left">
         <caption className="pb-2 text-sm caption-top">
 
-          <span className="font-bold leading-4">Table 1</span>. Macroeconomic and company specific parameters included in the Fritilaria predifined models (not the extended list)
+          <p><span className="font-bold leading-4">Table 1</span>. Estimate ranges <span className="italic">(in nuce)</span></p>
 
         </caption>
         <thead>

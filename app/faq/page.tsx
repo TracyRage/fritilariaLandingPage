@@ -28,27 +28,28 @@ export default function FAQ() {
         name: "What is Skidetica?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Skidetica /σχέδιο/ represents a new technology which implies the process of converting subjective opinions into Bayesian statistical models"
+          text: "Skidetica /σχέδιο/ represents a new technology which implies the process of converting subjective opinions into robust statistical models"
         }
 
       },
 
       {
         '@type': "Question",
-        name: "How can Skidetica improve my fundamental analysis?",
+        name: "How can Skidetica help a retail investor?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Skidetica listens to your personal opinion and uses it to create a statistically accurate fundamental analysis"
+          text: "Skidetica can generate accurate estimate of the fair value for any given publicly traded company."
         }
 
       },
 
       {
         '@type': "Question",
-        name: "What I am going to get after a skidetic fundamental analysis?",
+        name: "How does Skidetica do that?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The final output of Skidetica represents a log-normal distribution of Value/Share parameter"
+          text: "Skidetica performs a new type of fundamental analysis which employs both high quality accounting data and users subjective opinion."
+        
         }
 
       },
@@ -73,31 +74,28 @@ export default function FAQ() {
                 <LinkIcon className="w-[20px] font-extrabold lg:block hidden" />
               </Link>
             </div>
-            <div className="flex">
-              <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-8`}>
-                FAQ
+            <div className="flex flex-col">
+              <h1 className={`${sourceSerif.className} text-xl md:text-3xl tracking-tight pb-2`}>
+                Frequently asked questions
               </h1>
+              <h2 className={`${sourceSerif.className} text-sm md:text-lg tracking-tight pb-4 `}>
+                Next-generation fundamental analysis
+              </h2>
             </div>
           </div>
 
           <div id="faqList" className="flex flex-col space-y-4">
 
-            <RenderFAQListItem name="What's Skidetica?" content="Skidetica /σχέδιο/ represents the process of converting subjective opinions into Bayesian statistical models." />
-            <RenderFAQListItem name="What's Fritilaria?" content="Fritilaria represents the first implementation of skidetics in realm if value investing and by extension finance." />
-            <RenderFAQListItem name="What does Fritilaria do?" content="Simply put, Fritilaria calculates fundamental value of public traded companies." />
-            <RenderFAQListItem name="How does Fritilaria do it?" content="Fritilaria takes user's subjective opinion and fits it to a predifined Bayesian model." />
-            <RenderFAQListItem name="What's a predifined model?" content="Predifined model represents a Bayesian model which is trained on recently published accounting data" />
-            <RenderFAQListItem name="Why the model is predifined?" content="In order to became a full model, Fritilaria needs your opinion." />
-            <RenderFAQListItem name="What's accounting data?" content="Data extracted from publicly available data such as annual and quarter reports published by companies themselves." />
-            <RenderFAQListItem2 name="What about beta, default rate, premium rate?" content="Yes. They do. We create models what are based on ranges of values. It means that Fritilaria models take into account almost infinite number of macroeconomic scenarios (Table 1)." />
-            <RenderFAQListItem name="Can you rely on Fritilaria?" content="Fritilaria transforms user's subjective opinion into probabilistic model. Fritilaria mirrors user's outlook on a specific company. If user feels optimistic, then Fritilaria will provide optimistic results. User is in charge of reasoning and final conslusion. That's why Fritilaria is not a financial advisement app." />
-            <RenderFAQListItem name="Does Fritilaria employ AI?" content="No." />
-            <RenderFAQListItem name="Is Fritilaria a techical analysis tool?" content="No." />
-            <RenderFAQListItem name="Does Fritilaria provides ratios such as P/E?" content="No. Fritilaria does not take into account company stock price. Fritilaria is immune to market mood swings, speculative news or any kind short-term volatility." />
+            <RenderFAQListItem name="What's Skidetica?" content="Skidetica /σχέδιο/ represents a new technology which converts subjective opinions into robust statistical models" />
+            <RenderFAQListItem name="How can Skidetica help a retail investor?" content="Skidetica can generate accurate estimate of the fair value for any given publicly traded company." />
+            <RenderFAQListItem name="How does Skidetica do that?" content="Skidetica supercharges the classical fundamental analysis. It employs both high quality accounting data and user's subjective opinion." />
+            <RenderFAQListItem name="Why do you need my opinion?" content="Statistical models are accurate only in case then they are grounded in reality. Your subjective opinion serves as a lighting rod." />
+            <RenderFAQListItem name="So how do you use my opinion?" content="User's opinions can be transformed in probability distributions. These distributions are integrated into Skidetica models. In this way, you are getting a bespoke analysis and a personal fair value." />
+            <RenderFAQListItem name="Is my opinion that important?" content="Yes. Your opinion is very important. Half of the Skidetica process relies on accounting data. The other half is supposed to integrate overall mood regrading the stock. You provide the mood." />
+            <RenderFAQListItem name="Should I care about things such as beta, default rate, premium rate and so on?" content="No. You don't. Skidetica does it for you." />
+            <RenderFAQListItem name="So I cannot choose my beta, default rate and other company specifie metrics?" content="No. You don't need it. Skidetica works with ranges of macroeconomic estimates. It means that Skidetica final outputs account for all the possible betas, default rates, premiums and so on." />
+            <RenderFAQListItem2 name="Could you disclose some of these estimate ranges?" content="" />
           </div>
-
-
-
 
         </div>
       </div>

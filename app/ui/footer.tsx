@@ -31,7 +31,7 @@ export default function Footer() {
                             <p className="block md:hidden text-center text-xs md:text-base">Edineț, MD-4601, Republic of Moldova</p>
                         </div>
                     </address>
-                    <p className="text-center text-xs md:text-sm text-onBackground">@ 2024 Skidetica Labs. All rights Reserved</p>
+                    <p className="text-center text-xs md:text-sm text-onBackground">@ 2024 Skidetica Labs. All rights reserved</p>
                 </div>
             </div>
         </div>
