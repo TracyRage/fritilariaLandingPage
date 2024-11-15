@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
   },
   manifest: 'site.webmanifest',
-  description: 'Transform your opinion into statistically accurate fundamental analysis. Skidetic statistical models for value investing. Skidetica app.',
+  description: 'Transform your opinion into statistically accurate fundamental analysis. Skidetic statistical financial models for value investing.',
   keywords: 'skidetica, simulation packages, value investing simplified, modern dcf calculator, automatic fundamental analysis',
   metadataBase: new URL('https://www.skidetica.com'),
   authors: [{ name: 'Skidetica Lab', url: 'https://www.skidetica.com' },

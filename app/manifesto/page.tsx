@@ -41,25 +41,24 @@ export default function Manifesto() {
                     <div className="px-4 lg:pt-6 text-sm lg:text-base lg:leading-relaxed md:tracking-wide">
                         <ul className="list-disc">
                             <li className="pb-4">
-                                Have you ever tried to value invest and perform high-quality fundamental analyses?
+                                    Have you ever tried to value invest and perform high-quality fundamental analyses?
                             </li>
                             <li className="pb-4">
-                                You&apos;ve definitely tried. But you miserably failed.
+                                    You&apos;ve definitely tried. But you miserably failed.
                             </li>
                             <li className="pb-4">
-                                The majority of retail investors have found it challenging to perform good quality fundamental analyses and usually only pretend to value invest.
+                                    The majority of retail investors have found it challenging to perform good quality fundamental analyses and usually only pretend to value invest.
                             </li>
                             <li className="pb-4">
-                                However, there is a solution - Skidetica + Fritilaria.
+                                    However, there is a solution - Skidetica.
                             </li>
 
                             <li className="pb-4">
-                                Skidetika is a new technology that involves transforming subjective opinions into rigorous scientific discussions. It employs your intuition and creates robust fundamental analysis models for value investing.
-
+                                    Skidetica is a new technology that transforms subjective opinions into rigorous scientific discussions. It employs your intuition and creates robust fundamental analysis models for value investing.
                             </li>
 
                             <li>
-                                Fritilaria app employs skidetika and assists you in finding the fair value of your favorite stock.
+                                Skidetica app assists you in finding the fair value of your favorite stock.
                             </li>
                         </ul>
                     </div>

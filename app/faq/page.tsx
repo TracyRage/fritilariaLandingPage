@@ -21,6 +21,7 @@ export default function FAQ() {
 
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+
     mainEntity: [
 
       {
@@ -141,6 +142,7 @@ export default function FAQ() {
             <RenderFAQListItem name="What is a simulation package (simpack)?" content="Simpacks represent a group of Skidetica models. These models are attributed to a specific set of publicly traded companies. Simpacks are typically grouped by country, industry, or some other abstract category." />
             <RenderFAQListItem name="What is a simulation run (simrun)?" content="A very singular analysis using Skidetica constitutes a simulation run." />
             <RenderFAQListItem name="I bought a simpack. Will it be mine forever? Will I receive updates for it?" content="Yes. When you buy a simpack, you also buy all future updates indefinitely." />
+            <RenderFAQListItem name="How frequently should I expect my simpacks to be updated?" content="You should expect at least 4 scheduled updates per year. However, in practice, you should expect updates to your simpacks each time we update the Skidetica algorithm. This means at least 2 updates per month." />
             <RenderFAQListItem name="Do you provide subscriptions?" content="No." />
 
             <RenderFAQListItem name="Should I care about things such as beta, default rate, premium rate, and so on?" content="No, you don't. Skidetica does it for you." />

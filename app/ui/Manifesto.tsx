@@ -74,7 +74,7 @@ export default function Manifesto() {
                                 </li>
 
                                 <li className="pb-4">
-                                    Skidetika is a new technology that involves transforming subjective opinions into rigorous scientific discussions. It employs your intuition and creates robust fundamental analysis models for value investing.
+                                    Skidetica is a new technology that transforms subjective opinions into rigorous scientific discussions. It employs your intuition and creates robust fundamental analysis models for value investing.
 
                                 </li>
 
